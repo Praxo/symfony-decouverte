@@ -1,0 +1,67 @@
+.img_bkg {
+	max-height: 280px;
+	margin-bottom: 0;
+}
+
+.docs-comment-name{
+	font-weight:500;
+	color:#555
+}
+
+.docs-comment-disclaimer{
+	padding:20px;
+	background-color:#ffffe0;
+	border:1px solid #dfd8c2;
+	border-radius:5px;
+	font-size:0.9em;
+}
+
+.docs-comment-btn{
+	float: right;
+}
+
+a.docs-comment-btn,input.docs-comment-btn
+{
+	background-color:#5f95c4;
+	color:#fff;
+	vertical-align:middle;
+	text-decoration:none;
+	border:0;
+	padding:8px 20px;
+	display:inline-block;
+	cursor:pointer;
+	font-size:80%;
+	-webkit-border-radius:4;-moz-border-radius:4;border-radius:4px;
+	-webkit-transition:all 0.3s ease 0s;
+	-moz-transition:all 0.3s ease 0s;
+	-ms-transition:all 0.3s ease 0s;
+	-o-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s
+}
+
+.docs-comment-disclaimer a.docs-comment-btn{
+	margin-top:-8px;
+	margin-left:15px
+}
+
+a.docs-comment-btn:hover,input.docs-comment-btn:hover{
+	text-decoration:none;
+	background-color:#285a86
+}
+
+h3{
+	font-size: 20px;
+	color: #0085a1;
+}
+
+.complete_article {
+	font-size: 15px;
+}
+
+.artical-links ul{
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.artical-commentbox h3 {
+	padding-left: 15px;
+}

@@ -1,0 +1,343 @@
+/*--
+
+/*-- //header --*/
+/*-- header-bottom --*/
+*{
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.single-page-artical{
+	padding:0 3.5em 3.5em 3.5em;
+	background:#fff;
+}
+
+/*-- single --*/
+.artical-links{
+	padding: 10px 0px;
+	border:1px dashed rgba(0, 0, 0, 0.61);
+	border-left: none;
+	margin-top: 5px;
+	border-right: none;
+}
+.artical-links ul li{
+	display:inline-block;
+	margin : 0 10px;
+
+}
+/*.artical-links ul li:last-child{
+	float:right;
+}*/
+.artical-links ul li a span{
+	vertical-align:top;
+}
+.artical-links ul li small{
+	background:url(../images/img-sprite.png)no-repeat -18px -90px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-right:3px;
+	vertical-align: middle;
+}
+.artical-links ul li small.admin{
+	background-position:-48px -90px;
+}
+.artical-links ul li small.no{
+	background-position:-74px -90px;
+}
+.artical-links ul li small.posts{
+	background-position:-101px -90px;
+}
+.artical-links ul li small.link{
+	background-position:-125px -90px;
+}
+.artical-links ul li a{
+	color: #666;
+	padding-left: 20px;
+}
+.artical-links ul li a:hover{
+	text-decoration:underline;
+}
+.artical-content h3{
+	color: #337ab7;
+	text-align: left;
+	text-transform: capitalize;
+	padding: 3em 0 1.5em;
+	font-size:1.2em;
+	margin: 0;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.artical-content p {
+	color: #999;
+	font-size: 14px;
+	line-height: 1.8em;
+	margin: 1em 0;
+}
+/*---comment-box----*/
+.table-form{
+	width:100%;
+}
+.table-form form input[type="text"]{
+	border:none;
+	outline: none;
+	padding: 1em;
+	margin-top: 23px;
+	color: #666;
+	overflow: hidden;
+	width: 40%;
+	display: block;	
+	font-size: 1em;
+	background-color: #f4f4f4;
+}
+.table-form textarea{
+	padding: 1em;
+	margin-top: 25px;
+	outline:none;
+	color:#666;
+	border: none;
+	width:60%;
+	height:135px;
+	resize: none;
+	font-size: 1em;
+	background-color: #f4f4f4;
+}
+.table-form input[type="submit"] {
+	background: #0085a1;
+	color: #fff;
+	font-size: 1.2em;
+	display: block;
+	outline: none;
+	border: none;
+	padding:0.5em 15.1em;
+	margin: 0.8em 0 0;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.table-form input[type="submit"]:hover{
+	background:#F04709;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.comment-grid-top h3,.artical-commentbox h3 {
+  color: #0085a1;
+  text-transform: capitalize;
+  padding-top: 1em;
+  margin: 0;
+  font-size: 1.2em;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.top-comment-left{
+	float: left;
+	width: 13%;
+}
+.top-comment-right{
+	float: left;
+	width:84%;
+	margin-left:1em;
+}
+.top-comment-right ul{
+	padding: 0;
+	margin: 0;
+}
+.top-comment-right ul li {
+	display: inline-block;
+	color: #333;
+	padding: 0.3em;
+	font-weight: 700;
+}
+.top-comment-right ul li a{
+	text-decoration: none;
+	font-size: 0.7em;
+    color: #0085a1;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.top-comment-right ul li a:hover{
+	color: #F04709;
+}
+.top-comment-right p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.8em;
+}
+.top-comment-right ul li span.left-at{
+	font-size: 1em;
+}
+.top-comment-right ul li span.right-at{
+	font-size: 0.7em;
+}
+.comments-top-top {
+	margin: 1.5em 0;
+	background: #eee;
+	padding: 0.5em;
+	width: 70%;
+}
+.blog-top p {
+	font-size: 1em;
+	color: #fff;
+	line-height: 1.8em;
+	text-align: left;
+	margin: 1em 0;
+}
+.artical-content img {
+  width: 100%;
+}
+.artical-links ul li span {
+  font-size: 11px;
+  margin-top: 4px;
+  display: inline-block;
+}
+.single-page-artical {
+  min-height: 2280px;
+}
+
+/*-- //single --*/
+/*-----start-responsive-design------*/
+
+@media (max-width:1024px){
+
+	.single-page-artical {
+		padding: 0 3em 3.5em 3em;
+	}
+
+	.artical-content h3 {
+	  padding: 2em 0 1.5em;
+	  font-size: 1.2em;
+	}
+	.comments-top-top {
+	  width: 100%;
+	}
+	.top-comment-right ul li a {
+		font-size: 0.7em;
+	}
+	.table-form input[type="submit"] {
+		padding: 0.5em 13em;
+	}
+	.table-form textarea {
+	  width: 86%;
+	}
+	.table-form form input[type="text"] {
+	  width: 70%;
+	}
+	.single-page-artical {
+	  min-height: 2125px;
+	}
+}	
+@media (max-width:640px){
+	.single-page-artical {
+	  padding: 0 2em 3.5em 2em;
+	}
+
+	.artical-content h3 {
+	  padding: 2em 0 1em;
+	  font-size: 1.2em;
+	}
+	.artical-links ul li a {
+	  padding-left: 10px;
+	}
+	.top-comment-left img {
+	  width: 100%;
+	}
+	.table-form input[type="submit"] {
+	  padding: 0.5em 11em;
+	}
+	.single-page-artical {
+	  min-height: 2100px;
+	}
+	.table-form textarea,.table-form form input[type="text"] {
+		font-size: 14px;
+	}
+}	
+@media (max-width:480px){
+	.single-page-artical {
+	  padding: 0 1.5em 3em 1.5em;
+	}
+	
+	.table-form input[type="submit"] {
+	  padding:0.5em 9.1em;
+	}
+	.table-form textarea {
+	  width: 100%;
+	}
+	.table-form form input[type="text"] {
+	  width: 90%;
+	}
+	.table-form form input[type="text"],.table-form textarea {
+		margin-top: 15px;
+	}
+	.top-comment-right ul li span.right-at {
+	  font-size: 0.8em;
+	}
+	.top-comment-right ul li a {
+	  font-size: 0.7em;
+	}
+	.comments-top-top {
+	  padding: 1em;
+	}
+	.top-comment-left {
+	  width: 17%;
+	}
+	.top-comment-right {
+	  width: 78%;
+	}
+}	
+@media (max-width:384px){
+	.banner-inf {
+	  margin-top: 4.2em;
+	}
+	.banner-inf h3 {
+	  font-size: 1em;
+	}
+	.banner {
+	  min-height: 227px;
+	}
+	.newsletter input[type="submit"] {
+	  margin: 0 0 0.5em 8.2em;
+	}
+}
+@media (max-width:320px){
+
+	.artical-content p,.artical-links ul li span,.top-comment-right p,.about-info-right p,
+	.caption p{
+		font-size: 13px;
+	}
+	.pgs ul li {
+	  padding: 0 0 7px 24px;
+	    margin: 6px 0;
+	}
+	.artical-content h3 {
+	  font-size: 1em;
+	}
+	.artical-links ul li:last-child {
+	  float: none;
+	}
+	.comment-grid-top h3, .artical-commentbox h3 {
+		font-size: 1.2em;
+	}
+	.comments-top-top {
+	  padding:1em .5em;
+	}
+	.top-comment-left {
+	  width: 28%;
+	}
+	.top-comment-right {
+	  width: 66%;
+	}
+	.top-comment-right ul li {
+		padding: 0 0.3em;
+	}
+	.table-form form input[type="text"], .table-form textarea{
+		padding: 10px 10px;
+		width: 100%;
+		font-size: 13px;
+	}
+	.table-form input[type="submit"] {
+	  padding: 0.5em 4em;
+	  font-size: 13px;
+	}
+}	

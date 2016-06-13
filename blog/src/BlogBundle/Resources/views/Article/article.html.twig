@@ -1,0 +1,24 @@
+{% extends 'BlogBundle::base.html.twig' %}
+{% block content %}
+	<h3>Ma page d'article : {{ title }} </h3>
+	<h1>Administration</h1>
+
+<br />
+<h2>Créer article</h2>
+<form method="POST">
+	<div class="form-group">
+		<label for="title">Titre</label>
+		<input name="title" type="title" autofocus class="form-control" id="title" placeholder="Titre">
+	</div>
+	<div class="form-group">
+		<label for="content">Contenu</label>
+		<textarea name="content" class="form-control" id="content" placeholder="Contenu"></textarea>
+	</div>
+	<button type="submit" class="btn btn-default">Envoyer</button>
+</form>
+<hr>
+
+{% endblock %}
+{% block title %}
+	{{ title }} - {{ parent() }}
+{% endblock %}

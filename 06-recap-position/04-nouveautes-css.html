@@ -1,0 +1,131 @@
+<div class="main-wrapper">
+	<h1>Nouveautés CSS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Découvertes de nouvelles propriétés CSS :</p>
+					<ul>
+						<li>Reset</li>
+						<li>box-sizing</li>
+						<li>Les ombres</li>
+						<li>Police d'icônes - Font awesome</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a>
+						</li>
+						<li>
+							<a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font awesome</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Reset CSS</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Comme vous avez pu le voir, certains éléments HTML ont des comportements par défaut.<br />
+				Le <strong>reset CSS</strong> (ou cleaner) est un outil qui remet à 0 la valeur de certains éléments HTML afin d'éviter une partie des différences d'affichage sur les navigateurs (marges, graisses, tailles de texte, hauteur de ligne...).<br />
+				Il s'agit d'un fichier CSS à inclure dans votre projet: <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Téléchargez le ici</a>
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet" type="text/css" href="styles/reset.css" /&gt; &lt;!-- reset CSS --&gt;
+&lt;link rel="stylesheet" type="text/css" href="styles/style.css" /&gt; &lt;!-- Votre style CSS --&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">box-sizing - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Par défaut les block fonctionnent comme ça : <strong>width + padding + border = largeur du block</strong>.<br /><strong>box-sizing</strong> permet de modifier le fonctionnement des modèles de boîtes qui est utilisé pour calculer la largeur et la hauteur des éléments.
+			</p>
+<pre class="prettyprint lang-css linenums">
+p{
+	width: 500px;
+	height: 150px;
+	padding: 20px;
+	border: 5px solid #000;
+
+	box-sizing: border-box; /* width et height = contenu + padding + border */
+}
+</pre>
+			<p>
+				Par habitude, on va toujours utiliser cette propriété pour toutes les balises !<br>
+				Le sélecteur <strong>*</strong> permet de sélectionner toutes les balises.
+			</p>
+<pre class="prettyprint lang-css linenums">
+*{
+	box-sizing: border-box;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les ombres</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Ombres de boites - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow" target="_blank">Documentation</a></h4>
+			Valeurs nécessaires :
+			<ul>
+				<li>longueur longueur : décalages X et Y</li>
+				<li>longueur : rayon de l'ombre</li>
+				<li>Couleur : couleur de l'ombre (nom, hexa, rgb, rgba...)</li>
+				<li>Interne : inset (facultatif)</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+/* ombre interne */
+.boite-ombre{
+	box-shadow: 10px 5px 5px black inset;
+}</pre>
+
+			<h4>Ombres de texte - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-shadow" target="_blank">Documentation</a></h4>
+			<p>Les valeurs sont exactement les mêmes</p>
+<pre class="prettyprint lang-css linenums">
+.texte-ombre{
+	text-shadow: 1px 1px 2px black;
+}</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Polices d'icônes - Font awesome - <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font awesome</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Des polices d'icônes sont disponibles sur le web (font awesome, glyphicon, icomoon, flaticon...)<br>
+				Il suffit d'intégrer le fichier CSS de la police, et d'utiliser les class prévues à cet effet.
+			</p>
+<pre class="prettyprint lang-css linenums">
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"&gt;
+....
+&lt;i class="fa fa-comment"&gt;&lt;/i&gt;
+</pre>
+		</div>
+	</div>
+
+</div>

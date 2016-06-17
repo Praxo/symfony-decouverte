@@ -1,0 +1,236 @@
+<div class="main-wrapper">
+	<h1>Flexbox</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Flexbox</p>
+					<ul>
+						<li>Modèle de boîte flexible</li>
+						<li>Modèle HTML</li>
+						<li>Display flex</li>
+						<li>Distribution</li>
+						<li>Alignement</li>
+						<li>Répartir sur plusieurs lignes</li>
+						<li>Flexibilité</li>
+						<li>Ordre</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html" target="_blank">Alsacreations - CSS3 Flexbox Layout module</a>
+						</li>
+						<li>
+							<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-tricks - A Complete Guide to Flexbox</a>
+						</li>
+						<li>
+							<a href="http://www.sketchingwithcss.com/samplechapter/cheatsheet.html" target="_blank">The Ultimate Flexbox Cheat Sheet</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Modèle de boîte flexible</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Le module CSS3 <strong>Flexbox Layout</strong> fournit une façon plus efficace de disposer, aligner et distribuer l'espace entre les items d'un container, même lorsque leurs dimensions sont inconnues et/ou dynamiques - d'où le terme "flex".
+			</p>
+			<p>
+				Du coup, on ne raisonne plus en block / inline / float, mais en :
+			</p>
+			<ul>
+				<li><strong>Distribution</strong> des éléments horizontale ou verticale, avec passage à la ligne autorisé ou non</li>
+				<li><strong>Alignements</strong> et centrages horizontaux et verticaux, justifiés, répartis</li>
+				<li><strong>Réorganisation</strong> des éléments indépendamment de l'ordre du flux (DOM)</li>
+				<li><strong>Gestion des espaces disponibles</strong> (fluidité)</li>
+			</ul>
+			<p>En résumé, on a un conteneur, et on organise les éléments enfants dans ce conteneur.</p>
+		</div>
+	</div>
+
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Modèle HTML</h3>
+		</div>
+		<div class="widget-content">
+			<p>On va partir sur un modèle simple :</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="container"&gt;
+	&lt;div class="element"&gt;element 1&lt;/div&gt;
+	&lt;div class="element"&gt;element 2&lt;/div&gt;
+	&lt;div class="element"&gt;element 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Display flex</h3>
+		</div>
+		<div class="widget-content">
+			<p>En assignant un <strong>display: flex</strong> au conteneur, les éléments internes vont se placer côte à côte (par défaut, ils sont les uns en dessous des autres).<br>Les éléments internes sont considérés comme <strong>flex-items</strong>.</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	display: flex;
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Distribution</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Direction - flex-direction</h4>
+			<p><strong>flex-direction</strong> permet de gérer la distribution, le sens d'affichage (horizontal, vertical...).</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	display: flex;
+	flex-direction: row; /* row / row-reverse / column / column-reverse */
+}
+</pre>
+
+			<h4>Gérer les retours lignes - flex-wrap</h4>
+			<p>Par défaut, en HTML/CSS, lorsqu'un élément n'a plus la place de se positionner à coté, il va à la ligne.<br>Avec <strong>flex-wrap</strong> il est possible de définir si les éléments doivent retourner à la ligne, ou si on les force à rester sur la même ligne (leurs dimensions s'adapteront).</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	display: flex;
+	flex-wrap: nowrap; /* nowrap / wrap / wrap-reverse */
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Alignements</h3>
+		</div>
+		<div class="widget-content">
+			<p>Les éléments sont organisés soit horizontalement (row), soit verticalement (column). Cela définit l'<strong>axe principal</strong>. Il y a aussi un <strong>axe secondaire</strong>, qui correspond à l'opposé.</p>
+
+			<h4>Aligner l'axe principal - justify-content</h4>
+			<p><strong>justify-content</strong> permet de gérer l'alignement, comment les éléments vont se présenter sur l'<strong>axe principal</strong></p>
+			<ul>
+				<li><strong>flex-start</strong> : alignés au début</li>
+				<li><strong>flex-end</strong> : alignés à la fin</li>
+				<li><strong>center</strong> : alignés au centre</li>
+				<li><strong>space-between</strong> : dispatchés sur tout l'axe (espaces entre chacun, pas d'espaces aux extrémités)</li>
+				<li><strong>space-around</strong> : dispatchés sur tout l'axe (espaces entre chacun, espaces aux extrémités)</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.container{
+	display: flex;
+	justify-content: flex-start; /* flex-start / flex-end / center / space-between / space-around */
+}
+</pre>
+
+			<h4>Aligner l'axe secondaire - align-items</h4>
+			<p><strong>align-items</strong> permet de gérer l'alignement, comment les éléments vont se présenter sur l'<strong>axe secondaire</strong></p>
+			<ul>
+				<li><strong>stretch</strong> : alignés sur tout l'axe</li>
+				<li><strong>baseline</strong> : alignés sur la ligne de base</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.container{
+	align-items: stretch; /* stretch / flex-start / flex-end / center / baseline */
+}
+</pre>
+
+			<h4>Aligner un élément particulier - align-self</h4>
+			<p><strong>align-self</strong> permet d'aligner un "flex-item" en particulier (pour le distinguer des autres)</p>
+<pre class="prettyprint lang-css linenums">
+.element:nth-child(2){ /* 2e bloc */
+	align-self: flex-end; /* stretch / flex-start / flex-end / center / baseline */
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Répartir sur plusieurs lignes</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>align-content</strong> répartit les différentes lignes flexbox sur la hauteur.</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end; /* stretch / flex-start / flex-end / center / space-between / space-around */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Flexibilité - flex</h3>
+		</div>
+		<div class="widget-content">
+			<p>Les <strong>flex-items</strong> prennent la taille de leur contenu (un peu comme de l'inline).</p>
+			<p><strong>flex</strong> permet de rendre un élément flexible, en lui assignant une valeur > 0.<br>Cet élément occupera donc l'espace restant au sein de son conteneur.</p>
+<pre class="prettyprint lang-css linenums">
+.element:nth-child(2){
+	flex: 1;
+}
+.element:nth-child(3){
+	flex: 2; /* peut "grossir" 2 fois plus" que le second élément */
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ordre - order</h3>
+		</div>
+		<div class="widget-content">
+			<p>Il est possible de modifier l'ordre des éléments avec <strong>order</strong></p>
+<pre class="prettyprint lang-css linenums">
+.element:nth-child(1){
+	order: 3;
+}
+
+.element:nth-child(2){
+	order: 1;
+}
+
+.element:nth-child(3){
+	order: 2;
+}
+</pre>
+		</div>
+	</div>
+
+
+
+</div>
+

@@ -1,0 +1,205 @@
+<div class="main-wrapper">
+	<h1>Les formulaires</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer des formulaires HTML :</p>
+					<ul>
+						<li>Déclarer un formulaire</li>
+						<li>Champs de saisie</li>
+						<li>&Eacute;léments d'options / choix</li>
+						<li>Ajouter un fichier (pièce jointe)</li>
+						<li>Les boutons</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://fr.openclassrooms.com/informatique/cours/apprenez-a-creer-votre-site-web-avec-html5-et-css3/les-formulaires-8" target="_blank">Documentation (openclassroom)</a><br />
+						</li>
+						<li>
+							<a href="http://www.w3schools.com/tags/att_input_type.asp" target="_blank">Liste non exhaustive des éléments (EN)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Déclarer un formulaire</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				La balise <strong>form</strong> englobe les éléments d'un formulaire HTML (obligatoire).<br>
+				L'intérêt d'un formulaire est d'envoyer des informations (pour recevoir un mail, enregistré en base de données...). Le traitement du formulaire se fait en php.
+			</p>
+			<ul>
+				<li><strong>method (get | post)</strong> : méthode d'envoi des informations</li>
+				<li><strong>action</strong> : lien de la page / du fichier qui va traiter les informations (envoie l'email, enregistre en BDD...)</li>
+				<li><strong>enctype="multipart/form-data"</strong> : attribut obligatoire lors de l'upload d'un fichier</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;form method="post" action="traitement.php" enctype="multipart/form-data"&gt;
+	&lt;!-- Contenu du formulaire --&gt;
+&lt;/form&gt;
+</pre>
+			<blockquote><strong>NB :</strong> Je ne vais pas indiquer la balise form par la suite</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Champs de saisie</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				L'attribut <strong>name</strong> permet de nommer le champ, et de récupérer sa valeur dans le traitement (principe de variable).
+			</p>
+			<h4>Zone de texte uni-ligne</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;input type="text" name="pseudo" /&gt; &lt;!-- pseudo aura comme valeur, ce que l'utilisateur aura renseigné --&gt; 
+</pre>
+			<h4>Mot de passe : input password</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;input type="password" name="mdp" /&gt;
+</pre>
+			<h4>Zone multiligne : textarea</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;textarea name="description"&gt;&lt;/textarea&gt;
+</pre>
+			<h4>Autres attributs possibles</h4>
+			<ul>
+				<li><strong>maxlength</strong> : nombre de caractères max que l'utilisateur peut saisir</li>
+				<li><strong>value</strong> : pré-rempli le champ par valeur par défaut</li>
+				<li><strong>placeholder</strong> : indication sur le contenu (disparait au focus)</li>
+				<li><strong>required</strong> : champ obligatoire (html5)</li>
+				<li><strong>disabled</strong> : champ désactivé</li>
+			</ul>
+
+			<h4>Libellé de champ</h4>
+			<p>
+				<strong>label</strong> est une balise de libellé. Elle va permettre de lier un texte à un champ (lors du click sur le texte, le contenu aura le <strong>focus</strong>).<br>
+
+				Pour lier un libellé à élément de formulaire, il faut ajouter des attributs de valeur identique :
+			</p>
+			<ul>
+				<li><strong>label</strong> : attribut for</li>
+				<li><strong>input</strong> : attribut id</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;label for="champPseudo"&gt;Pseudo : &lt;/label&gt; &lt;input type="text" name="pseudo" id="champPseudo" /&gt;
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">&Eacute;léments d'options / choix</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Cases à cocher (unique) : input radio</h4>
+			<ul>
+				<li><strong>value</strong> permet d'indiquer la valeur du champ</li>
+				<li><strong>name</strong> est identique pour lier les champs (cocher l'un -> décoche l'autre)</li>
+				<li><strong>checked</strong> coche une case par défaut</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+Je suis :
+&lt;input type="radio" name="choixSexe" value="homme" id="choixHomme" checked /&gt; &lt;label for="choixHomme"&gt;un homme&lt;/label&gt;
+&lt;input type="radio" name="choixSexe" value="femme" id="choixFemme" /&gt; &lt;label for="choixFemme"&gt;Une femme&lt;/label&gt;
+&lt;input type="radio" name="choixSexe" value="idk" id="choixIdk" /&gt; &lt;label for="choixIdk"&gt;Je ne sais pas...&lt;/label&gt;</pre>
+
+			<h4>Cases à cocher (multiple) : input checkbox</h4>
+			<p>
+				Les <strong>checkbox</strong> renvoient plusieurs résultats (choix multiple).<br>
+				Le name sera donc sous la forme d'un tableau de résultat, d'où la syntaxe <strong>nom[]</strong>
+			</p>
+<pre class="prettyprint lang-html linenums">
+Cochez les langages que vous apprenez :
+&lt;input type="checkbox" name="langages[]" value="html" id="choixHtml" checked /&gt; &lt;label for="choixHtml"&gt;HTML&lt;/label&gt;
+&lt;input type="checkbox" name="langages[]" value="css" id="choixCss" checked /&gt; &lt;label for="choixCss"&gt;CSS&lt;/label&gt;
+&lt;input type="checkbox" name="langages[]" value="js" id="choixJs" checked /&gt; &lt;label for="choixJs"&gt;JS&lt;/label&gt;
+&lt;input type="checkbox" name="langages[]" value="php" id="choixPhp" /&gt; &lt;label for="choixPhp"&gt;PHP&lt;/label&gt;</pre>
+			<h4>Listes déroulantes : select</h4>
+			<ul>
+				<li><strong>select</strong> : englobe une liste déroulante</li>
+				<li><strong>option</strong> : élément de liste déroulante, choix</li>
+				<li><strong>value</strong> : valeur récupérée dans le traitement</li>
+				<li><strong>selected</strong>: élément sélectionné par défaut</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;label for="choixSexe"&gt;Vous êtes : &lt;/label&gt;
+&lt;select name="selectSex" id="choixSexe"&gt;
+	&lt;option value="0" selected&gt;Sélectionnez votre sexe&lt;/option&gt;
+	&lt;option value="homme"&gt;Un homme&lt;/option&gt;
+	&lt;option value="femme"&gt;Une femme&lt;/option&gt;
+	&lt;option value="idk"&gt;Je ne sais pas&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ajouter un fichier (pièce jointe)</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;input type="file" name="avatar" /&gt;
+</pre>
+			<blockquote><strong>NB :</strong> en cas de champ file, pensez à rajouter l'attribut <strong>enctype</strong> dans la balise form</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les boutons</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Envoi du formulaire : input submit</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;input type="submit" value="Valider le formulaire" /&gt;
+</pre>
+			<h4>Vider le formulaire : input reset</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;input type="reset" value="Vider" /&gt;
+</pre>
+
+			<h4>Bouton générique : input button</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;input type="button" value="Cliquez sur moi!" /&gt;
+</pre>
+			<h4>Depuis HTML5 : button</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;button type="submit"&gt;Valider le formulaire&lt;/button&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li>Réaliser un formulaire de contact : <a href="../exercices/13-TP-formulaires/01-form-simple.html" target="_blank">Modèle</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

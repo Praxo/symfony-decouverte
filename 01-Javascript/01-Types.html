@@ -1,0 +1,80 @@
+<div class="main-wrapper">
+	<h1>Les Types en JS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Introduction</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Généralités, Internet et le web</p>
+			<ul>
+				<li>Les langages de programmation disposent de structures de données natives.</li>
+				<li>Selon les langages, les structures mises à disposition peuvent être différentes.</li>
+				<li>Dans cet article, on listera les structures de données natives en JavaScript.</li>
+				<li>On détaillera leurs propriétés et les façons de les utiliser voire de les combiner.</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les types de données</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le dernier standard ECMAScript définit 7 types de données :</p>
+			<ul>
+				<li>Six types de données primitifs:
+					<ul>
+						<li>
+							<strong>boolean</strong> : Un booléen représente le résultat d'une assertion logique et peut avoir deux valeurs : true (pour le vrai logique) et false (pour le faux logique).
+							<pre class="lang-javascript linenums">var vrai = true;
+var faux = false;</pre></li>
+						<li>
+							<strong>null</strong> : Le type nul ne possède qu'une valeur : null. Voir <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/null">null</a> pour plus d'informations.
+							<pre class="lang-javascript linenums">var mavariable = null;</pre>
+						</li>
+						<li>
+							<strong>undefined</strong> : Une variable à laquelle on n'a pas affecté de valeur vaudra undefined. Voir <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined">undefined</a> pour plus d'informations.
+							<pre class="lang-javascript linenums">var mavariable;
+if (mavariable === undefined)
+	alert('undefined !');</pre>
+						</li>
+						<li>
+							<strong>number</strong> : Selon le standard ECMAScript, un seul type est géré pour représenter les nombres : les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754 (les nombres compris entre -(253 -1) et 253 -1). Il n'y a donc pas de type à part pour représenter les nombres entiers. En plus de sa capacité à représenter les nombres décimaux, le type nombre possède trois valeurs symboliques : +Infinity, -Infinity, et NaN (Not A Number en anglais, qui signifie « n'est pas un nombre »).
+							<pre class="lang-javascript linenums">var entier = 3;
+var floatant = 42.7;
+var etrange = 3E42;</pre>
+						</li>
+						<li>
+							<strong>string</strong> : Ce type JavaScript est utilisé afin de représenter des données textuelles. C'est un ensemble d'« éléments » de valeurs entières non-signées représentées sur 16 bits. Chaque élément occupe une position au sein de cette chaîne de caractères. Le premier élément est situé à l'indice 0, le deuxième à l'indice 1 et ainsi de suite. La longueur d'une chaîne de caractères correspond au nombre d'éléments qu'elle contient.
+							<pre class="lang-javascript linenums">var prenom = "toto";</pre>							
+						</li>
+						<li>
+							<strong>symbol</strong> : <strong title="Pas encore répandu">***</strong> <del>Les symboles sont une nouveautés du langage, apportée par ECMAScript 6. Un symbole est une valeur primitive unique et immuable pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes.</del>
+							<pre class="lang-javascript linenums">var monsymbole = Symbol("toto");</pre>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Et le type <strong>Object</strong> : En JavaScript, les objets peuvent être considérés comme des collections de propriétés. En utilisant un littéral objet, il est possible d'initialiser un ensemble limité de propriétés ; d'autres propriétés peuvent ensuite être ajoutées et/ou retirées. Les valeurs des propriétés peuvent être de n'importe quel type, y compris des objets. Cela permet de construire des structures de données complexes. Les propriétés sont identifiées grâce à une « clé ». Une clé peut être une chaîne de caractères ou un symbole.
+					<pre class="lang-javascript linenums">
+function Car(brand)
+{
+	this.color = 'red';
+}
+Car.prototype =
+{
+	start : function()
+	{
+		//
+	}
+}
+var voiture = new Car();
+voiture.start();</pre>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

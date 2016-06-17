@@ -1,0 +1,141 @@
+<div class="main-wrapper">
+	<h1>Modèles de boites v2</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Aller plus loin avec les modèles de boites :</p>
+					<ul>
+						<li>Block</li>
+						<li>Inline</li>
+						<li>Inline-block</li>
+						<li>None</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Block</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Les boites de type <strong>block</strong> créé automatiquement un retour ligne avant et après.<br />
+On peut modifier les dimensions (largeur, hauteur), les marges (externes, internes). Par défaut, un <strong>block</strong> prendra toute la largeur possible.
+			</p>
+<pre class="prettyprint lang-css linenums">
+p{
+	display: block; /* p est une balise block */
+}
+</pre>
+			<blockquote>
+				Hn, p, div... sont des modèles de type block
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inline</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Un modèle de boite <strong>inline</strong> suit le flux du contenu.<br />
+				La taille est automatique en fonction du contenu. Il est possible de lui assigner des marges (externes, internes) mais <strong>uniquement horizontales</strong>.
+			</p>
+<pre class="prettyprint lang-css linenums">
+a{
+	display: inline; /* a est une balise inline */
+}
+</pre>
+			<blockquote>
+				a, span, strong, em... sont des modèles de type inline
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inline-Block</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Là, c'est limite de la magie !<br>
+				L'inline-block se comporte comme les balises inline (reste dans le flux du contenu), mais on peut lui assigner les propriétés d'un block (<strong>width, height, padding, margin</strong>).
+			</p>
+<pre class="prettyprint lang-css linenums">
+li{
+	display: inline-block;
+}
+</pre>
+			<p>
+				Et ce n'est pas tout...<br>
+				Les éléments en inline-block peuvent aligner verticalement <strong>les uns par rapport aux autres</strong> !
+			</p>
+<pre class="prettyprint lang-css linenums">
+li{
+	display: inline-block;
+	vertcal-align: middle; /* top, middle, bottom, baseline */
+}
+</pre>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<ul class="cleanList dib">
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">A<br>Propos</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">None</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				La propriété <strong>display: none;</strong> permet de cacher un élement.
+			</p>
+<pre class="prettyprint lang-css linenums">
+.hidden-tab{
+	display: none;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Réaliser le schéma suivant en utilisant le modèle <strong>inline-block</strong> :<br>
+				<a href="../exercices/05-TP-inlineblock.zip">Télécharger les fichiers</a>
+			</p>
+			<img src="../assets/images/modele.jpg" alt="">
+		</div>
+	</div>
+	<div class="widget widget-correction">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Corrigé de l'exercice</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/05-TP-inlineblock-corrige.zip">Télécharger les fichiers</a>
+		</div>
+	</div>
+</div>

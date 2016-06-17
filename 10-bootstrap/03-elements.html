@@ -1,0 +1,134 @@
+<div class="main-wrapper">
+	<h1>&Eacute;léments de base</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Découvrir quelques éléments de base</p>
+					<ul>
+						<li>Clearfix</li>
+						<li>Typo iconographique</li>
+						<li>Formulaires</li>
+						<li>Boutons</li>
+						<li>Barre de navigation</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://fr.openclassrooms.com/informatique/cours/prenez-en-main-bootstrap/elements-de-base" target="_blank">Les éléments de base</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Clearfix - <a href="http://getbootstrap.com/css/#helper-classes-clearfix" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>Bootstrap</strong> intègre par défaut la class <strong>.clearfix</strong> permettant d'englober les float (fonctionnement :after).</p>
+			<blockquote><strong>NB :</strong> <strong>.row</strong> intègre également la class <strong>.clearfix</strong> pour gérer les retours dans le flux</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Typo iconographique - <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>Glyphicons</strong> est une font iconographique (partiellement gratuite) intégrée à Bootstrap, fonctionnant exactement comme <strong>font awesome</strong>, chaque icone a une classe qui lui est destinée.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;i class="glyphicon glyphicon-pencil"&gt;&lt;/i&gt; &lt;!-- icone avec un crayon --&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Formulaires - <a href="http://getbootstrap.com/css/#forms" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>.form-group</strong> : améliore l'espacement entre les lignes</li>
+				<li><strong>.form-control</strong> : donne un style plus esthétique aux champs de formulaires</li>
+				<li></li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;form action="" method="post"&gt;
+	&lt;legend&gt;Formulaire de contact&lt;/legend&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="test"&gt;Nom / Prénom&lt;/label&gt;
+		&lt;input class="form-control" type="text" name="nom" id="test"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="test2"&gt;E-mail&lt;/label&gt;
+		&lt;input class="form-control" type="email" name="nom" id="test2"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="test3"&gt;Message&lt;/label&gt;
+		&lt;textarea class="form-control" name="nom" id="test3"&gt;&lt;/textarea&gt;
+	&lt;/div&gt;
+	&lt;button&gt;Valider&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+			<a href="../exemples/bootstrap-element-form.html" target="_blank">Exemple</a>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Boutons - <a href="http://getbootstrap.com/css/#buttons" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>Bootstrap</strong> fournit différents styles de boutons</p>
+<pre class="prettyprint lang-html linenums">
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt; &lt;!-- Standard : blanc --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt; &lt;!-- Bleu --&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt; &lt;!-- Vert --&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt; &lt;!-- Bleu ciel --&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt; &lt;!-- Orange --&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt; &lt;!-- Rouge --&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt; &lt;!-- Lien basique --&gt;
+</pre>
+			<a href="../exemples/bootstrap-element-button.html" target="_blank">Exemple</a>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Barre de navigation : navbar - <a href="http://getbootstrap.com/components/#navbar" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>navbar</strong> : définit une barre de navigation</li>
+				<li><strong>navbar-default</strong> : définit le style (fond noir : navbar-inverse)</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;nav class="navbar navbar-default"&gt;
+	&lt;ul class="nav navbar-nav"&gt;
+		&lt;li class="active"&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Présentation&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+			<blockquote>Par défaut, la position est relative (dans le flux), mais on peut fixer la navbar avec <strong>navbar-fixed-top</strong></blockquote>
+			<a href="../exemples/bootstrap-element-navbar.html" target="_blank">Exemple</a>
+		</div>
+	</div>
+</div>

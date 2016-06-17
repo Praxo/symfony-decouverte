@@ -1,0 +1,161 @@
+<div class="main-wrapper">
+	<h1>Transitions CSS3</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer des transitions CSS3</p>
+					<ul>
+						<li>Propriété(s) animée(s) : transition-property</li>
+						<li>Durée de la transition : transition-duration</li>
+						<li>Interpolation : transition-timing-function</li>
+						<li>Délai d'enclenchement : transition-delay</li>
+						<li>Raccourci</li>
+						<li>Exercices</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/873-transitions-css3-animations.html" target="_blank">Transitions / animations CSS3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Transitions CSS3</h3>
+		</div>
+		<div class="widget-content">
+			<p>Une <strong>transition CSS3</strong> permet une transition douce entre une valeur et une autre valeur lors d'un évènement / changement d'état (ex : hover, focus, ajout d'une class en JS...).<br>
+			Plusieurs données sont nécessaires : la propriété CSS, la durée, l'interprétation et le délai</p>
+			<blockquote>Attention : c'est du CSS3, donc pensez aux préfix (-webkit -moz ...)</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Propriété(s) animée(s) : <strong>transition-property</strong> - <a href="http://www.alsacreations.com/tuto/lire/874-transitions-css3-proprietes.html" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>transition-property</strong> définit la propriété CSS qui sera animée (liste séparée par des ",").</p>
+			<ul>
+				<li><strong>all</strong> : toutes les propriétés qui ont une nouvelle valeur</li>
+				<li><strong>propriété(s)</strong> : liste des propriétés (width, height, color...)</li>
+				<li><strong>none</strong> : aucune</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.bouton {
+	transition-property: background, color; /* on animera le background et la couleur du texte */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Durée de la transition : <strong>transition-duration</strong> - <a href="http://www.alsacreations.com/tuto/lire/875-transitions-css3-transition-duration.html" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>transition-duration</strong> définit la durée de l'animation (décimale possible).</p>
+			<ul>
+				<li><strong>s</strong> : seconde</li>
+				<li><strong>ms</strong> : milliseconde</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.bouton {
+	transition-duration: 1.5s; /* durée de 1.5 secondes */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Interpolation : <strong>transition-timing-function</strong> - <a href="http://www.alsacreations.com/tuto/lire/876-transitions-css3-transition-timing-function.html" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>transition-timing-function</strong> définit comment le navigateur interprète l'animation : accélération, décélération, linéaire...</p>
+			<ul>
+				<li><strong>linear</strong> : La vitesse est constante sur toute la durée de l'animation.</li>
+				<li><strong>ease</strong> : Rapide sur le début et ralenti sur la fin.</li>
+				<li><strong>ease-in</strong> : Lent sur le début et accélère de plus en plus vers la fin.</li>
+				<li><strong>ease-out</strong> : Rapide sur le début et décèlere sur la fin.</li>
+				<li><strong>ease-in-out</strong> : Le départ et la fin sont lents.</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.bouton {
+	transition-timing-function: ease-in-out;
+}
+</pre>
+			<a href="http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_transition-timing-function2" target="_blank">Exemple des interpolations</a>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Délai d'enclenchement : <strong>transition-delay</strong> - <a href="http://www.alsacreations.com/tuto/lire/877-transitions-css3-transition-delay.html" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>transition-delay</strong> permet d'ajouter un délai avant la transition</p>
+			<ul>
+				<li><strong>linear</strong> : La vitesse est constante sur toute la durée de l'animation.</li>
+				<li><strong>ease</strong> : Rapide sur le début et ralenti sur la fin.</li>
+				<li><strong>ease-in</strong> : Lent sur le début et accélère de plus en plus vers la fin.</li>
+				<li><strong>ease-out</strong> : Rapide sur le début et décèlere sur la fin.</li>
+				<li><strong>ease-in-out</strong> : Le départ et la fin sont lents.</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.bouton {
+	transition-delay: 1s; /* retarde l'animation de 1s */
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Raccourci</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+.bouton {
+	background: red;
+	color: #fff;
+	transition: all 1.2s ease-out 1s;
+}
+
+.bouton:hover{
+	background: blue;
+	color: pink;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/17-TP-transition/02-transitions.html" target="_blank">Réaliser les exemples suivants</a>
+		</div>
+	</div>
+</div>

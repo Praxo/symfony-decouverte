@@ -1,0 +1,78 @@
+<div class="main-wrapper">
+	<h1>AJAX</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Maitriser l'AJAX</p>
+			<ul>
+				<li>Le code JS vanilla</li>
+				<li>Avec jQuery</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Définition</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>L'architecture informatique Ajax (acronyme d'Asynchronous JavaScript and XML) permet de construire des applications Web et des sites web dynamiques interactifs sur le poste client en se servant de différentes technologies ajoutées aux navigateurs web entre 1995 et 2005.</strong>
+			</p>
+			<p>
+				Ajax combine JavaScript, les CSS, JSON, XML, le DOM et le XMLHttpRequest afin d'améliorer maniabilité et confort d'utilisation des applications internet riches (abr. RIA) :
+			</p>
+			<ul>
+				<li>DOM et JavaScript permettent de modifier l'information présentée dans le navigateur en respectant sa structure ;</li>
+				<li>l'objet XMLHttpRequest sert au dialogue asynchrone avec le serveur Web ;</li>
+				<li>XML structure les informations transmises entre serveur Web et navigateur.</li>
+			</ul>
+			<p>
+				<strong>Outre le XML, les échanges de données entre client et serveur peuvent utiliser d'autres formats, tels que JSON.</strong>
+				<br/>
+				Les applications Ajax fonctionnent sur tous les navigateurs Web courants : Google Chrome, Safari, Mozilla Firefox, Internet Explorer, Konqueror, Opera, etc.
+			</p>
+			<img src="http://www.finalclap.com/ressources/images/schema-jquery-serveur.jpg">
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Javascript Vanilla</h3>
+		</div>
+		<div class="widget-content">
+			<pre class="lang-javascript linenums">
+var req = new XMLHttpRequest();
+req.open('GET', 'http://www.mozilla.org/', true);
+req.onreadystatechange = function (aEvt) {
+  if (req.readyState == 4) {
+     if(req.status == 200)
+      alert(req.responseText);
+     else
+      alert("Erreur pendant le chargement de la page.\n");
+  }
+};
+req.send(null);</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">jQuery</h3>
+		</div>
+		<div class="widget-content">
+			<pre class="lang-javascript linenums">
+$.get('http://www.mozilla.org/', function(data)
+{
+	alert(data);
+});</pre>
+		</div>
+	</div>
+</div>

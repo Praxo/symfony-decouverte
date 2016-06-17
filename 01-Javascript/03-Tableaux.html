@@ -1,0 +1,72 @@
+<div class="main-wrapper">
+	<h1>Les Tableaux en JS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Prise en main des tableaux en JS</p>
+			<ul>
+				<li>Tableaux simples à une dimension (liste)</li>
+				<li>Tableaux à 2 dimensions</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-content">
+			<strong>Array</strong> : Les tableaux JavaScript sont des objets semblables à une liste et possèdent plusieurs méthodes incorporées pour exécuter des opérations de parcours et de modification. Ni la taille d'un tableau ni les types de ses éléments n'est fixé. Puisque la dimension d'un tableau peut augmenter ou diminuer à tout moment, les tableaux ne sont pas garantis d'être compacts. En général, cela permet de couvrir plusieurs cas pratiques. En revanche si cette compacité est nécessaire pour votre cas d'utilisation, vous pourriez envisager d'utiliser les tableaux typés.
+		</div>
+		<div class="widget-content">
+			<strong>Attention</strong> : Notez que vous ne devriez pas considérer un tableau comme un tableau associatif. Vous pouvez utiliser des objets classiques à la place pour obtenir ce comportements (cette approche n'est pas sans inconvénient non plus, mais c'est la plus pertinente).
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple Tableau à 1 dimension</h3>
+		</div>
+		<div class="widget-content">
+			<pre class="lang-javascript linenums">
+var arr = ["le premier élément", "le second élément"];
+console.log(arr[0]);             // affiche "le premier élément"
+console.log(arr[1]);             // affiche "le second élément"
+console.log(arr[arr.length - 1]);// affiche "le second élément"</pre>
+		</div>
+		<div class="widget-content">
+			On peut parcourir un tableau en javascript directement via la méthode <strong>forEach</strong> de l'objet Array :
+			<pre class="lang-javascript linenums">
+var list = ["toto", "tata", "titi", "tutu", "tete"];
+list.forEach(function(value)
+{
+	console.log(value);
+});</pre>
+		</div>
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple Tableau à 2 dimensions</h3>
+		</div>
+		<div class="widget-content">
+			<pre class="lang-javascript linenums">
+var plateau = [ 
+  ['T','C','F','R','K','F','C','T'],
+  ['P','P','P','P','P','P','P','P'],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  ['p','p','p','p','p','p','p','p'],
+  ['t','c','f','k','r','f','c','t'] ];
+
+console.log(plateau.join('\n') + '\n\n');
+
+// On déplace le pion de deux cases en avant 2
+plateau[4][4] = plateau[6][4];
+plateau[6][4] = ' ';
+console.log(plateau.join('\n'));</pre>
+		</div>
+	</div>
+</div>

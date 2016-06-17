@@ -1,0 +1,166 @@
+<div class="main-wrapper">
+	<h1>Format SVG</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Format SVG</p>
+					<ul>
+						<li>Le format SVG</li>
+						<li>Les différentes formes</li>
+						<li>Attribut d</li>
+						<li>Mise en forme</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1421-svg-initiation-syntaxe-outils.html" target="_blank">SVG, le dessin vectoriel pour le Web</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Le format SVG</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le <strong>SVG</strong> (Scalable Vector Graphics) est un format d'images vectorielles basé sur le langage de balisage <strong>XML</strong>.<br>Il répond parfaitement à des besoins graphiques légers, qu'ils soient statiques, dynamiques ou interactifs.</p>
+			<blockquote><strong>NB</strong> : tout élément SVG doit être dans un élément SVG.</blockquote>
+			<h4>Balise SVG</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;svg height="200" width="400"&gt;
+&lt;/svg&gt;
+</pre>
+			<h4>Exemple de fichier SVG</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="480" height="240"&gt;
+    &lt;rect width="100" height="80" x="0" y="70" fill="green" /&gt;
+    &lt;line x1="5" y1="5" x2="250" y2="95" stroke="red" /&gt;
+    &lt;path d="M 100,180 L 140,0 L 180,180 L 220,0 L 260,180 L 300,0 L 330,180" style="fill:none; stroke:black"/&gt;
+    &lt;circle cx="90" cy="80" r="50" fill="blue" /&gt;
+&lt;/svg&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les différentes formes</h3>
+		</div>
+		<div class="widget-content">
+			<table>
+				<thead>
+					<tr>
+						<td>Balise</td>
+						<td>Description</td>
+						<td>Exemple</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>rect</strong></td>
+						<td>Le rectangle, avec les attributs x, y, width et height</td>
+						<td>
+<pre class="prettyprint lang-html linenums">
+&lt;rect x="25px" y="25px" width="150" height="100" /&gt;
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td><strong>circle</strong></td>
+						<td>Le cercle, avec les attributs cx, cy et r (radius)</td>
+						<td>
+<pre class="prettyprint lang-html linenums">
+&lt;circle cx="110" cy="200" r="30" /&gt;
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td><strong>line</strong></td>
+						<td>La ligne, avec les attributs x1, y1, x2 et y2</td>
+						<td>
+<pre class="prettyprint lang-html linenums">
+&lt;line x1="300" y1="50" x2="400" y2="150" /&gt;
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td><strong>path</strong></td>
+						<td>Le chemin, avec l'attribut d</td>
+						<td>
+<pre class="prettyprint lang-html linenums">
+&lt;path d="M 100,180 L 140,0 L 180,180 L 220,0 L 260,180 Z" /&gt;
+</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">L'attribut d - path</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>M (moveto)</strong> : coordonnées du premier point du tracé</li>
+				<li><strong>L (Lineto)</strong> : trace une ligne entre les coordonnées mentionnés</li>
+				<li><strong>Z (ClosePath)</strong> : ferme le tracé</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Mise en forme</h3>
+		</div>
+		<div class="widget-content">
+			<p>À toutes ces formes s'appliquent des couleurs de remplissage ou de contours. Les attributs suivants en définissent l'apparence :</p>
+			<ul>
+				<li><strong>stroke</strong> : couleur du contour</li>
+				<li><strong>fill</strong> : couleur de remplissage</li>
+				<li><strong>stroke-opacity</strong> : opacité du contour (de 0 à 1)</li>
+				<li><strong>fill-opacity</strong> : opacité du remplissage (de 9 à 1)</li>
+				<li><strong>stroke-width</strong> : la taille du contour (sans unité)</li>
+				<li><strong>stroke-dasharray</strong> : pour mettre le contour en pointillé, par exemple "1,1"</li>
+			</ul>
+
+<pre class="prettyprint lang-html linenums">
+&lt;rect width="100" height="80" x="0" y="70" style="fill:green; stroke: #F00; stroke-dasharray: 1,1;" /&gt;
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple</h3>
+		</div>
+		<div class="widget-content">
+			<p><a href="../exemples/svg.html" target="_blank">C'est par ici</a></p>
+		</div>
+	</div>
+
+
+
+
+</div>
+

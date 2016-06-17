@@ -1,0 +1,82 @@
+<div class="main-wrapper">
+	<h1>CSS - Couleurs</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Les couleurs en CSS :</p>
+					<ul>
+						<li>Propriété color</li>
+						<li>Syntaxes des couleurs : nom, RGB, hexadécimal</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://developer.mozilla.org/fr/docs/CSS/Premiers_pas/Couleurs" target="_blank">Documentation</a><br />
+						</li>
+						<li>
+							<a href="http://web-color.aliasdmc.fr/" target="_blank">Exemples</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Propriété - color</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+a{
+	color: red;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Syntaxes des couleurs</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Nominative</h4>
+<pre class="prettyprint lang-css linenums">
+a{
+	color: red; /* Valeurs possibles : red, blue, white, black, yellow,... */
+}
+</pre>
+			<h4>Syntaxe RGB</h4>
+			<p>
+				Permet de définir les composants de <strong>R</strong>ed (rouge), <strong>G</strong>reen (vert) et <strong>B</strong>lue (bleu), avec des valeurs allant de 0 (0%) à 255 (100%).<br />RGB = RVB = Rouge Vert Bleu.<br />
+			</p>
+<pre class="prettyprint lang-css linenums">
+span{
+	color: rgb(0, 255, 0); /* vert, peut être noté : rgb(0%, 100%, 0%) */
+	color: rgb(0, 0, 0); /* noir (aucune couleur) */
+	color: rgb(255, 255, 255); /* blanc (toutes les couleurs), peut être noté : rgb(100%, 100%, 100%) */
+}
+</pre>
+		<h4>Hexadécimale</h4>
+		Syntaxe : <strong>#RRGGBB</strong>. Les composantes rouges, vertes et bleues sont fixées sur un interval de 0-9 et A-F (A=10, F=15).
+<pre class="prettyprint lang-css linenums">
+span{
+	color: #000; /* Correspond à #000000, black, rgb(0, 0, 0) */
+	color: #ff0000; /* Correspond à #f00, red, rgb(255, 0, 0) */
+	color: #ffffff; /* Correspond à #fff, white, rgb(255, 255, 255) */
+}
+</pre>
+		</div>
+	</div>
+
+</div>

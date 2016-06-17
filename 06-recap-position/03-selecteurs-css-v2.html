@@ -1,0 +1,153 @@
+<div class="main-wrapper">
+	<h1>Sélecteurs CSS v2</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Aller plus loin avec les sélecteurs :</p>
+					<ul>
+						<li>Rappel</li>
+						<li>Sélecteur descendant</li>
+						<li>Sélecteur enfant</li>
+						<li>Sélecteur adjacent</li>
+						<li>&Eacute;tats</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Rappel</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Sélecteur balise</h4>
+<pre class="prettyprint lang-css linenums">
+p{...}
+</pre>
+			<h4>Sélecteur de class</h4>
+<pre class="prettyprint lang-css linenums">
+.header{...}
+</pre>
+			<h4>Sélecteur d'ID</h4>
+<pre class="prettyprint lang-css linenums">
+#main{...}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Sélecteur descendant</h3>
+		</div>
+		<div class="widget-content">
+			<p>Sélection des éléments contenus dans un autre élément (relation parent-enfant)</p>
+<pre class="prettyprint lang-html linenums">
+&lt;article class="post"&gt;
+	Texte noir
+	&lt;strong&gt;Texte rouge&lt;/strong&gt;
+&lt;/article&gt;
+</pre>
+
+<pre class="prettyprint lang-css linenums">
+.post{
+	color: black;
+}
+
+.post strong{
+	color: red;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Sélecteur enfant direct</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong> > </strong> : sélectionne les éléments directement enfants d'un élément</p>
+<pre class="prettyprint lang-html linenums">
+&lt;article class="post"&gt;
+	Texte noir
+	&lt;strong&gt;Texte rouge&lt;/strong&gt;
+	&lt;p&gt;
+		Contenu de mon paragraphe &lt;strong&gt;Texte vert&lt;/strong&gt;
+	&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+
+<pre class="prettyprint lang-css linenums">
+.post strong{
+	color: green;
+}
+
+.post > strong{
+	color: red;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Sélecteur adjacent</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong> + </strong> : sélectionne l'élément placé directement après un élément</p>
+<pre class="prettyprint lang-html linenums">
+&lt;article class="post"&gt;
+	Texte noir
+	&lt;p&gt;
+		Contenu de mon paragraphe &lt;strong&gt;Texte vert&lt;/strong&gt;
+	&lt;/p&gt;
+	&lt;strong&gt;Texte rouge&lt;/strong&gt;
+&lt;/article&gt;
+</pre>
+
+<pre class="prettyprint lang-css linenums">
+.post strong{
+	color: green;
+}
+
+.post p + strong{
+	color: red;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">&Eacute;tats - interactions avec l'utilisateur</h3>
+		</div>
+		<div class="widget-content">
+			Il existe différents états (principalement pour les liens) :
+			<ul>
+				<li><strong>:hover</strong> - état survol</li>
+				<li><strong>:active</strong> - état actif (lorsqu'on clique dessus)</li>
+				<li><strong>:focus</strong> - lorsque l'élément a le focus (exemple, champ texte)</li>
+				<li><strong>:visited</strong> - état visité</li>
+			</ul>
+		</div>
+	</div>
+</div>

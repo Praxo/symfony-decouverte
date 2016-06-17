@@ -1,0 +1,184 @@
+	    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+	    <style>
+	    	.wrapper-position-body{
+	    		position: relative;
+	    	}
+	    	.position-body {
+	    		background-color: #ccc; 
+	    		font: 1em/1.5 'Oxygen', sans-serif;
+	    		width: 900px;
+	    		margin: 50px auto;
+	    		padding: 20px 50px;
+	    		border-radius: 20px;
+	    		background-color: #efefef;
+	    	}
+	    	h1, h2, h3, h4 { font-weight: 400; }
+	    	.section {
+	    		padding-bottom: 50px;
+	    		border-top: 1px #fff solid;
+	    		box-shadow: 0 -1px 0 #ccc;
+	    	}
+	    	.titre { 
+	    		padding: 30px 0; 
+	    		text-decoration: underline; 
+	    	}
+	    	.block { background-color: #ffcccc; }
+	    	.inline { background-color: #ccffcc; }
+	    	.caracteristiques {
+	    		border-radius: 20px;
+	    		margin-bottom: 50px;
+	    		padding: 10px 20px;
+	    		background-color: #fff;
+	    	}
+	    	.box {
+	    		color: #fff;
+	    		width: 200px;
+	    		height: 200px;
+	    		margin: 0 20px 20px 0;
+	    		padding: 10px;
+	    	}
+	    	.box-1 {
+	    		background-color: #fc8800;
+	    	}
+	    	.box-2 {
+	    		color: #fff;
+	    		background-color: #26738d;
+	    	}
+	    	.box-3 {
+	    		background-color: #966196;
+	    	}
+	    	.big-box {
+	    		margin-bottom: 20px;	
+	    		padding: 20px;
+	    		color: #fff;
+	    		background: #AEA078;
+	    	}
+	    	.relative {
+	    		position: relative;
+	    		top: 40px;
+	    		left: 40px;
+	    		color: #fff;
+	    		background-color: #fc8800; 
+	    	}
+	    	.absolute {
+	    		position: absolute;
+	    		top: 40px;
+	    		left: 40px;
+	    		color: #fff;
+	    		background-color: #26738d; 
+	    	}
+	    	.absolute-relative {
+	    		position: relative;
+	    	}
+	    	.fixed {
+	    		position: fixed;
+	    		right: -100px;
+	    		top: 40px;
+	    		background-color: #339966;
+	    	}
+	    	.static {
+	    		position: static;
+	    		right: 40px;
+	    		bottom: 40px;
+	    		background-color: #339966;
+	    	}
+	    	.fl { float: left; }
+	    	.fr { float: right; margin: 0 0 0 20px; }
+	    	.clear { clear: both; }
+	    </style>
+<div class="wrapper-position-body">
+	<div class="position-body">
+		<h1>Positionnement CSS</h1>
+
+		<div class="section">
+			<h2 class="titre">Position static</h2>
+				<div class="box static">BOX position: static;</div>
+		</div><!-- section -->
+
+		<div class="section">
+			<h2 class="titre">Position relative</h2>
+				<p>Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint <b>summos, inter arta tamen et invia nullas</b> acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+
+				<p>Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint <span class="relative">summos, inter arta tamen et invia nullas</span> acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+				<div class="box box-1">BOX</div>
+				<div class="box box-1 relative">BOX <br>position: relative;</div>
+		</div><!-- section -->
+
+		<div class="section">
+			<h2 class="titre">Position absolute</h2>
+
+			<p>Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint <span class="absolute">summos, inter arta tamen et invia nullas</span> acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+				<div class="box box-2">BOX</div>
+				<div class="box box-2 absolute">BOX <br>position: absolute;</div>
+		</div><!-- section -->
+
+
+		<div class="section">
+			<h2 class="titre">'Position absolute' placé dans un 'Position relative'</h2>
+				<p class="absolute-relative">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint <span class="absolute">summos, inter arta tamen et invia nullas</span> acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+				<div class="box box-1 absolute-relative">BOX position: relative;
+					<div class="box box-2 absolute">BOX <br>position: absolute;</div>
+				</div>
+		</div><!-- section -->
+
+
+		<div class="section">
+			<h2 class="titre">Position fixed</h2>
+				<div class="box fixed">BOX<br>position: fixed;
+				</div>
+		</div><!-- section -->
+
+		<div class="section">
+			<h2 class="titre">Float</h2>
+
+			<img src="http://www.twinspix.com/local/cache-vignettes/L1024xH680/arton263-ed83e.jpg" style="float:left; height: 200px; margin: 0 20px 0 0;">
+			<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati <br> Periculose per prona discedunt Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruin o gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.<br><br><br><br></p>
+
+			<h3>Exemples :</h3>
+
+			<div class="big-box">
+				<div class="box box-3">BOX 1</div>
+				<div class="box box-3">BOX 2</div>
+			</div>
+			<h3>Problème</h3>
+			<div class="big-box">
+				<div class="box box-3 fl">BOX 1 <br> float: left;</div>
+				<div class="box box-3 fl">BOX 1 <br> float: left;</div>
+			</div>
+			<div style="clear:both;">&nbsp;</div>
+			<h3>Solution</h3>
+			<div class="big-box" style="overflow: hidden;">
+				{ overflow: hidden; }
+				<div class="box box-3 fl">BOX 1 <br> float: left;</div>
+				<div class="box box-3 fl">BOX 1 <br> float: left;</div>
+			</div>
+		</div><!-- section -->
+
+		<div class="section">
+			<h2 class="titre">Clear</h2>
+			<h3>2 float left</h3>
+			<div class="big-box" style="overflow: hidden; background-color: #9BBAAC;">
+				<div class="box box-3 fl" style="background-color: #D95D50;">BOX 1 <br> float: left;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati.</p>
+				<div class="box box-3 fl" style="background-color: #D95D50;">BOX 1 <br> float: left;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati <br> Periculose per prona discedunt Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruin o gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+			</div>
+
+			<h3>2 float left + 1 clear left</h3>
+			<div class="big-box" style="overflow: hidden; background-color: #9BBAAC;">
+				<div class="box box-3 fl" style="background-color: #D95D50;">BOX 1 <br> float: left;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati.</p>
+				<div class="box box-3 fl" style="clear: left; background-color: #D95D50;">BOX 1 <br> float: left;<br>clear: left;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati <br> Periculose per prona discedunt Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruin o gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+			</div>
+			<h3>float left & float right</h3>
+			<div class="big-box" style="overflow: hidden; background-color: #9BBAAC;">
+				<div class="box box-3 fl" style="background-color: #D95D50;">BOX 1 <br> float: left;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati.</p>
+				<div class="box box-3 fr" style="background-color: #D95D50;">BOX 1 <br> float: right;</div>
+				<p style="text-align: justify;">Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati <br> Periculose per prona discedunt Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruin o gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.</p>
+			</div>
+
+		</div><!-- section -->
+	</div>
+</div>

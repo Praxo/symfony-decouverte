@@ -1,0 +1,122 @@
+<div class="main-wrapper">
+	<h1>HTML - Introduction</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Première page HTML :</p>
+					<ul>
+						<li>Afficher un hello world</li>
+						<li>Syntaxe des balises HTML & attributs</li>
+						<li>Structure HTML : doctype, html, head, body</li>
+						<li>Commentaires HTML</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Afficher un hello world</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+Hello world
+</pre>
+		<p>
+			Enregistrer et nommer le fichier <strong>index.html</strong>
+		</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balises HTML & attributs</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Balises</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;balise&gt; &lt;/balise&gt; &lt;!-- Balise double --&gt;
+&lt;balise /&gt; &lt;!-- Balise orpheline --&gt;
+</pre>
+			<p>Le <strong>/</strong> de fin des balises orphelines n'est plus obligatoire depuis HTML5.</p>
+			<h4>Attributs : informations complémentaires</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;balise attribut="valeur"&gt; &lt;/balise&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Structure HTML de base</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Hello world&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		Hello world !
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+			<ul>
+				<li><strong>doctype</strong> : Instruction obligatoire qui permet de définir le type de document, ses règles et sa syntaxe - dans notre cas, HTML.</li>
+				<li><strong>html</strong> : Racine du document - englobe la totalité du code</li>
+				<li><strong>head</strong> : Entête du document contenant toutes les méta-informations du document, son titre et les liens vers certaines ressources externes.</li>
+				<li><strong>meta</strong> : Informations complémentaires (SEO - encodage - lecture du document etc...)</li>
+				<li><strong>body</strong> : Le corps du document contenant l'ensembles de la partie visible du document</li>
+				<li><strong>title</strong> : Le titre du document à placer dans le head</li>
+			</ul>
+			<p class="widget-intro">
+				Tous ces éléments sont uniques 
+			</p>
+			<p class="mb20">	
+				<strong>Attention</strong> : dans la suite du cours, je ne préciserai plus les doctype, html, head et body. Tout l'HTML sera dans la balise body.
+			</p>
+			
+
+			<blockquote>
+				<h4>Anciens Doctype</h4>
+				<ul>
+					<li>
+						Doctype HTML 4.01 :<br>
+						&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+					</li>
+					<li>
+						Doctype XHTML 1.0<br>
+						&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+					</li>
+				</ul>
+			</blockquote>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Commentaire HTML : non visible sur le site</h3>
+		</div>
+		<div class="widget-content">
+			<p>Les commentaires sont visibles dans le code source (CTRL + U), et dans l'inspecteur (F12), mais ils ne sont pas visibles dans la page web.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;!-- ceci est un commentaire --&gt;
+</pre>
+		</div>
+	</div>
+
+</div>

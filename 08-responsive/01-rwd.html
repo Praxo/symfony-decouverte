@@ -1,0 +1,157 @@
+<div class="main-wrapper">
+	<h1>Responsive Web Design</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Comprendre le responsive</p>
+					<ul>
+						<li>Le Responsive Web Design, késako ?</li>
+						<li>Dimensions minimales et maximales</li>
+						<li>Les media queries</li>
+						<li>Viewport</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/article/lire/930-css3-media-queries.html" target="_blank">Les media queries</a>
+						</li>
+						<li>
+							<a href="http://media-queries.aliasdmc.fr/meta_viewport_et_viewport_css_mobile.php" target="_blank">Meta viewport</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">C'est quoi le Responsive ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Le <strong>responsive web design</strong> est une technique, permettant de créer un design qui s'adapte au device utilisé (téléphone, tablette, ordi...).<br />
+				Il existe plusieurs manières de faire :
+			</p>
+			<ul>
+				<li>Faire une version pour mobile, une autre version pour tablette... mais lourd en cas de modification</li>
+				<li>Utiliser les <strong>Media queries</strong> : permet de faire une condition en fonction de la taille du device et d'adapter le CSS en fonction (<a href="http://3200tigres.wwf.fr/" target="_blank">Exemple</a>)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Dimensions minimales et maximales</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Il est possible de définir des largeurs et hauteurs minimales et maximales
+			</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	max-width: 1200px; /* Si la résolution est &lt;1200px, l'élément va s'adapter, sinon il sera limité à 1200px */
+}
+
+.post-resume{
+	min-height: 300px; /* L'élément aura une hauteur minimale de 300px, même si la hauteur de son contenu est < */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les media queries</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Les <strong>media queries</strong> permettent de spécifier un média pour une (ou plusieurs) feuille de style. Ex : imprimante (print), screen (écran)...<br />
+				Pour spécifier ces informations, on ajoute l'attribut <strong>media</strong> à l'appel du CSS (link), ou directement dans le fichier CSS.
+				
+			</p>
+
+			<h4>Un fichier CSS par condition</h4>
+			<p>
+				Assigner un fichier CSS selon les conditions (largeur de l'écran, hauteur du navigateur, oriention du téléphone...).<br />
+				Exemple : le fichier mobile.css ne sera appelé que si la résolution du navigateur est &lt;= 500px
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet" type="text/css" media="screen and (max-width:500px)" href="mobile.css" /&gt;
+</pre>
+
+			<h4>Ajouter les conditions directement dans le CSS</h4>
+<pre class="prettyprint lang-css linenums">
+/* CSS ne s'appliquent que si on est sur une résolution &lt;= 500px */
+@media screen and (max-width:500px){
+	body{
+		background: blue;
+	}
+}
+</pre>
+			<h4>Principe du mobile first</h4>
+			<p>
+				Le principe du mobile first consiste à commencer par le style en format mobile, puis d'augmenter la résolution.
+			</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	background: blue;
+}
+
+/* CSS ne s'appliquent que si on est sur une résolution &gt; 800px */
+@media screen and (min-width:800px){
+	body{
+		background: red;
+	}
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Viewport - <a href="http://media-queries.aliasdmc.fr/meta_viewport_et_viewport_css_mobile.php" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				La balise <strong>meta viewport</strong> (à positionner dans le &lt;head&gt;) permet de contrôler l'apparence de l'affichage de la page en fonction des devices.<br />
+				Par défaut, le navigateur mobile va afficher le contenu comme si on était sur Desktop.<br>
+				Il va donc falloir préciser comment le navigateur doit afficher la page web.
+			</p>
+			<p>
+				De nombreuses propriétés peuvent être définies, séparées par des virgules.<br />
+				Dans ce cas, on définit la largeur de la fenêtre (width) comme étant celle du device (tablette, smartphone...), et on définit l'échelle de la fenêtre à 1.
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li>Block - background : <a href="../exercices/14-TP-responsive/01-responsive-block.html" target="_blank">Modèle</a></li>
+				<li>Menu : <a href="../exercices/14-TP-responsive/02-responsive-menu.html" target="_blank">Modèle</a></li>
+				<li>Layout + menu : <a href="../exercices/14-TP-responsive/03-layout.html" target="_blank">Modèle</a></li>
+				<li>Layout (un peu) plus compliqué : <a href="../exercices/14-TP-responsive/04-layout-2.html" target="_blank">Modèle</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

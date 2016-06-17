@@ -1,0 +1,79 @@
+<div class="main-wrapper">
+	<h1>Les Boucles en JS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Introduction</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Les boucles permettent de répéter des actions simplement et rapidement.</p>
+			Il y a différents types de boucles mais elles se ressemblent toutes au sens où elles répètent une action un certain nombre de fois (ce nombre peut éventuellement être zéro).
+			<br/>
+			Les différents types de boucles permettent d'utiliser différentes façon de commencer et de terminer une boucle.
+			<br/>
+			Chaque type de boucle pourra être utilisé en fonction de la situation et du problème qu'on cherche à résoudre.
+			<ul>
+				<li><strong>for</strong></li>
+				<li><strong>while</strong></li>
+				<li><strong>do...while</strong></li>
+				<li><strong>label</strong></li>
+				<li><strong>break</strong></li>
+				<li><strong>continue</strong></li>
+				<li><strong>for...in</strong></li>
+				<li><strong>for...of</strong></li>
+			</ul>
+		</div>
+	</div>
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les boucles</h3>
+		</div>
+		<div class="widget-content">
+			<p>Voici les différentes boucles fournies par JavaScript :</p>
+			<ul>
+				<li>
+					<strong>for</strong> : Une boucle for répète des instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée.
+					<pre class="lang-javascript linenums">for ([expressionInitiale]; [condition]; [expressionIncrément])
+  instruction</pre></li>
+				<li>
+					<strong>while</strong> : Une instruction while permet d'exécuter une instruction tant qu'une condition donnée est vérifiée. Cette instruction while s'utilise de la façon suivante :
+					<pre class="lang-javascript linenums">while (condition)
+  instruction</pre>
+				</li>
+				<li>
+					<strong>do...while</strong> : L'instruction do...while permet de répéter un ensemble d'instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. (NdT : littéralement « do...while » signifie en « faire... tant que »). Une instruction do...while s'utilise de la façon suivante :
+					<pre class="lang-javascript linenums">do
+  instruction
+while (condition);</pre>
+				</li>
+				<li>
+					<strong>label</strong> : Un label (ou étiquette) permet de fournir un identifiant pour une instruction afin d'y faire référence depuis un autre endroit dans le programme. On peut ainsi identifier une boucle grâce à un label puis utiliser les instructions break ou continue pour indiquer si le programme doit interrompre ou poursuivre l'exécution de cette boucle.
+					<pre class="lang-javascript linenums">label:
+  instruction</pre>
+				</li>
+				<li>
+					<strong>break</strong> : L'instruction break est utilisée pour finir l'exécution d'une boucle, d'une instruction switch, ou avec un label.
+					<pre class="lang-javascript linenums">break;</pre>
+				</li>
+				<li>
+					<strong>continue</strong> : L'instruction continue permet de reprendre une boucle while, do-while, for, ou une instruction label.
+					<pre class="lang-javascript linenums">continue;</pre>
+				</li>
+				<li>
+					<strong>for...in</strong> : L'instruction for...in permet d'itérer sur l'ensemble des propriétés énumérables d'un objet. Pour chaque propriété, JavaScript exécutera l'instruction indiquée.
+					<pre class="lang-javascript linenums">for (variable in objet) {
+  instruction
+}</pre>
+				</li>
+				<li>
+					<strong>for...of</strong> : L'instruction for...of crée une boucle qui fonctionne avec les objets itérables (qui incluent Array, Map, Set, l'objet arguments, etc.). La boucle appelle un mécanisme d'itération propre à l'objet utilisé et elle parcourt l'objet et les valeurs de ses différentes propriétés.
+					<pre class="lang-javascript linenums">for (variable of objet) {
+  instruction
+}</pre>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

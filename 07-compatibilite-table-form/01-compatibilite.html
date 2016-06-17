@@ -1,0 +1,116 @@
+<div class="main-wrapper">
+	<h1>Compatibilité HTML5 & CSS3</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Comprendre et corriger les incompatibilités :</p>
+					<ul>
+						<li>CSS 3 - Vendor prefix</li>
+						<li>HTML 5</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/article/lire/1159-prefixes-vendeurs-css-proprietaires.html" target="_blank">Les préfixes vendeurs en CSS</a>
+						</li>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1329-osez-html5-et-css3.html" target="_blank">Osez HTML5 et CSS3</a>
+						</li>
+						<li>
+							<a href="http://caniuse.com/" target="_blank">CanIUse</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Préfixes CSS - <a href="https://autoprefixer.github.io/" target="_blank">Générer le CSS avec les préfixes</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Les nouvelles propriétés CSS3 (border-radius, box-shadow ...) mettent du temps à être normalisées. Du coup, sous autorisation du W3C, les éditeurs de navigateurs (vendors) ont la possibilité d'introduire le support de propriétés spécifiques : les <strong>préfixes vendor</strong>, en attendant la sortie d'une nouvelle version du standard (W3C).<br />
+				Aujourd'hui, la majorité des navigateurs comprenent les propriétés sans les préfixes, mais il faut rester prudent...
+			</p>
+			<p class="widget-intro">
+				Les principaux préfixes :
+			</p>
+			<ul>
+				<li>-webkit- (pour Chrome, Safari,…)</li>
+				<li>-moz- (pour Firefox, Flock,…)</li>
+				<li>-o- (pour Opera)</li>
+				<li>-ms- (pour Internet Explorer)</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.elem{
+	box-sizing: border-box;
+}</pre>
+Devient
+<pre class="prettyprint lang-css linenums">
+.elem{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}</pre>
+			<h4>Utilisation d'un plugin javascript - Prefixfree : <a href="https://leaverou.github.io/prefixfree/" target="_blank">prefixfree</a> - <a href="http://www.alsacreations.com/article/lire/1306-prefix-free-prefixes-CSS3.html" target="_blank">Avantages & inconvénients</a></h4>
+			<p>
+				<strong>Prefixfree</strong> est un plugin JS qui détecte le navigateur utilisé et ajoute automatiquement le préfix correspondant à votre CSS.<br>
+				Pour l'utiliser, il suffit de le télécharger  et de l'importer dans votre fichier HTML :
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript" src="scripts/prefixfree.min.js"&gt;&lt;/script&gt;
+</pre>
+			<blockquote>NB : Ne vous embêtez pas à les ajouter durant la formation, mais il faut y penser quand un site est en production !</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Compatibilité HTML5</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				La plupart des vieux navigateurs ne reconnaissent pas les éléments HTML5 (il seront identifiés comme étant de type "en-ligne" par défaut, ce que l'on peut comparer à un &lt;span&gt;), mais rien ne nous empêche de les utiliser en connaissance de cause en leur appliquant un display approprié (display:block ou autre).<br>
+
+				<strong>Attention Le hic : </strong>Internet Explorer 8 et versions inférieures nécessitent un code JavaScript afin de créer au préalable ces éléments dans leur DOM sous peine de ne rien afficher du tout.
+			</p>
+			<h4>Utilisation d'un plugin javascript - HTML5shiv : <a href="https://github.com/afarkas/html5shiv" target="_blank">HTML5shiv</a> - <a href="http://www.alsacreations.com/article/lire/1306-prefix-free-prefixes-CSS3.html" target="_blank">Avantages & inconvénients</a></h4>
+			<p>
+				<strong>html5shim (ou html5shiv)</strong>, offre la possibilité aux anciennes versions d'IE de reconnaître et d'interpréter les éléments HTML5, à l'aide d'un simple code HTML/JS à placer dans le <strong>head</strong> de votre HTML :
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;!--[if lt IE 9]&gt;
+&lt;script type="text/javascript" src="scripts/html5shiv.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</pre>
+			<blockquote>NB : Ne vous embêtez pas à les ajouter durant la formation, mais il faut y penser quand un site est en production !</blockquote>
+			<blockquote>NB2 : Le fichier reset.css redéfinit déjà les balises HTML5 comme des block ;)</blockquote>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Comment savoir ce qui est compatible ou non ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Le site <a href="http://caniuse.com/" target="_blank">CanIUse</a> permet de vérifier la compatibilité des propriétés CSS et des balises HTML.
+			</p>
+		</div>
+	</div>
+
+</div>

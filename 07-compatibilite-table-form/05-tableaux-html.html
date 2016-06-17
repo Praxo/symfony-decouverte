@@ -1,0 +1,163 @@
+<div class="main-wrapper">
+	<h1>Tableaux HTML</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Construire un tableau html :</p>
+					<ul>
+						<li>Balises de bases : table, tr, td</li>
+						<li>Balises de structure : caption, thead, tbody, tfoot, th</li>
+						<li>Fusion des cellules</li>
+						<li>Propriétés CSS tableaux</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://fr.openclassrooms.com/informatique/cours/apprenez-a-creer-votre-site-web-avec-html5-et-css3/les-tableaux-1" target="_blank">Documentation (openclassroom)</a>
+						</li>
+						<li>
+							<a href="http://css-tricks.com/complete-guide-table-element/" target="_blank">Documentation (css-tricks EN)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Création d'un tableau basique</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>table</strong> : déclarer un tableau</li>
+				<li><strong>tr</strong> : ligne de tableau</li>
+				<li><strong>td</strong> : cellule de tableau</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cellule 1 / ligne 1&lt;/td&gt;
+		&lt;td&gt;cellule 2 / ligne 1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cellule 1 / ligne 2&lt;/td&gt;
+		&lt;td&gt;cellule 2 / ligne 2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Tableau structuré</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>caption</strong> : titre du tableau</li>
+				<li><strong>thead</strong> : header du tableau</li>
+				<li><strong>tbody</strong> : corps du tableau</li>
+				<li><strong>tfoot</strong> : pied du tableau</li>
+				<li><strong>th</strong> : cellules mises en avant (par défaut en gras, remplace td dans thead ou dans tfoot)</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;table&gt;
+	&lt;caption&gt;Titre du tableau&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Entete 1&lt;/th&gt;
+			&lt;th&gt;Entete 2&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;c1 l1&lt;/td&gt;
+			&lt;td&gt;c2 l1&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;c1 l2&lt;/td&gt;
+			&lt;td&gt;c2 l2&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Pied 1&lt;/th&gt;
+			&lt;th&gt;Pied 2&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Fusion des cellules</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>colspan</strong> : nombre de colonnes que doit faire une cellule : fusion horizontale (1 par défaut)</li>
+				<li><strong>rowspan</strong> : nombre de lignes que doit faire une cellule : fusion verticale (1 par défaut)</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;table border="1"&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;2 colonnes (fusion horizontale)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td rowspan="2"&gt;2 lignes (fusion verticale)&lt;/td&gt;
+		&lt;td&gt;cellule 2 / ligne 2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cellule 2 / ligne 3&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Donner du style à un tableau</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+table{
+	border-collapse: collapse; /* bordures confondues : collapse, separate */
+}
+
+td{
+	vertical-align: middle; /* alignement vertical : top, left, middle, bottom */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li>Réaliser un tableau simple : <a href="../exercices/12-TP-tableaux/01-table-simple.html" target="_blank">Modèle</a></li>
+				<li>Utiliser rowspan : <a href="../exercices/12-TP-tableaux/02-table-fusion.html" target="_blank">Modèle</a></li>
+				<li>Utiliser rowspan + colspan : <a href="../exercices/12-TP-tableaux/03-table-both.html" target="_blank">Modèle</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,143 @@
+<div class="main-wrapper">
+	<h1>HTML - Liens et URLs</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer un lien hypertexte :</p>
+					<ul>
+						<li>Balise de lien</li>
+						<li>"Cadre" de lien</li>
+						<li>Infobulle au survol du lien</li>
+						<li>Lien interne - autre page de son site</li>
+						<li>Lien vers une ancre</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/creer-des-liens">Openclassrooms : Créer des liens</a>
+							<a href="http://www.w3schools.com/tags/att_link_target.asp">W3school : Targets</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balise de lien</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;a href="http://www.google.com/"&gt;Lien vers Google&lt;/a&gt;
+</pre>
+			<ul class="mb20">
+				<li><strong>a</strong> : Balise html</li>
+				<li><strong>href</strong> : Attribut obligatoire de la balise &lt;a&gt;, définit la destination</li>
+				<li><strong>http://www.google.com/</strong> : Valeur de l'attribut href</li>
+				<li><strong>"Lien vers Google"</strong> : Label du lien (texte sur lequel on clique)</li>
+			</ul>
+			<blockquote>Pour un lien externe, il faut préciser le protocole</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">"Cadre" de lien</h3>
+		</div>
+		<div class="widget-content">
+			<p>Il est possible de définir le cadre d'ouverture du lien (fenêtre courante (par défaut), nouvelle fenêtre, ...)</p>
+<pre class="prettyprint lang-html linenums">
+&lt;a href="http://www.google.com/" target="_blank"&gt;Lien vers Google&lt;/a&gt;
+</pre>
+			<ul>
+				<li><strong>target="_blank"</strong> : Le lien s'ouvre dans une nouvelle fenêtre</li>
+			</ul>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<a href="http://www.google.com/" target="_blank">Google</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Infobulle au survol du lien</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;a href="http://www.google.com/" title="Cliquez ici"&gt;Lien vers Google&lt;/a&gt;
+</pre>
+			<ul>
+				<li><strong>title="Cliquez ici"</strong> : Attribut définissant un titre de lien - valeur textuelle uniquement</li>
+			</ul>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<a href="http://www.google.com/" title="Lien vers Google">Google</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Lien interne - autre page de son site</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Le fichier de destination se situe au même niveau</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;a href="page2.html"&gt;Lien vers la page 2&lt;/a&gt;
+</pre>
+			<h4>Le fichier de destination se situe dans un sous-dossier "contenu"</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;a href="contenu/page2.html"&gt;Lien vers la page 2 &lt;/a&gt;
+</pre>
+			<h4>Le fichier de destination se situe dans un dossier parent</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;a href="../page2.html"&gt;Lien vers la page 2&lt;/a&gt;
+</pre>
+			<h4>Naviguer dans l'arborescence</h4>
+			<ul>
+				<li><strong>.</strong> : à partir du dossier courant</li>
+				<li><strong>..</strong> : revient vers au dossier parent</li>
+				<li><strong>/</strong> : à partir du dossier racine</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Lien vers une ancre</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Une ancre est un repère dans la page courante (<a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">Exemple</a>)<br>
+				Pour créer une ancre, il suffit d'ajouter l'attribut <strong>id</strong> à n'importe quelle balise html.
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;h3 id="biographie"&gt;Ma biographie&lt;/h3&gt;
+</pre>
+			<p>
+				Pour créer un lien vers l'ancre, on utilise le caractère <strong>#</strong> (symbole de l'id)
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;a href="#biographie"&gt;Aller vers l'ancre biographie&lt;/a&gt;
+</pre>
+			<blockquote>
+				L'attribut <strong>id</strong> doit être unique dans un document HTML.
+			</blockquote>
+		</div>
+	</div>
+</div>

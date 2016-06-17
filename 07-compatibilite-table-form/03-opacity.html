@@ -1,0 +1,64 @@
+<div class="main-wrapper">
+	<h1>Opacity & visibility</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Gérer les opacités / visibilités en CSS :</p>
+					<ul>
+						<li>Opacités</li>
+						<li>Visibilité</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Opacités</h3>
+		</div>
+		<div class="widget-content">
+			<h4>rgba - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/color_value#rgba" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+.elem{
+	color: rgba(255, 0, 0, 0.6); /* opacité sur la couleur du texte */
+	background: rgba(150, 0, 144, 0.6); /* opacité sur la couleur du background */
+}</pre>
+			<h4>opacity - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/opacity" target="_blank">Documentation</a></h4>
+			<p>
+				<strong>opacity</strong> permet de gérer l'opacité d'un élément (contrairement à rgba qui gère l'opacité de la couleur).<br>
+				La propriété prend une valeur comprise entre <strong>0</strong> (transparent) et <strong>1</strong> (opaque).
+			</p>
+			<pre class="prettyprint lang-css linenums">
+.elem{
+	opacity: 0.6;
+}</pre>
+			<ul>
+				<li><a href="../exemples/opacity.html" target="_blank">Exemples d'opacités</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Visibilité - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/visibility" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				La propriété <strong>visibility</strong> peut être utilisée pour cacher un élément, tout en laissant l'espace qu'il aurait occupé
+			</p>
+<pre class="prettyprint lang-css linenums">
+.elem{
+	visibility: hidden; /* visible, hidden, ... */
+}</pre>
+		</div>
+	</div>
+</div>

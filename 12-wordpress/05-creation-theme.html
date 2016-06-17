@@ -1,0 +1,94 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Création d'un thème</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Créer un thème wordpress</p>
+					<ul>
+						<li>Création d'un thème</li>
+						<li>Les fichiers de bases</li>
+						<li>Activer un thème</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Création d'un thème</h3>
+		</div>
+		<div class="widget-content">
+			<p>Un <strong>thème</strong> Wordpress est un ensemble de fichiers (php, js, css, jpg...) permettant de styliser le rendu front (partie visible) d'un site Wordpress</p>
+			<p>Les thèmes Wordpress sont stockés dans <strong>/wp-content/themes/</strong>. Un thème doit être dans un dossier (actuellement il y a 3 thèmes : twentyfifteen, twentyfourteen, twentysixteen).</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les fichiers de bases</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Plusieurs fichiers sont obligatoires pour la création d'un thème :</p>
+			<ul>
+				<li><strong>style.css</strong> : fichier CSS contenant des informations relatives au thème</li>
+				<li><strong>index.php</strong> : fichier "template" (on reviendra dessus) par défaut</li>
+			</ul>
+			<h4>style.css</h4>
+			<p>Créer un fichier <strong>style.css</strong> en indiquant ces informations en début du fichier :</p>
+<pre class="prettyprint lang-css linenums">
+/*
+Theme Name: nom du thème
+Theme URI: lien vers le thème
+Description: description
+Version: 1.0
+Author: auteur
+Author URI: lien vers le site de l'auteur
+Tags: liste de mots clés
+*/
+</pre>
+			<h4>index.php</h4>
+			<p>Créer un fichier <strong>index.php</strong> en indiquant ces informations en début du fichier :</p>
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Mon premier site Wordpress&lt;/title&gt;
+    &lt;link rel="stylesheet" href="&lt;?php bloginfo('stylesheet_url'); ?&gt;" type="text/css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenue sur le site &lt;?php bloginfo('name'); ?&gt;&lt;/h1&gt;
+    &lt;p&gt;&lt;?php bloginfo('description'); ?&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+			<p>La fonction <strong>bloginfo()</strong> permet de récupérer différentes informations relatives au site (<a href="http://codex.wordpress.org/Function_Reference/bloginfo" target="_blank">Documentation</a>)</p>
+			<ul>
+				<li><strong>stylesheet_url</strong> : lien vers le fichier du thème style.css</li>
+				<li><strong>name</strong> : nom du site (administrable)</li>
+				<li><strong>description</strong> : description du site (administrable)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Activer un thème</h3>
+		</div>
+		<div class="widget-content">
+			<p>Avec ces 2 fichiers, le thème sera disponible dans l'administration (Apparence > Thèmes).<br />
+			Activez le.<br />C'est bien beau, mais ça ne sert à rien pour l'instant...</p>
+		</div>
+	</div>
+
+</div>

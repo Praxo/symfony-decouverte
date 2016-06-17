@@ -1,0 +1,56 @@
+<div class="main-wrapper">
+	<h1>CSS - Utiliser des polices (fonts) différentes</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Modifier la police de votre site avec des polices natives :</p>
+					<ul>
+						<li>Propriété font-family</li>
+						<li>Familles de polices</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-family" target="_blank">Documentation</a><br />
+						</li>
+						<li>
+							<a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank">Familles de polices web-safe</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Propriété - font-family</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+body{
+	font-family: Arial;
+}</pre>
+		<p>
+			Les polices sont installées sur l'ordinateur des visiteurs.<br>
+			Ainsi, pour qu'une police fonctionne sur le web, elle doit exister chez le client (on ne peut pas forcer l'installation d'une police), sinon le navigateur en prendra une par défaut.<br>
+			Il est donc préférable de donner une liste de police pour proposer différentes polices (notion de family) :<br />
+			si la première n'existe pas, on prend la seconde, etc...
+		</p>
+<pre class="prettyprint lang-css linenums">
+h1{
+	font-family: Courier, "MS Courier New", Prestige, monospace;
+}</pre>
+		<p>Nous verrons un peu plus tard comment utiliser des polices personnalisées (non "safe").</p>
+		</div>
+	</div>
+</div>

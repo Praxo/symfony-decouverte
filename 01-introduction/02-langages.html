@@ -1,0 +1,150 @@
+<div class="main-wrapper">
+	<h1>Langages et technologies</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Découvrir les langages et les technologies abordés durant la formation</p>
+			<ul>
+				<li><strong>HTML</strong> (HyperText Markup Language)</li>
+				<li><strong>CSS</strong> (Cascading Style Sheets)</li>
+				<li><strong>Javascript</strong></li>
+				<li><strong>jQuery</strong></li>
+				<li><strong>PHP</strong> (Hypertext Preprocessor)</li>
+				<li><strong>SQL</strong> (Structured Query Language) et <strong>SGBD</strong> (Mysql)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">HTML (HyperText Markup Language)</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Langage de <strong>balisage</strong> pour gérer et organiser le contenu (c'est un titre, c'est un paragraphe, c'est une image...).
+			</p>
+			
+<pre class="lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Hello world&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1 class="titre-principal" id="titre-hello"&gt;Hello world !&lt;/h1&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">CSS (Cascading Style Sheets)</h3>
+		</div>
+		<div class="widget-content">
+			
+			<p class="widget-intro">
+				Styliser et gérer l'apparence d'une page (agencement, couleurs, formatage du texte...).
+			</p>
+			
+<pre class="lang-css linenums">
+h1.titre-principal{
+	font-family: Arial, Verdana, Sans;
+	color: #333;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 2em;
+}
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Javascript</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Langage de script interprété et exécuté par un navigateur. Permet (entre autre) de traiter les interactions avec l'utilisateur.
+			</p>
+			
+<pre class="lang-js linenums">
+var mainTitle = document.getElementById('titre-hello');
+mainTitle.style.color = "#f00";
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">jQuery</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Bibliothèque (ensemble de fonctions) JS permettant (entre autre) de manipuler les éléments HTML et CSS.
+			</p>
+
+<pre class="lang-js linenums">
+$(function(){
+	$('#titre-hello').css("color","#f00");
+});
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">PHP (Hypertext Preprocessor)</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Langage serveur permettant (entre autre) de générer de l'HTML, intéragir avec une base de données...
+			</p>
+
+<pre class="lang-php linenums">
+&lt;?php
+	$color = array("rouge"=>"#f00", "bleu"=>"#00aeff");
+	echo $color["rouge"];
+?&gt;
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">SQL et SGBD (Mysql)</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+			SQL (Structured Query Language) : langage permettant de gérer les informations stockées dans une BDD (ex : identifiant / mot de passe).<br>
+			SGBD : Système de Gestion de Base de Données (phpmyadmin).
+			</p>
+
+<pre class="lang-sql linenums">
+select * from login where email="test@test.fr" and password="motDePasse"
+</pre>
+
+		</div>
+	</div>
+
+
+
+</div>

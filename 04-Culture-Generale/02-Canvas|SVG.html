@@ -1,0 +1,161 @@
+<div class="main-wrapper">
+	<h1>Modèles de boites</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Introduction aux modèles de boites :</p>
+					<ul>
+						<li>Modèles de boites : block, inline</li>
+						<li>Largeur et hauteur : width, height</li>
+						<li>Gestion des marges : margin, padding</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Block</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Les boites de type <strong>block</strong> créé automatiquement un retour ligne avant et après.<br />
+On peut modifier les dimensions (largeur, hauteur), les marges (externes, internes). Par défaut, un <strong>block</strong> prendra toute la largeur possible.
+			</p>
+<pre class="prettyprint lang-css linenums">
+p{
+	display: block; /* p est une balise block */
+}
+</pre>
+			<blockquote>
+				Hn, p, div... sont des modèles de type block
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inline</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Un modèle de boite <strong>inline</strong> suit le flux du contenu.<br />
+				La taille est automatique en fonction du contenu. Il est possible de lui assigner des marges (externes, internes) mais <strong>uniquement horizontales</strong>.
+			</p>
+<pre class="prettyprint lang-css linenums">
+a{
+	display: inline; /* a est une balise inline */
+}
+</pre>
+			<blockquote>
+				a, span, strong, em... sont des modèles de type inline
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Autres modèles</h3>
+		</div>
+		<div class="widget-content">
+			<p>Il existe d'autre modèles de boites : none, inline-block, table, list-item, table-cell, flex...</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Largeur et hauteur d'un block</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Largeur : width</h4>
+			<strong>width</strong> permet de fixer la largeur d'un block.
+<pre class="prettyprint lang-css linenums">
+div{
+	/* valeurs possibles : px, em, %... */
+	width: 200px;
+}
+</pre>
+			<h4>Hauteur : height</h4>
+			<strong>height</strong> permet de fixer la hauteur d'un block.
+<pre class="prettyprint lang-css linenums">
+div{
+	/* valeurs possibles : px, em, %... */
+	height: 200px;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Gestion des marges</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Marges externes : padding</h4>
+			<p>La propriété CSS <strong>margin</strong> permet de modifier les marges externes.</p>
+<pre class="prettyprint lang-css linenums">
+div{
+	/* tous les cotés d'un block */
+	margin: 30px;
+
+	/* marge d'un coté : top, right, bottom, left */
+	margin-top: 30px;
+
+	/* Racourcis */
+	margin: 10px 20px;  /* T&B:10px / R&L:20px */
+	margin: 10px 20px 5px 0px;  /* T:10px / R:5px / BR:20px / BL:0 */
+}
+</pre>
+			<h4>Marges internes : padding</h4>
+			<p><strong>padding</strong> modifie les marges internes.</p>
+<pre class="prettyprint lang-css linenums">
+div{
+	/* tous les cotés d'un block */
+	padding: 30px;
+
+	/* marge d'un coté : top, right, bottom, left */
+	padding-left: 30px;
+}
+</pre>
+			<blockquote>Attention : les paddings sont <strong>ajoutées</strong> aux dimensions du block</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Astuce indispensable</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour centrer horizontalement un block, il est possible de lui donner des marges left et right à <strong>auto</strong> lorsque la largeur est fixée.</p>
+<pre class="prettyprint lang-css linenums">
+.container{
+	width: 300px;
+	margin: 0 auto; /* top 0, right auto, bottom 0, left auto */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Box modèle</h3>
+		</div>
+		<div class="widget-content">
+			<img src="../assets/images/box-model.jpg" alt="Modèle de boite">
+		</div>
+	</div>
+</div>

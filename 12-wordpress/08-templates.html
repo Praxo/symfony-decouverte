@@ -1,0 +1,201 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Les templates de base</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Découvrir les templates de base</p>
+					<ul>
+						<li>Appeler un fichier dans le thème (CSS / JS / Images...)</li>
+						<li>Lien vers la page d'accueil</li>
+						<li>Des templates différents, pourquoi ?</li>
+						<li>archive.php / category.php</li>
+						<li>single.php</li>
+						<li>page.php</li>
+						<li>home.php</li>
+						<li>404.php</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="../assets/images/wordpress-templates.png" target="_blank">Hiérarchie des templates</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Générer le chemin vers le theme</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour générer le chemin vers le thème en cours, il existe 2 fonctions :</p>
+			<ul>
+				<li><strong>bloginfo("template_url")</strong></li>
+				<li><strong>echo get_template_directory_uri()</strong></li>
+			</ul>
+			<p>Attention aux chemins vers vos CSS et vos images, vous êtes dans le dossier wordpress/wp-content/themes/.../</p>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Générer le lien vers la page d'accueil</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour générer le lien vers la page d'accueil :</p>
+			<ul>
+				<li><strong>bloginfo("url")</strong></li>
+				<li><strong>home_url()</strong></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Des templates différents, pourquoi ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>Toutes les pages n'auront pas le même style. Le listing des articles peut être sous forme de grille, une page statique avec un contenu centré, une page d'article avec une image en header...<br>
+			Ainsi, Wordpress permet de créer des templates différents en fonction de la page courante.</p>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">archive.php / category.php</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>category.php</strong> : liste de posts - quand on est dans une catégorie</li>
+				<li><strong>archive.php</strong> : liste de posts - catégorie / auteur / date /...</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;!-- On inclut header.php --&gt;
+&lt;?php get_header(); ?&gt;
+
+&lt;h1&gt;Catégorie :  &lt;?php single_cat_title(); ?&gt;&lt;/h1&gt;
+
+&lt;!-- On boucle pour récupérer le contenu de la page actuelle --&gt;
+&lt;?php if(have_posts()) : ?&gt;
+	&lt;?php while(have_posts()) : the_post(); ?&gt;
+		&lt;div class="post"&gt;
+			&lt;h2 class="post-title"&gt;
+				&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;
+					&lt;?php the_title(); ?&gt;
+				&lt;/a&gt;
+			&lt;/h2&gt;
+			&lt;p class="post-info"&gt;
+				Posté dans : &lt;?php the_category(', '); ?&gt; / Auteur : &lt;?php the_author(); ?&gt;.
+			&lt;/p&gt;
+			&lt;div class="post-content"&gt;
+				&lt;?php the_content(); ?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;?php endwhile; ?&gt;
+&lt;?php else : ?&gt;
+	Aucune post à afficher !
+&lt;?php endif; ?&gt;
+
+&lt;!-- On inclut footer.php --&gt;
+&lt;?php get_footer(); ?&gt;
+</pre>
+			<p><strong>single_cat_title()</strong> : affiche le nom de la catégorie en cours</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">page.php</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>page.php</strong> est le template dédié à l'affichage d'une <strong>page statique</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php get_header(); ?&gt;
+
+&lt;main class="main page"&gt;
+	&lt;?php if (have_posts()) : ?&gt;
+		&lt;?php while (have_posts()) : the_post(); ?&gt;
+			&lt;div class="page"&gt;
+				&lt;h1 class="page-title"&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;
+				&lt;div class="page-content"&gt;
+					&lt;?php the_content(); ?&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;?php endwhile; ?&gt;
+	&lt;?php endif; ?&gt;
+&lt;/main&gt;
+
+&lt;?php get_footer(); ?&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">single.php</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>single.php</strong> est le template dédié à l'affichage <strong>d'un seul post</strong>.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php get_header(); ?&gt;
+
+&lt;main class="main single"&gt;
+	&lt;?php if (have_posts()) : ?&gt;
+		&lt;?php while (have_posts()) : the_post(); ?&gt;
+			&lt;div class="single"&gt;
+				&lt;h1 class="single-title"&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;
+				&lt;div class="single-content"&gt;
+					&lt;?php the_content(); ?&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;?php endwhile; ?&gt;
+	&lt;?php endif; ?&gt;
+&lt;/main&gt;
+
+&lt;?php get_footer(); ?&gt;
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">home.php</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>home.php</strong> est le template de la <strong>page d'accueil</strong>.</p>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">404.php</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>404.php</strong> est le template de la <strong>page 404</strong> (si le lien est inconnu, que la page/l'article n'existe pas).</p>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,157 @@
+<div class="main-wrapper">
+	<h1>Pseudo classe et pseudo élément</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Pseudo classe et pseudo élément</p>
+					<ul>
+						<li>Pseudo classe</li>
+						<li>Pseudo élément</li>
+						<li>after & before</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a target="_blank" href="https://css-tricks.com/numbering-in-style/">Démo pour créer un compteur avec les pseudos éléments</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.w3.org/TR/CSS21/generate.html">Doc indigeste mais -presque- complète</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Pseudo classe - <a href="http://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Une pseudo-classe est une manière de cibler un élément sans ajouter une classe.
+			</p>
+			<ul>
+				<li>:first-child : premier enfant</li>
+				<li>:last-child : dernier enfant</li>
+				<li>:not() : élément qui n'est pas...</li>
+				<li>
+					:nth-child() : sélectionne les éléments en fonction de leur "index"
+					<ul>
+						<li>:nth-child(odd) : les éléments fils impairs (1e, 3e, 5e...)</li>
+						<li>:nth-child(event) : les éléments fils pairs (2e, 4e, 6e...)</li>
+						<li>:nth-child(3) : le 3e élément</li>
+					</ul>
+				</li>
+				<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes" target="_blank">Liste des pseudos classes</a></li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+ul li:first-child{ /* premier enfant li de ul */
+	background: red;
+}
+p:not(.intro){ /* p qui n'a pas la class intro */
+	font-weight: normal;
+}
+ul li:nth-child(even){ /* tous les enfants li avec un index pair */
+	color: yellow;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Pseudo élément - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Un pseudo-élément est une chose que l'on n’aurait pas pu cibler autrement qu'en rajoutant un élément</p>
+			<ul>
+				<li>:first-letter : première lettre</li>
+				<li>:first-line : première ligne</li>
+				<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments" target="_blank">Liste des pseudos éléments</a></li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+p:first-letter{ /* première lettre de p */
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Pseudo élément magiques : :after & :before</h3>
+		</div>
+		<div class="widget-content">
+		
+			<strong>:after</strong> et <strong>:before</strong> permettent d'ajouter du contenu <strong>inline</strong> directement après ou avant le contenu d'un élément.<br />
+			<strong>content</strong>, propriété obligatoire de after/before, permet de spécifier le contenu qui est inséré.
+<pre class="prettyprint lang-html linenums">
+&lt;h1&gt;Mon titre principal&lt;/h1&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+h1{
+	color: red;
+}
+
+h1:after{
+	content: " C'était un titre";
+	font-size: 12px;
+	color: blue;
+}
+h1:before{
+	content: "Titre : ";
+	text-transform: uppercase;
+	color: green;
+}
+</pre>
+
+			<h4>Astuce clearfix & after</h4>
+			<p>
+				Lorsqu'on utilise des float, il faut revenir dans le flux et on avait vu 2 solutions :
+			</p>
+			<ul>
+				<li>
+					<strong>overflow: hidden</strong> sur le parent
+				</li>
+				<li>
+					<strong>clear: both</strong> sur un élément placé directement après les float
+				</li>
+			</ul>
+			<p>
+				Le pseudo élément <strong>:after</strong>, ajoute un "pseudo contenu" après le contenu d'un élément. Vous voyez où je veux en venir ?
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="wrapper"&gt;
+	&lt;div class="colonne"&gt;&lt;/div&gt;
+	&lt;div class="colonne"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+.colonne{
+	float: left;
+	width: 50%;
+}
+
+.wrapper:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+</pre>
+		</div>
+	</div>
+</div>

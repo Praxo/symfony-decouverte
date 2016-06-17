@@ -1,0 +1,88 @@
+<div class="main-wrapper">
+	<h1>Les événements en JS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Maitriser les events en JS</p>
+			<ul>
+				<li>La liste des événements</li>
+				<li>Réagir à un événement</li>
+				<li>Les événements importants</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Liste non exhaustive</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li>
+					Événements standards :
+					<ul>
+						<li><strong>change</strong> : Un élément perd le focus et sa valeur a changé depuis l'acquisition du focus.</li>
+						<li><strong>click</strong> : Un bouton d'un dispositif de pointage a été appuyé ou relaché sur un élément.</li>
+						<li><strong>keydown</strong> : A key is pressed down.</li>
+						<li><strong>keypress</strong> : A key is pressed down and that key normally produces a character value (use input instead).</li>
+						<li><strong>keyup</strong> : A key is released.</li>
+						<li><strong>mousedown</strong> : A pointing device button (usually a mouse) is pressed on an element.</li>
+						<li><strong>mouseenter</strong> : A pointing device is moved onto the element that has the listener attached.</li>
+						<li><strong>mouseleave</strong> : A pointing device is moved off the element that has the listener attached.</li>
+						<li><strong>mousemove</strong> : A pointing device is moved over an element.</li>
+						<li><strong>mouseout</strong> : A pointing device is moved off the element that has the listener attached or off one of its children.</li>
+						<li><strong>mouseover</strong> : A pointing device is moved onto the element that has the listener attached or onto one of its children.</li>
+						<li><strong>mouseup</strong> : A pointing device button is released over an element.</li>
+						<li><strong>scroll</strong> : The document view or an element has been scrolled.</li>
+						<li><strong>submit</strong> : A form is submitted.</li>
+					</ul>
+				</li>
+				<li>
+					Événements importants :
+					<ul>
+						<li><strong>DOMContentLoaded</strong> : Le document a fini de charger (mais pas les ressources qui en dépendent).</li>
+						<li><strong>abort</strong> : Une transaction a été interrompue.</li>
+						<li><strong>error</strong> : Le chargement d'une ressource a échoué.</li>
+						<li><strong>offline</strong> : The browser has lost access to the network.</li>
+					</ul>
+				</li>
+				<li>
+					Timers :
+					<ul>
+						<li><strong>setInterval</strong> : Appelle une fonction de manière répétée, avec un certain délai fixé entre chaque appel.</li>
+						<li><strong>setTimout</strong> : Exécute un morceau de code ou une fonction après un délai determiné.</li>
+						<li><strong>requestAnimationFrame</strong> : The Window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes as an argument a callback to be invoked before the repaint.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Réagir à un événement</h3>
+		</div>
+		<div class="widget-content">
+			<p>En JavaScript on réagit à un événement toujours avec une callback (une fonction de rappel) qui peut être anonyme ou non.</p>
+		</div>
+		<div class="widget-content">
+			<h4>Sans jQuery</h4>
+			<pre class="lang-javascript linenums">
+document.querySelector('div').onclick = function()
+{
+	alert('click !');
+};</pre>
+			<h4>Avec jQuery</h4>
+			<pre class="lang-javascript linenums">
+$('div').click(function()
+{
+	alert('click !');
+});</pre>
+		</div>
+	</div>
+</div>

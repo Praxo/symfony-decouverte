@@ -1,0 +1,165 @@
+<div class="main-wrapper">
+	<h1>Flux, float & clear</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Faire "flotter" des éléments :</p>
+					<ul>
+						<li>Comprendre la notion de flux</li>
+						<li>Sortir un élément du flux : le faire flotter</li>
+						<li>Annuler le comportement du float / rétablir le flux</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://openweb.eu.org/articles/initiation_float/" target="_blank">Initiation au positionnement CSS : position float</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Comprendre la notion de flux</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Le flux HTML peut se définir comme comme étant le comportement naturel d'affichage des éléments d'une page web.<br>
+				Autrement dit, les éléments se place <strong>les uns à la suite des autre depuis le haut de la page</strong> (comme ils ont été écrit dans l'HTML).<br>
+				On peut le schématiser par une flèche allant du bas vers le haut.
+			</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Faire flotter un élément - float</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				On peut <strong>sortir un élément du flux</strong> en lui donnant la propriété <strong>float</strong>.<br>
+				L'élément peut être sorti du flux par la droite (<strong>right</strong>), par la gauche (<strong>left</strong>).
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="colonne-wrapper"&gt;
+	&lt;div class="colonne-gauche"&gt;...&lt;/div&gt;
+	&lt;div class="colonne-droite"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+.colonne-gauche{
+	background: red;
+	width: 60%;
+	height: 300px;
+	float: left;
+}
+
+.colonne-droite{
+	background: blue;
+	width: 35%;
+	height: 400px;
+	float: right;
+}
+</pre>
+			<blockquote>
+				Pour annuler un float, on utilise la valeur <strong>none</strong> : float:none;
+			</blockquote>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Rétablir le flux - clear</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Les éléments en <strong>float</strong> étant hors du flux, leur hauteur n'est pas prise en compte.<br>
+				Pour comptabiliser la hauteur des éléments flottants dans le flux (et ainsi revenir dans la flux normal), il faux ajouter un "clear" qui va annuler le comportement du float.<br>
+				Plusieurs solutions :
+			</p>
+				<h4>Propriété - clear</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="colonne-wrapper"&gt;
+	&lt;div class="colonne-gauche"&gt;...&lt;/div&gt;
+	&lt;div class="colonne-droite"&gt;...&lt;/div&gt;
+	&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+.clearfix{
+	clear: both; /* rétablis le flux après des float */
+}
+</pre>
+				<h4>Propriété - overflow</h4>
+					<p>
+						Overflow permet (entre autre, on en reparlera...) de créer un contexte de formatage, c'est à dire une "zone indépendante" qui reviendra automatiquement dans le flux.<br>
+						La propriété overflow doit envelopper les float.
+					</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="colonne-wrapper"&gt;
+	&lt;div class="colonne-gauche"&gt;...&lt;/div&gt;
+	&lt;div class="colonne-droite"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+.colonne-wrapper{
+	overflow: hidden; /* rétablis le flux après des float */
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">En résumé</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Pour réaliser des colonnes en utilisant la propriété float, il faut:
+			</p>
+			<ul>
+				<li>Un élément parent</li>
+				<li>
+					Autant d'éléments enfants que de colonnes avec:
+					<ul>
+						<li>la largeur (width) définie</li>
+						<li>la propriété float</li>
+					</ul>
+				</li>
+				<li>un clear</li>
+			</ul>
+		</div>
+	</div>
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Réaliser le schéma suivant en utilisant les positionnements flottants :<br>
+				<a href="../exercices/05-TP-inlineblock.zip">Télécharger les fichiers</a>
+			</p>
+			<blockquote>
+				Pour vérifier que le flux est bien revenur, ajouter un paragraphe et du contenu à la suite.
+			</blockquote>
+			<img src="../assets/images/modele.jpg" alt="">
+		</div>
+	</div>
+
+</div>

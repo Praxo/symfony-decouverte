@@ -1,0 +1,130 @@
+<div class="main-wrapper">
+	<h1>HTML - listes</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Créer des listes</p>
+					<ul>
+						<li>Liste non ordonnée (puces)</li>
+						<li>Liste ordonnée (numérique)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Liste non ordonnée</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;ul&gt;
+	&lt;li&gt;HTML&lt;/li&gt;
+	&lt;li&gt;CSS&lt;/li&gt;
+	&lt;li&gt;Javascript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			<ul>
+				<li><strong>&lt;ul&gt; &lt;/ul&gt;</strong> : délimite toute une liste non ordonnée</li>
+				<li><strong>&lt;li&gt; &lt;/li&gt;</strong> : délimite un élément de la liste</li>
+			</ul>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<ul class="cleanList">
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Javascript</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Liste ordonnée</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;ol&gt;
+	&lt;li&gt;Obi wan kenobi&lt;/li&gt;
+	&lt;li&gt;Chewbacca&lt;/li&gt;
+	&lt;li&gt;Dark Vador&lt;/li&gt;
+	&lt;li&gt;La réponse D&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+			<ul>
+				<li><strong>&lt;ol&gt; &lt;/ol&gt;</strong> : délimite toute une liste ordonnée</li>
+				<li><strong>&lt;li&gt; &lt;/li&gt;</strong> : délimite un élément de la liste</li>
+			</ul>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<ol class="cleanList">
+					<li>Obi wan kenobi</li>
+					<li>Chewbacca</li>
+					<li>Dark Vador</li>
+					<li>La réponse D</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Différents niveaux de liste</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Il est possible de créer des sous-listes
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;ul&gt;
+	&lt;li&gt;
+		Intégration
+		&lt;ul&gt;
+			&lt;li&gt;HTML&lt;/li&gt;
+			&lt;li&gt;CSS&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		Développement
+		&lt;ul&gt;
+			&lt;li&gt;Javascript&lt;/li&gt;
+			&lt;li&gt;PHP&lt;/li&gt;
+			&lt;li&gt;SQL&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			<div class="widget-details">
+				<h4>Exemple</h4>
+				<ul class="cleanList">
+					<li>
+						Intégration
+						<ul class="cleanList">
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+					</li>
+					<li>
+						Développement
+						<ul class="cleanList">
+							<li>Javascript</li>
+							<li>PHP</li>
+							<li>SQL</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

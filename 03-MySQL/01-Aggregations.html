@@ -1,0 +1,106 @@
+<div class="main-wrapper">
+	<h1>CSS - Introduction</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Premières notions de CSS :</p>
+					<ul>
+						<li>Déclarer du CSS : inline, style, externe</li>
+						<li>Sélecteurs / declaration { propriete:valeur }</li>
+						<li>Commentaires CSS</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf" target="_blank">Cheat sheet CSS : liste des propriétés CSS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Déclarer le CSS</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Inline - directement dans une balise HTML via l'attribut style - à proscrire !</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;p style="..."&gt;&lt;/p&gt;
+</pre>
+
+			<h4>Balise style - directement dans le head de l'HTML</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;style&gt;...&lt;/style&gt;
+</pre>
+
+			<h4>Fichier externe (à privilégier) - dans la balise head - à privilégier !</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;link type="text/css" rel="stylesheet" href="" /&gt;
+</pre>
+			<blockquote>
+				<strong>href</strong> aura comme valeur, le chemin vers le fichier CSS
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Sélecteurs / déclaration</h3>
+		</div>
+		<div class="widget-content">
+			<h4>&Eacute;lément - sélectionne les balises du type</h4>
+<pre class="prettyprint lang-css linenums">
+p{...}
+</pre>
+<pre class="prettyprint lang-html linenums">
+&lt;p&gt; &lt;/p&gt;
+</pre>
+			<h4>Class - sélectionne les balises ayant cet attribut class (à privilégier)</h4>
+				<p>
+					Le caractère correspondant à une class est <strong>.</strong> (point).<br>
+					On peut utiliser autant de fois une class, et on peut ajouter plusieurs class à une balise.
+				</p>
+<pre class="prettyprint lang-css linenums">
+.header{...}
+</pre>
+<pre class="prettyprint lang-html linenums">
+&lt;p class="header"&gt; &lt;/p&gt;
+</pre>
+			<h4>ID - sélectionne la baliste ayant cet attribut id</h4>
+				<p>
+					Le caractère correspondant à un id est <strong>#</strong> (dièse -et non hashtag didiou !-)<br>
+					Un id est unique et on ne peut avoir qu'un seul id.
+				</p>
+<pre class="prettyprint lang-css linenums">
+#main{...}
+</pre>
+<pre class="prettyprint lang-html linenums">
+&lt;p id="main"&gt; &lt;/p&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Commentaires CSS</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+/* commentaire CSS */
+</pre>
+	</div>
+
+</div>

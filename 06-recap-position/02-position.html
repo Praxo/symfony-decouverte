@@ -1,0 +1,175 @@
+<div class="main-wrapper">
+	<h1>positionnements CSS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Comprendre les différents positionnements CSS :</p>
+					<ul>
+						<li>Retours sur le float</li>
+						<li>Marges négatives</li>
+						<li>Position absolue</li>
+						<li>Position fixe</li>
+						<li>Position relatif</li>
+						<li>Superposition - z-index</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://fr.openclassrooms.com/informatique/cours/apprenez-a-creer-votre-site-web-avec-html5-et-css3/le-positionnement-en-css" target="_blank">Documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Retour sur le float</h3>
+		</div>
+		<div class="widget-content">
+			<h4>float (left, right, none)</h4>
+			Le float permet de sortir un élément du flux normal, en le plaçant tout à gauche ou tout à droite de son conteneur.
+			<h4>Rétablir le flux</h4>
+			Pour rétablir le flux après les éléments en float, on peut ajouter la propriété <strong>overflow: hidden</strong> au conteneur des éléments flottants, ou ajouter un block avec la propriété <strong>clear: both</strong> après les float.
+<pre class="prettyprint lang-html linenums">
+&lt;div class="conteneur"&gt;
+	&lt;div class="colonne-gauche"&gt;
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+	&lt;/div&gt;
+	&lt;div class="colonne-droite"&gt;
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita delectus eius quae magnam, deleniti a aliquid !
+	&lt;/div&gt;
+	&lt;div class="cleafix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+.colonne-gauche{
+	float: left;
+}
+
+.colonne-droite{
+	float: right;
+}
+
+/* overflow sur le conteneur OU clear après les colonnes */
+.conteneur{
+	overflow: hidden;
+}
+
+.cleafix{
+	clear: both;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Marges négatives</h3>
+		</div>
+		<div class="widget-content">
+				Il est possible de définir des marges négatives à un élément, pour ajuster sa position.<br>
+<pre class="prettyprint lang-css linenums">
+.marge-negative{
+	margin-top: -20px; /* remonte le bloc de 20px */
+	margin-left: -40px; /* recule le bloc de 40px vers la gauche */
+	margin-right: -100px; /* recule le bloc de 100px vers la droite */
+}</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Propriété CSS : position - <a href="http://www.w3schools.com/cssref/pr_class_position.asp" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<h4>Positionnement statique : static</h4>
+			<p>Valeur par défaut, les éléments s'affichent dans l'ordre, comme dans le document html.</p>
+
+			<h4>Positionnement relatif : relative</h4>
+			<p>Permet de décaler l'élément par rapport à sa position normale.</p>
+
+			<h4>Positionnement fixe : fixed</h4>
+			<p>Positionne un élément n'importe où, par rapport à la <strong>fenêtre du navigateur</strong> (l'élément reste toujours visible).<br> <strong>Attention : Un élément fixed sort du flux</strong></p>
+
+			<h4>Positionnement absolu : absolute</h4>
+			<p>Positionne un élément n'importe où sur la page, par rapport à son <strong>premier parent positionné</strong>.<br><strong>Attention : Un élément absolute sort du flux</strong></p>
+
+
+			<h4>Positionner son élément</h4>
+			Pour positionner son élément dans la fenêtre, on utilise les propriétés <strong>left</strong>, <strong>right</strong>, <strong>top</strong>, <strong>bottom</strong>.<br />
+
+			<pre class="prettyprint lang-css linenums">
+.bloc-absolu{
+	position: absolute;
+	right: 0; /* 0 de la droite */
+	bottom: 20px; /* 20px du bas */
+	z-index: 1; /* niveau 1 */
+}
+
+.bloc-fixe{
+	position: fixed;
+	left: 10px; /* 10px de la gauche */
+	top: 0; /* 0 du haut */
+}
+
+.bloc-relatif{
+	position: relative;
+}
+</pre>
+
+			<a href="./02-position-exemples" target="_blank">Voir des exemples</a>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Superposition d'éléments - z-index</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Lorsque des éléments sont positionnés, il est possible de gérer l'ordre de superposition (qui sera au dessus, qui sera en dessous...)<br>
+				Pour ça, on utilise la propriété <strong>z-index</strong>. Plus la valeur de <strong>z-index</strong> est élevée, plus l'élément sera au dessus (oui, je parle bien la France...).
+			</p>
+<pre class="prettyprint lang-css linenums">
+.bloc1{
+	position: absolute; 
+	z-index: 1;
+}
+
+.bloc2{
+	position: absolute; 
+	z-index: 2; /* S'il y a superposition avec .bloc1, il sera au dessus */
+}
+
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">&Agrave; partir de l'HTML fourni, recréer la structure du schéma suivant en utilisant les propriétés de positionnements que vous connaissez (float, margin, position...)</p>
+			<ul>
+				<li><a href="../exercices/08-TP-position-corrige/corrige.html" target="_blank">Voir le schéma final</a></li>
+				<li><a href="../exercices/08-TP-position.zip">Télécharger les fichiers</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

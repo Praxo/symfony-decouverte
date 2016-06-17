@@ -1,0 +1,145 @@
+<div class="main-wrapper">
+	<h1>Utiliser des polices (fonts) différentes - v2</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Modifier la police de votre site :</p>
+					<ul>
+						<li>Rappels - Familles de polices</li>
+						<li>Google web font</li>
+						<li>Police personnalisée : @font-face</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-family" target="_blank">Documentation</a><br />
+						</li>
+						<li>
+							<a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank">Familles de polices web-safe</a>
+						</li>
+						<li>
+							<a href="https://www.google.com/fonts" target="_blank">Google webfonts</a>
+						</li>
+						<li>
+							<a href="http://www.alsacreations.com/astuce/lire/630-fonte-personnalisee-site-web.html" target="_blank">Fonts personnalisées - article</a>
+						</li>
+						<li>
+							<a href="http://www.fontsquirrel.com/" target="_blank">Fontsquirrel</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Rappel - font-family</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour utiliser des polices différentes, on utilise la propriété <strong>font-family</strong>.</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	font-family: Arial;
+}</pre>
+			<p>
+				Les polices sont installées sur l'ordinateur des visiteurs.<br>
+				Ainsi, pour qu'une police fonctionne sur le web, elle doit exister chez le client (on ne peut pas forcer l'installation d'une police), sinon le navigateur en prendra une par défaut.<br>
+				Il est donc préférable de donner une liste de police pour proposer différentes polices (notion de family) :<br />
+				si la première n'existe pas, on prend la seconde, etc...
+			</p>
+			si la première n'existe pas, on prend la seconde, etc...
+			<pre class="prettyprint lang-css linenums">
+h1{
+	font-family: Courier, "MS Courier New", Prestige, monospace;
+}</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Google web font</h3>
+		</div>
+		<div class="widget-content">
+			<p>Google met à disposition différentes polices pour le web : <a href="https://www.google.com/fonts" target="_blank">Google webfonts</a><br /> Il suffit de les importer comme un fichier CSS.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'&gt;
+</pre>
+<pre class="prettyprint lang-css linenums">
+body{
+	font-family: "Lato", Arial, Verdana;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Police personnalisée : @font-face - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/@font-face" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				On peut utiliser (presque) n'importe quelle police grâce à <strong>@font-face</strong>.<br>
+				<strong>Attention cependant</strong> : au poids des polices (elles devront être téléchargées par le navigateur), aux droits d'auteur et aux surtout, aux <strong>formats</strong>.<br />
+				En effet, il faut différents formats pour que ça fonctionne sur tous les navigateurs : ttf (tous et IE9+), eot (uniquement IE), otf (tous sauf IE), svg (iphone, ipad), woff (tous et IE9+).
+			</p>
+<pre class="prettyprint lang-css linenums">
+@font-face {
+    font-family: 'maSuperFont';
+    src: url('maSuperFont-regular.eot') format('eot'),
+         url('maSuperFont-regular.woff') format('woff'),
+         url('maSuperFont-regular.ttf') format('truetype'),
+         url('maSuperFont-regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'maSuperFont';
+    src: url('maSuperFont-bold.eot') format('eot'),
+         url('maSuperFont-bold.woff') format('woff'),
+         url('maSuperFont-bold.ttf') format('truetype'),
+         url('maSuperFont-bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'maSuperFont';
+    src: url('maSuperFont-bold-italic.eot') format('eot'),
+         url('maSuperFont-bold-italic.woff') format('woff'),
+         url('maSuperFont-bold-italic.ttf') format('truetype'),
+         url('maSuperFont-bold-italic.svg') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body{
+	/* Appelle la police maSuperFont en normal */
+	font-family: 'maSuperFont';
+}
+
+h1{
+	/* Appelle la police maSuperFont en bold */
+	font-family: 'maSuperFont';
+	font-weight: bold;
+}
+</pre>
+			<blockquote>
+				<strong>Note : </strong> on peut trouver différentes polices accessibles sur <a href="http://www.fontsquirrel.com/" target="_blank">fontsquirrel</a>.
+			</blockquote>
+		</div>
+	</div>
+</div>

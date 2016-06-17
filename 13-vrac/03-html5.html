@@ -1,0 +1,122 @@
+<div class="main-wrapper">
+	<h1>Balises HTML5</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Balises HTML5</p>
+					<ul>
+						<li>Vidéo</li>
+						<li>Audio</li>
+						<li>Autres balises HTML5</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/article/lire/1125-introduction-balise-video-html5-mp4-h264-webm-ogg-theora.html" target="_blank">Introduction à la balise vidéo</a>
+						</li>
+						<li>
+							<a href="http://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/la-video-et-l-audio" target="_blank">Balise audio (+ video en fin)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balise - video</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Attributs</h4>
+			<ul>
+				<li><strong>poster="image.jpg"</strong> : vignette, image à placer lorsque la vidéo n'est pas encore lancée (défaut : première image de la vidéo)</li>
+				<li><strong>controls</strong> : ajoute les boutons de controle</li>
+				<li><strong>width</strong> : ...</li>
+				<li><strong>height</strong> : ...</li>
+				<li><strong>loop</strong> : joue la vidéo en boucle</li>
+				<li><strong>autoplay</strong> : lecture automatique</li>
+			</ul>
+
+			<h4>Différentes sources</h4>
+			<p>Les navigateurs ne reconnaisssent pas les memes formats de vidéos, du coup on peut définir différents fichiers avec la balise <strong>source</strong> :</p>
+			<ul>
+				<li><strong>H.264/MP4</strong> : IE + Chrome (4-16) + Safari 5.0</li>
+				<li><strong>ogv</strong> : FF 3.5 + Opera 10.5 + Chrome 4.0</li>
+				<li><strong>webm</strong> : FF 4.0 + Opera 10.6 + IE (si codecs installés) + Chrome 6.0</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;video controls autoplay&gt;
+	&lt;source src="video.mp4" /&gt;
+	&lt;source src="video.webm" /&gt;
+	&lt;source src="video.ogv" /&gt;
+	Votre navigateur ne supporte pas la balise vidéo.
+&lt;/video&gt;
+</pre>
+			<h4>Exemples</h4>
+			<p><a href="../exemples/video.zip">Télécharger l'exemple</a></p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balise - audio</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Attributs</h4>
+			<ul>
+				<li><strong>controls</strong> : ajoute les boutons de controle</li>
+				<li><strong>width</strong> : ...</li>
+				<li><strong>loop</strong> : joue la vidéo en boucle</li>
+				<li><strong>autoplay</strong> : lecture automatique</li>
+			</ul>
+
+			<h4>Différentes sources</h4>
+			<p>Idem que vidéo, on va utiliser différentes sources car les navigateurs sont capricieux... :</p>
+			<ul>
+				<li><strong>mp3</strong> : IE + Chrome + Safari</li>
+				<li><strong>ogg</strong> : Chrome + FF + Opera</li>
+			</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;audio controls autoplay loop&gt;
+	&lt;source src="piano_mp3.mp3" /&gt;
+	&lt;source src="piano_ogg.ogg" /&gt;
+	Votre navigateur ne supporte pas la balise audio.
+&lt;/audio&gt;
+</pre>
+			<h4>Exemples</h4>
+			<p><a href="../exemples/audio.zip">Télécharger l'exemple</a></p>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Autres balises HTML5</h3>
+		</div>
+		<div class="widget-content">
+			<p>Il existe des tas d'autres balises HTML5 (time, details, summary, mark...) que je ne connais pas plus que ça et que je n'utilise que très rarement... &Agrave; vous de voir si vous en avez l'utilité.<br>
+			Quelques pistes :</p>
+			<ul>
+				<li><a href="http://www.alsacreations.com/" target="_blank">Alsacreations</a> : à vous de chercher</li>
+				<li><a href="http://html5please.com/#html" target="_blank">HTML5please</a> : Infos sur d'autres balises</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+</div>
+

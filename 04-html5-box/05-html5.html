@@ -1,0 +1,134 @@
+<div class="main-wrapper">
+	<h1>Balises HTML5</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Présentation des balises HTML5 :</p>
+					<ul>
+						<li>header : en-tête de la page</li>
+						<li>nav : navigation</li>
+						<li>section : englobe une portion de la page</li>
+						<li>article : article indépendant (exemple : actualités)</li>
+						<li>figure : illustration d'un article</li>
+						<li>aside : informations complémentaires à un article ou au site</li>
+						<li>footer : pied de page</li>
+						<li>main : balise unique englobant le contenu principal du site</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li><a href="http://www.alsacreations.com/article/lire/1376-html5-section-article-nav-header-footer-aside.html" target="_blank">Balises HTML5</a></li>
+						<li><a href="http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html" target="_blank">Figure & figcaption</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les balises principales</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>(body)</strong> : peut contenir directement un header, un footer...</li>
+				<li><strong>article</strong> : Contenu indépendant, pouvant être extrait sans altérer la compréhension de la page ou de l'article</li>
+				<li><strong>section</strong> : Conteneur générique regroupant un même sujet</li>
+				<li><strong>nav</strong> : Englobe les liens de navigations principaux</li>
+				<li><strong>main</strong> : Balise unique englobant le contenu principal du site*</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les balises secondaires</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">
+				Ces balises sont à placer dans les balises principales (body étant une balise principale)
+			</p>
+			<ul>
+				<li><strong>header</strong> : Introduction d'un article, d'une autre section ou du document entier (en-tête de page).</li>
+				<li><strong>footer</strong> : Conclusion d'une section ou d'un article, voire du document entier (pied de page)</li>
+				<li><strong>aside</strong> : Contenu supplémentaire sans forcément être en lien direct</li>
+				<li><strong>figure & figcaption</strong> : Une figure est une illustration (image, vidéo, citation...) & figcaption sa légende</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple d'utilisation</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;header&gt;
+	&lt;h1&gt;Titre principal&lt;/h1&gt;
+	&lt;h2&gt;Titre 2&lt;/h2&gt;
+&lt;/header&gt;
+&lt;main&gt;
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;section&gt;
+		&lt;article&gt;                
+			&lt;aside&gt;
+				&lt;p&gt;Informations secondaires à l'article (citations, liens, glossaire...)&lt;/p&gt;
+			&lt;/aside&gt;
+			&lt;header&gt;
+				&lt;h1&gt;Titre de l'article&lt;/h1&gt;
+			&lt;/header&gt;
+			&lt;p&gt;Contenu de l'article&lt;/p&gt;
+			&lt;figure&gt;
+				&lt;img src="images/illustration.jpg" alt="Voyage des ornithorynques" /&gt;
+				&lt;figcaption&gt;Schéma d'illustration expliquant la migration des ornithorynques dans le Pacifique Sud.&lt;/figcaption&gt;
+			&lt;/figure&gt;
+		&lt;/article&gt;
+	&lt;/section&gt;
+	&lt;aside&gt;
+		&lt;p&gt;Informations secondaires au site (lien vers le site des copains, publicité...)&lt;/p&gt;
+	&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+	&lt;p&gt;Pied de page, date, auteur&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+			<blockquote>
+				<strong>NB</strong> : la balise <strong>main</strong> est prévue par le W3C (HTML 5.1) mais pas encore utilisable en production
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple de structure - schéma</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-8">
+					<img src="../assets/images/pense-bete-html5.png" alt="">
+				</div>
+				<div class="columns medium-4">
+					<img src="../assets/images/html5-structure-1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

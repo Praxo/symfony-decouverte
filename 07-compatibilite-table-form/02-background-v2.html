@@ -1,0 +1,123 @@
+<div class="main-wrapper">
+	<h1>Background v2</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Nouvelles propriétés de background :</p>
+					<ul>
+						<li>Rappel - Propriété background</li>
+						<li>Background-size</li>
+						<li>Background-attachment</li>
+						<li>Les dégradés</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/astuce/lire/1216-arriere-plan-background-extensible.html" target="_blank">Créer un background extensible</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Rappels sur les background</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+body{
+	background-color: #00aeff; /* couleur de fond (nom, hexa, rgb, rgba) */
+	background-image: url("../images/backgrount.jpg"); /* image de fond (par défaut : repeat) */
+	background-repeat: no-repeat; /* répétition (repeat, no-repeat, repeat-x, repeat-y) */
+	background-position: right top; /* positionnement du background (top, left, right, bottom, center, px, em) */
+
+	/* Raccourci */
+	background: #00aeff url("../images/back.jpg") right top no-repeat;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Background size : CSS3 - <a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>background-size</strong> est une propriété CSS3 qui permet de définir la taille du background image.<br />
+				La valeur peut être (entre autre) en px, %, auto, <strong>cover</strong> ou <strong>contain</strong>.
+			</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-image: url("background.jpg"); /* image de fond (par défaut : repeat) */
+
+	/* Comme c'est une propriété CSS3 */
+	-webkit-background-size: cover; /* pour Chrome et Safari */
+	-moz-background-size: cover; /* pour Firefox */
+	-o-background-size: cover; /* pour Opera */
+
+	background-size: cover; /* version standardisée */
+}
+</pre>
+			<blockquote><strong>Attention :</strong> il s'agit d'une nouvelle propriété, elle ne peut donc pas être raccourcie dans la propriété background !</blockquote>
+			<ul>
+				<li><a href="../exemples/background-size-cover.html" target="_blank">Exemple de background-size cover</a></li>
+				<li><a href="../exemples/background-size-contain.html" target="_blank">Exemple de background-size contain</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Background attachment - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>background-attachment</strong> permet de définir si l'image de fond est fixe ou si elle défile avec le contenu.
+			</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-image: url("background.jpg"); /* image de fond (par défaut : repeat) */
+	background-attachment : fixed; /* valeur possible : scroll, fixed, ... */
+}
+</pre>
+			<ul>
+				<li><a href="../exemples/background-attachment-scroll.html" target="_blank">Exemple de background-attachment scroll</a></li>
+				<li><a href="../exemples/background-attachment-fixed.html" target="_blank">Exemple de background-attachment fixed</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Dégradés CSS3 - <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Générateur de dégradé</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				background: linear-gradient(angle en deg, couleur initiale, couleur finale);
+			</p>
+			<pre class="prettyprint lang-css linenums">
+.elem{
+	background: linear-gradient(90deg, red, blue);
+}</pre>
+			<ul>
+				<li><a href="../exemples/background-linear-gradient.html" target="_blank">Exemple de dégradé</a></li>
+			</ul>
+			<blockquote>C'est une propriété CSS3, donc il faut penser aux préfix</blockquote>
+		</div>
+	</div>
+</div>

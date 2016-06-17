@@ -1,0 +1,111 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Inclusion de fichiers</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Inclusion de fichiers</p>
+					<ul>
+						<li>Includes de fichiers</li>
+						<li>header.php / footer.php</li>
+						<li>Inclure les fichiers</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Includes de fichiers</h3>
+		</div>
+		<div class="widget-content">
+			<p>Certains contenus (codes HTML / PHP) seront identiques pour tous les templates. On peut donc les regrouper dans différents fichiers et les inclure.</p>
+			<ul>
+				<li><strong>header.php</strong> : début du code (doctype, head, body ouvrant)</li>
+				<li><strong>footer.php</strong> : fin du code (fermeture body, html)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">header.php / footer.php</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le fichier <strong>header.php</strong> est celui, avec <strong>footer.php</strong>, que l'on place dans tous les templates. L'un ouvre le code HTML, contient le doctype, le head, le body, l'autre le ferme (fichiers JS, fermeture du body & html).<br>Le template se chargera des contenus.</p>
+			<ul>
+				<li><strong>header.php</strong> : début du code (doctype, head, body ouvrant)</li>
+				<li><strong>footer.php</strong> : fin du code (fermeture body, html)</li>
+			</ul>
+
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head &lt;?php language_attributes(); ?&gt;&gt;
+    &lt;meta charset="&lt;?php bloginfo('charset'); ?&gt;"&gt;
+    &lt;link rel="stylesheet" href="&lt;?php bloginfo('stylesheet_url'); ?&gt;" type="text/css"&gt;
+    &lt;?php wp_head(); ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;header&gt;
+            &lt;h1&gt;&lt;a&gt;&lt;?php bloginfo('name'); ?&gt;&lt;/a&gt;&lt;/h1&gt;
+            &lt;h2&gt;&lt;?php bloginfo('description'); ?&gt;&lt;/h2&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums">
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;?php bloginfo('name'); ?&gt; est propulsé par &lt;a href="http://wordpress.org"&gt;WordPress&lt;/a&gt;.
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    &lt;?php wp_footer(); ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+			<ul>
+				<li><strong>wp_head()</strong> : permet aux plugins d'insérer du code dans le head</li>
+				<li><strong>wp_footer()</strong> : idem wp_head (notamment les appels JS)</li>
+			</ul>
+
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inclure les fichiers dans les templates</h3>
+		</div>
+		<div class="widget-content">
+			<p>Maintenant que nous avons définis les includes de base (header et footer), utilisons-les dans un template : index.php.</p>
+
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+	get_header(); // inclut header.php
+?&gt;
+
+	&lt;!-- Contenu du template --&gt;
+	Contenu du template index.php.
+
+&lt;?php
+	get_footer(); // inclut footer.php
+?&gt;
+</pre>
+
+		</div>
+	</div>
+
+
+
+</div>

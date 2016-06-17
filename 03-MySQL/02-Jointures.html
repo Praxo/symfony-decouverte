@@ -1,0 +1,141 @@
+
+<div class="main-wrapper">
+	<h1>CSS - Formatage du texte</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Donner du style à son texte :</p>
+			<ul>
+			<li>color</li>
+			<li>text-transform/align/decoration</li>
+			<li>Unités de taille</li>
+			<li>text-indent</li>
+			<li>font-size/weight/style</li>
+			<li>letter-spacing</li>
+			<li>line-height</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Donner du style à son texte</h3>
+		</div>
+		<div class="widget-content">
+			<h4>color : couleur du texte - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/color" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* couleur du texte rouge */
+	color: red;
+}
+</pre>
+
+		<h4>text-transform : casse du texte - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-transform" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : uppercase, lowercase, capitalize, none */
+	text-transform: uppercase;
+}
+</pre>
+
+		<h4>text-align : alignement du texte - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-align" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : left, right, center, justify*/
+	text-align: center;
+}
+</pre>
+
+		<h4>text-decoration : décoration/formatage du texte - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : underline, overline, line-through, none */
+	text-decoration: underline;
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Unités de longueur / taille - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/longueur" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">		
+			<p>Il existe différentes unités de taille :</p>
+			<ul>
+				<li>px : taille absolue, "correspond au pixel écran"</li>
+				<li>em : taille relative, par rapport à la taille héritée</li>
+				<li>% : taille relative, par rapport à la taille héritée</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Et ça continue !</h3>
+		</div>
+		<div class="widget-content">		
+			<h4>text-indent - espace d'indentation de la première ligne - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-indent" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : px, em, %... */
+	text-indent: 2em;
+}
+</pre>
+
+			<h4>font-size : taille de la police - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-size" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : small, medium, large, px, em... */
+	font-size: 12px;
+}
+
+p strong{
+	/* 1,5 fois la valeur de la valeur de la taille héritée = 150% */
+	font-size: 1.5em; 
+}
+</pre>
+
+			<h4>font-weight : graisse de la police - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-weight" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : normal, bold, bolder, lighter, 100-900... */
+	font-weight: bold;
+}
+</pre>
+
+			<h4>font-style : change l'aspect de la police - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-style" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : normal, italic, oblique */
+	font-style: italic;
+}
+</pre>
+
+			<h4>letter-spacing : espace entre les caractères - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/letter-spacing" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : normal, px, em... */
+	letter-spacing: 1.6px;
+}
+</pre>
+
+			<h4>line-height : hauteur de la ligne - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/line-height" target="_blank">Documentation</a></h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	/* valeurs possibles : normal, px, em, %... */
+	line-height: 22px;
+}
+</pre>
+		</div>
+	</div>
+</div>

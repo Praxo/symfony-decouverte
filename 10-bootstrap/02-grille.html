@@ -1,0 +1,306 @@
+<div class="main-wrapper">
+	<h1>Système de grille</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Système de grille</p>
+					<ul>
+						<li>Conteneur</li>
+						<li>Organisation de la grille</li>
+						<li>Sauter des colonnes</li>
+						<li>Exercice</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://fr.openclassrooms.com/informatique/cours/prenez-en-main-bootstrap/une-grille" target="_blank">Grille</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Conteneur</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Une grille est un ensemble de lignes, découpées en cellules.<br />
+				La grille de <strong>bootstrap</strong> est divisée en 12 colonnes fluides (en %). Une ligne sera donc "découpée" en 12 colonnes.
+			</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Système de grille - <a href="http://getbootstrap.com/css/#grid-options" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<div class="clearfix">
+				<div class="columns medium-6">
+					<p>La grille <strong>Bootstrap</strong> doit être placée dans un conteneur.</p>
+					<ul>
+						<li><strong>container</strong> : centre la grille sur une largeur fixe qui s'adapte</li>
+						<li><strong>container-fluid</strong> : prend toute la largeur (100%)</li>
+					</ul>
+					<p>Le conteneur est responsive, ainsi, il s'adaptera toujours :</p>
+				</div>
+				<div class="columns medium-6">
+					<table class="">
+						<thead>
+							<tr>
+								<th>Type d'écran</th>
+								<th>Grille</th>
+								<th>Taille d'écran</th>
+								<th>Taille du container</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Smartphone</td>
+								<td>xs : extra small devices</td>
+								<td>&lt; 768 pixels</td>
+								<td>auto</td>
+							</tr>
+							<tr>
+								<td>Tablette</td>
+								<td>sm : small devices</td>
+								<td>&gt;= 768 pixels</td>
+								<td>750px</td>
+							</tr>
+							<tr>
+								<td>Écran de bureau</td>
+								<td>md : medium devices</td>
+								<td>&gt;= 992 pixels</td>
+								<td>970px</td>
+							</tr>
+							<tr>
+								<td>Grand écran de bureau</td>
+								<td>lg : large devices</td>
+								<td>&gt;= 1200 pixels</td>
+								<td>1170px</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="container"&gt;
+	Conteneur de ma grille
+&lt;/div&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Organisation de la grille - ligne</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Une "ligne" est définie par la class <strong>row</strong>.
+				La class <strong>row</strong> sert entre autre de <strong>clearfix</strong>.
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		Contenu de ma ligne
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Organisation de la grille - Colonnes</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour définir une colonne, il faut lui donner une dimension. La grille étant divisée en 12 colonnes :</p>
+			<ul>
+				<li><strong>1</strong> : 1/12 = 8.33%</li>
+				<li><strong>4</strong> : 4/12 = 33.33%</li>
+				<li><strong>6</strong> : 6/12 = 50%</li>
+				<li><strong>...</strong></li>
+			</ul>
+			<p>
+				Bootstrap est <strong>reponsive</strong>, chaque class de grille correspond en fait à un <strong>media query</strong>, sous la forme <strong>col-[device]-[nb col]</strong> :
+			</p>
+
+			<table class="">
+				<thead>
+					<tr>
+						<th>Type d’écran</th>
+						<th>Grille</th>
+						<th>Taille d’écran</th>
+						<th>Classes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Smartphone</td>
+						<td>xs : extra small devices</td>
+						<td>&lt; 768px</td>
+						<td>.col-xs-*</td>
+					</tr>
+					<tr>
+						<td>Tablette</td>
+						<td>sm : small devices</td>
+						<td>&gt;= 768px</td>
+						<td>.col-sm-*</td>
+					</tr>
+					<tr>
+						<td>Écran de bureau</td>
+						<td>md : medium devices</td>
+						<td>&gt;= 992px</td>
+						<td>.col-md-*</td>
+					</tr>
+					<tr>
+						<td>Grand écran de bureau</td>
+						<td>lg : large devices</td>
+						<td>&gt;= 1200px</td>
+						<td>.col-lg-*</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>
+				Ainsi, il est possible de combiner plusieurs classes à un élément, et gérer son comportement dans les différentes résolutions : 
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-lg-3 col-sm-6"&gt;Largeur de 3&lt;/div&gt; &lt;!-- 3/12 quand >=1200 / 6/12 quand >=992 --&gt;
+		&lt;div class="col-lg-1 col-sm-3"&gt;Largeur de 1&lt;/div&gt; &lt;!-- 1/12 quand >=1200 / 3/12 quand >=992 --&gt;
+		&lt;div class="col-lg-8 col-sm-3"&gt;Largeur de 8&lt;/div&gt; &lt;!-- 8/12 quand >=1200 / 3/12 quand >=992 --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			<a href="../exemples/bootstrap-grid.html" target="_blank">Exemple</a>
+		</div>
+	</div>
+
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/18-TP-bootstrap/01-grille.html" target="_blank">Réaliser le schéma suivant</a>
+			<p class="widget-intro">Seules propriétés css autorisées :</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	background: #f2f2f2;
+}
+
+/* Espace en dessous des lignes */
+.row{
+	margin-bottom: 20px;
+}
+
+/* Styles pour les colonnes */
+[class^="col-"]{
+	background:#fff;
+	border: 1px solid #CCC;
+}
+
+/* ET C'EST TOUT ! */
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/18-TP-bootstrap/02-grille-thumb.html" target="_blank">Réaliser le schéma suivant</a>
+			<p class="widget-intro">Seules propriétés css autorisées :</p>
+<pre class="prettyprint lang-css linenums">
+body { margin-top: 10px; }
+img { width: 100%; }
+[class*="col"] { margin-bottom: 20px; }
+
+/* that's all folks ! */
+</pre>
+			<p>Pour les images, rendez-vous sur : <a href="http://lorempixel.com" target="_blank">Lorem pixel</a></p>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Décaler les éléments -colonnes- d'une grille </h3>
+		</div>
+		<div class="widget-content">
+			<p>Sur le même principe, il est possible de décaler des colonnes grâce à une série de class <strong>col-[device]-offset-[nb col]</strong> (se traduit par un <strong>margin-left</strong>)</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Type d’écran</th>
+						<th>Grille</th>
+						<th>Taille d’écran</th>
+						<th>Classes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Smartphone</td>
+						<td>xs : extra small devices</td>
+						<td>&lt; 768px</td>
+						<td>.col-xs-offset-*</td>
+					</tr>
+					<tr>
+						<td>Tablette</td>
+						<td>sm : small devices</td>
+						<td>&gt;= 768px</td>
+						<td>.col-sm-offset-*</td>
+					</tr>
+					<tr>
+						<td>Écran de bureau</td>
+						<td>md : medium devices</td>
+						<td>&gt;= 992px</td>
+						<td>.col-md-offset-*</td>
+					</tr>
+					<tr>
+						<td>Grand écran de bureau</td>
+						<td>lg : large devices</td>
+						<td>&gt;= 1200px</td>
+						<td>.col-lg-offset-*</td>
+					</tr>
+				</tbody>
+			</table>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-md-6"&gt;Largeur de 6&lt;/div&gt;
+		&lt;div class="col-md-4 col-md-offset-2"&gt;Largeur de 4 avec décalage de 2&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			<a href="../exemples/bootstrap-grid-offset.html" target="_blank">Exemple</a>
+		</div>
+	</div>
+
+
+
+
+
+</div>

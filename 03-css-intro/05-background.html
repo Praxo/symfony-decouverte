@@ -1,0 +1,67 @@
+<div class="main-wrapper">
+	<h1>CSS - Background</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Définir un background à un élément :</p>
+					<ul>
+						<li>Propriété background</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Propriétés - background</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Couleur de fond : background-color</h4>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-color: red; /* #F00, rgba(255, 0, 0); */
+}</pre>
+			<h4>Image de fond : background-image</h4>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-image: url("chemin/vers/monimage.jpg");
+}</pre>
+			<h4>Répétition du fond : background-repeat</h4>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-repeat: repeat; /* no-repeat, repeat-x, repeat-y... */
+}</pre>
+			<h4>Position de l'image de fond : background-position</h4>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-position: right top; /* top, left, right, bottom, center, %, px... */
+}</pre>
+			<div class="clearfix">
+				<div class="columns medium-4 small-12">
+					<img src="../assets/images/css-background-position.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Raccourci</h3>
+		</div>
+		<div class="widget-content">
+			<p>Comme souvent en CSS (vous allez vous en rendre compte très vite), les propriétés d'un même "type" possèdent un des raccourcis pour simplifier la syntaxe.</p>
+<pre class="prettyprint lang-css linenums">
+body{
+	background: blue url("../images/background.jpg") no-repeat center center;
+}</pre>
+		</div>
+	</div>
+</div>

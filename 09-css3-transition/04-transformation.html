@@ -1,0 +1,142 @@
+<div class="main-wrapper">
+	<h1>Transformations CSS3</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer des transformations CSS3</p>
+					<ul>
+						<li>Origine</li>
+						<li>Rotation</li>
+						<li>&Eacute;chelle</li>
+						<li>Inclinaison</li>
+						<li>Exemples / Exercices</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/article/lire/1418-css3-transformations-2d.html" target="_blank">Documentation</a>
+						</li>
+						<li>
+							<a href="http://www.css3files.com/transform/" target="_blank">Exemples</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Transformations</h3>
+		</div>
+		<div class="widget-content">
+			<p>Depuis CSS3, on peut apporter des transformations avec la propriété <strong>transform</strong> et une liste de fonctions prédéfinies.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Origine de la transformation</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>transform-origin</strong> permet de définir l'origine de la transformation. Par défaut, il s'agit du centre de l'élément.</p>
+			<p><strong>Valeurs possibles :</strong> top, bottom, left, right, center, px, em, %...</p>
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform-origin: 50% 50%; /* X, Y */
+	transform-origin: top left;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Rotation</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: rotate(30deg); /* valeur négative possible */
+}
+</pre>		
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Changement d'échelle</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: scale(2, 0.5); /* X, Y : nombre de fois la valeur initiale */
+}
+</pre>
+			<h4>Horizontal</h4>
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: scaleX(2);
+}
+</pre>
+			<h4>Vertical</h4>
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: scaleY(0.5);
+}
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inclinaison</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: skewX(20deg) skewY(15deg);
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Translation</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-css linenums">
+.power-rangers{
+	transform: translateX(-50%) translateY(50px);
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/17-TP-transition/04-transformations.html" target="_blank">Réaliser les exemples suivants</a>
+		</div>
+	</div>
+</div>

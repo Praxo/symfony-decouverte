@@ -1,0 +1,48 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Anatomie d'un thème</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Comprendre l'anatomie d'un thème</p>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="../assets/images/wordpress-templates.png" target="_blank">Hiérarchie des templates</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Anatomie d'un thème</h3>
+		</div>
+		<div class="widget-content">
+			<h4>style.css (obligatoire)</h4>
+			<p>Ce fichier est <strong>indispensable</strong> et doit s'appeler <strong>style.css</strong>. Il contiendra des informations sur le thème.</p>
+
+			<h4>screenshot.png (facultatif)</h4>
+			<p>Il s'agit de la vignette du thème (visible dans l'admin : apparence > thèmes).<br />
+			Format : 300x225px</p>
+
+			<h4>Les templates - <a href="http://wordpress.bbxdesign.com/hierarchie-des-templates" target="_blank">Documentation</a></h4>
+			<p>
+				Un template est un <strong>fichier PHP</strong> appelé par Wordpress pour générer le contenu HTML.<br />
+				Lorsque vous êtes sur une page, Wordpress recherche le type de cette page (listing des posts, page statique, article, page d'accueil...). En fonction de la page courante, il appelera un fichier/template différent : 
+				<a href="../assets/images/wordpress-templates.png" target="_blank">Schéma des appels de templates</a>
+			</p>
+			<p>Pour qu'un thème soit valide, il faut obligatoirement qu'il contienne un fichier de template : <strong>index.php</strong>, qui est le fichier appelé par défaut.</p>
+		</div>
+	</div>
+</div>

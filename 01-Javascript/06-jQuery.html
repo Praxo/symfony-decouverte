@@ -1,0 +1,102 @@
+<div class="main-wrapper">
+	<h1>jQuery</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<p class="widget-intro">Maitriser jQuery</p>
+			<ul>
+				<li>Structure de base</li>
+				<li>Les selecteurs</li>
+				<li>Les fonctions</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Définition</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>jQuery est une bibliothèque JavaScript libre et multi-plateforme créée pour faciliter l'écriture de scripts côté client dans le code HTML des pages web. La première version est lancée en janvier 2006 par John Resig.</strong>
+			</p>
+			<p>
+				La bibliothèque contient notamment les fonctionnalités suivantes :
+			</p>
+			<ul>
+				<li>Parcours et modification du DOM (y compris le support des sélecteurs CSS 1 à 3 et un support basique de XPath) ;</li>
+				<li>Événements ;</li>
+				<li>Effets visuels et animations ;</li>
+				<li>Manipulations des feuilles de style en cascade (ajout/suppression des classes, d'attributs…) ;</li>
+				<li>Ajax ;</li>
+				<li>Plugins ;</li>
+				<li>Utilitaires (version du navigateur web…).</li>
+			</ul>
+			<p>
+				La bibliothèque jQuery peut être appelée de deux manières différentes :
+			</p>
+			<ul>
+				<li>via la fonction jQuery, ou $. Cette fonction est chaînable (elle retourne l'objet appelant). Par exemple :</li>
+				<pre class="lang-javascript linenums">$("div.test").add("p.quote").addClass("blue").slideDown("slow");</pre>
+				<li>via l'objet $. Par exemple :</li>
+				<pre class="lang-javascript linenums">$.each([1,2,3], function() {
+	document.write(this + 1);
+});</pre>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les sélecteurs</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>jQuery utilise les selecteurs CSS pour fonctionner</strong>
+			</p>
+			<p>
+				# pour les id, . pour les classes, etc...<br/>
+				Dans le cas où jQuery ne trouverait aucun élément, aucune erreur n'est renvoyé, mais un tableau vide fait office de résultat
+			</p>
+		</div>
+	</div>
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les fonctions</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong><a href="http://api.jquery.com/">Documentation officielle</a></strong>
+			</p>
+			<p>
+				Attendre le chargement de la page
+				<pre class="lang-javascript linenums">$('document').ready(function()
+{
+	// Attends l'event DOMContentLoaded pour être déclenché (le chargement de la page)
+});</pre>
+			</p>
+			<p>
+				Changer un attribut css
+				<pre class="lang-javascript linenums">$('div').css('background-color', 'red');</pre>
+			</p>
+			<p>
+				Changer le contenu html
+				<pre class="lang-javascript linenums">$('div').html('nouveau contenu');</pre>
+			</p>
+			<p>
+				Ecouter un evenement
+				<pre class="lang-javascript linenums">$('div').click(function()
+{
+	alert('click !');
+});</pre>
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,85 @@
+<div class="main-wrapper">
+	<h1>Bordures</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Ajouter des bordures à des éléments :</p>
+					<ul>
+						<li>Propriété border</li>
+						<li>Bordures arrondies</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Border - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				3 éléments sont nécessaires pour créer une bordure : sa taille (<strong>width</strong>), son style (<strong>style</strong>) et sa couleur (<strong>color</strong>).
+			</p>
+			<p>
+				border: width style color<br />
+				border-top / right / bottom / left
+			</p>
+<pre class="prettyprint lang-css linenums">
+.bloc-bordure{
+	border-width: 5px; /* px, em, % */
+	border-style: solid; /* Valeurs possibles : solid, dotted, dashed, none,... */
+	border-color: #CCC; /* Valeurs possibles : nom, rgb, hexa */
+}
+
+/* raccourci */
+.bloc-bordure{
+	border: 5px solid #CCC;
+}
+
+/* Uniquement la bordure d'un coté */
+.bordure-gauche{
+	border-left: 3px solid red;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Bordures arrondies - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>border-radius</strong> permet d'arrondir les angles<br />
+				border-top-left-radius / border-bottom-right-radius...
+			</p>
+<pre class="prettyprint lang-css linenums">
+.bloc-bordure{
+	border-radius: 10px; /* les 4 coins */
+	border-radius: 10px 5px 20px 0; /* TL:10px / TR:5px / BR:20px / BL:0 */
+}
+</pre>
+		</div>
+	</div>
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Réalisez les schémas suivants :
+			</p>
+			<img src="../assets/images/05-bordures.jpg" alt="">
+		</div>
+	</div>
+</div>

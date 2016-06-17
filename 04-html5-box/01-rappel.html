@@ -1,0 +1,120 @@
+<div class="main-wrapper">
+	<h1>Rappels</h1>
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Rappels :</p>
+					<ul>
+						<li>HTML : Structure générale : DOCTYPE, html, head, body</li>
+						<li>HTML : Balises génériques : Hn, strong, em, p, br, hr, ul, ol, li</li>
+						<li>HTML : Liens : a href</li>
+						<li>HTML : Images : img</li>
+						<li>CSS : privilégier l'insertion de fichier externe : &lt;link rel="stylesheet" href="./styles/style.css" /&gt;</li>
+						<li>CSS : formatage du texte : color, text-transform/align/decoration, px/em/%, text-indent, font-size/weight/style, letter-spacing, line-height</li>
+						<li>CSS : changer de police</li>
+						<li>CSS : background</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">HTML</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Hello world&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="styles/style.css" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Titre principal&lt;/h1&gt;
+		&lt;h2&gt;Titre 2&lt;/h2&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="menu"&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="accueil.html"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="portfolio.html"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+
+			&lt;div class="article"&gt;
+				&lt;h3&gt;Titre de l'article&lt;/h3&gt;
+				&lt;img src="images/article.jpg" alt="Illustration de mon article" /&gt;
+				&lt;p&gt;
+					Lorem ipsum dolor sit amet, &lt;strong&gt;forte mise en avant&lt;strong&gt; elit. Laudantium officiis similique dolore architecto commodi eius aspernatur veritatis.&lt;br /&gt;
+					fuga a in, dolor nemo blanditiis fugiat culpa nesciunt consectetur! Magni maxime, fugit!
+				&lt;/p&gt;
+				&lt;a href="article.html"&gt;Lien vers l'article&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">CSS</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Formatage du texte</h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	color: red; /* couleur du texte */
+	
+	text-transform: uppercase; /* casse */
+	text-align: center; /* alignement */
+	text-decoration: underline; /* decoration */
+	text-indent: 10px; /* indentation */
+
+	font-weight: bold; /* graisse */
+	font-style: italic; /* aspect */
+
+	letter-spacing: 1.6em; /* espace entre les caractères */
+	line-height: 2em; /* hauteur des lignes */
+}
+</pre>
+			<h4>Couleurs</h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	color: red; /* nominatif */
+	color: #ff0000; /* hexadecimal */
+	color: rgba(255, 0, 0); /* RGB */
+}
+</pre>
+			<h4>Utiliser une police différente -native-</h4>
+<pre class="prettyprint lang-css linenums">
+p{
+	font-family: Arial, Helvetica, sans-serif; /* penser au fallback pour les différents OS */
+}
+</pre>
+			<h4>Background</h4>
+<pre class="prettyprint lang-css linenums">
+body{
+	background-color: red; /* #F00, rgba(255, 0, 0); */
+	background-image: url("chemin/vers/monimage.jpg");
+	background-repeat: repeat; /* no-repeat, repeat-x, repeat-y... */
+	background-position: right top; /* top, left, right, bottom, center, %, px... */
+
+	/* Raccourci */
+	background: red url("chemin/vers/monimage.jpg") no-repeat right top;
+}</pre>
+		</div>
+	</div>
+</div>

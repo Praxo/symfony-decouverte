@@ -1,0 +1,121 @@
+<div class="main-wrapper">
+	<h1>Emmet - plugin sublime text</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Découvrir Emmet - plugin sublime text (et autres editeurs / IDE)</p>
+					<ul>
+						<li>Découvrir et installer Emmet sur sublime text</li>
+						<li>Raccourcis HTML</li>
+						<li>Raccourcis CSS</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://emmet.io/" target="_blank">Site officiel</a>
+						</li>
+						<li>
+							<a href="http://docs.emmet.io/cheat-sheet/" target="_blank">Petite liste de raccourcis</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Découvrir et installer Emmet sur sublime text</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				<strong>Emmet</strong> est un plugin disponible pour quasiment tous les éditeurs de texte et IDE.<br> 
+				Il propose un tas de raccourcis pour générer de l'HTML et du CSS.
+			</p>
+			<blockquote><strong>Attention : </strong> je le présente maintenant car je considère que vous maitrisez et connaissez la logique HTML et les balises (imbrication / attributs), ainsi que la syntaxe des propriétés CSS.<br>Si ce n'est pas encore totalement le cas, privilégiez l'écriture en dur !</blockquote>
+
+			<h4>Installer Emmet sur sublime text</h4>
+			<ul>
+				<li><strong>CTRL + Shift + P</strong> : ouverture de la palette de commandes</li>
+				<li>Recherchez <strong>Install package</strong> puis "enter" (Si vous ne le trouvez pas, appelez moi - <a href="https://packagecontrol.io/installation" target="_blank">Installation de la palette de commandes</a>)</li>
+				<li>Recherchez <strong>Emmet</strong> puis "enter" pour lancer l'installation</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Raccourcis HTML</h3>
+		</div>
+		<div class="widget-content">
+			Il faut être dans un fichier HTML pour les utiliser.<br>
+			Tous les raccourcis vont être déclenché en utilisant "tab".
+			<h4>.toto : balise générique avec class</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="toto"&gt;&lt;/div&gt;
+</pre>
+			<h4>nav.toto : balise spécifique avec class</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;nav class="toto"&gt;&lt;/nav&gt;
+</pre>
+			<h4>ul>li : relation parent - enfant</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;ul&gt;
+	&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			<h4>header+main : relation frère</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;header&gt;&lt;/header&gt;
+&lt;main&gt;&lt;/main&gt;
+</pre>
+			<h4>nav>ul>li*2>a : relation parent - enfant multiple</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Raccourcis CSS</h3>
+		</div>
+		<div class="widget-content">
+			Il faut être dans un fichier CSS pour les utiliser.<br>
+			Tous les raccourcis vont être déclenché en utilisant "tab".
+			<h4>w20</h4>
+<pre class="prettyprint lang-css linenums">
+width: 20px;
+</pre>
+			<h4>tac</h4>
+<pre class="prettyprint lang-css linenums">
+text-align: center;
+</pre>
+			<h4>fwb</h4>
+<pre class="prettyprint lang-css linenums">
+font-weight: bold;
+</pre>
+			<h4>dib</h4>
+<pre class="prettyprint lang-css linenums">
+display: inline-block;
+</pre>
+		</div>
+	</div>
+</div>

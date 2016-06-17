@@ -1,0 +1,310 @@
+<div class="main-wrapper">
+	<h1>Less - pré-processeur CSS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Découvrir un pré-processeur CSS</p>
+					<ul>
+						<li>Un pré-processeur ? Késako ?</li>
+						<li>Pourquoi un pré-processeur ?</li>
+						<li>Less - comment ça marche ?</li>
+						<li>Les variables</li>
+						<li>L'imbrication / la hiérarchisation de propriétés</li>
+						<li>Les mixins</li>
+						<li>Les mixins - avec paramètres</li>
+						<li>Les opérations</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://lesscss.org/" target="_blank">Less CSS</a>
+						</li>
+						<li>
+							<a href="http://lesscss.org/less-preview/" target="_blank">Less2CSS - compilateur LESS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Un pré-processeur ? Késako ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Depuis quelques années, c'est la mode des <strong>pré-processeurs CSS</strong>. Ils peuvent être considérés comme des outils permettant de générer dynamiquement du CSS.
+			</p>
+			<p>
+				Les pré-processeurs interviennent en amont, avant la rédaction de CSS, puisque ce sont eux qui vont générer la feuille de style à partir d'un langage spécifique à chaque pré-processeur.
+			</p>
+			<p>Les principaux pré-processeurs du marché sont :</p>
+			<ul>
+				<li><strong>LESS</strong> : que nous allons voir car plus simple d'implémentation que les autres</li>
+				<li><strong>SASS</strong> : selon moi le plus abouti et celui que j'utilise</li>
+				<li><strong>Stylus</strong> : inconnu au bataillon, mais peut être que vous serez curieux !</li>
+			</ul>
+			<blockquote><strong>NB : </strong> peu importe le pré-processeur, la logique restera quasiment la même, seule la syntaxe sera différente.</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Pourquoi un pré-processeur ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>On commence doucement à se rendre compte que :</p>
+			<ul>
+				<li>L'indentation est importante pour grouper visuellement le CSS</li>
+				<li>Les propriétés / valeurs sont souvent répétées, ou sont regroupées pour éviter les redondances</li>
+				<li>Les éléments récurents d'un design (font-family, color, background, tailles) vont être utilisés à plusieurs reprises, et ne seront pas pratique à maintenir</li>
+				<li>Les prefixes pour les propriétés CSS3 alourdissent le code</li>
+				<li>...</li>
+			</ul>
+			<p>
+				Les pré-processeurs, vont par exemple permettre de :
+			</p>
+			<ul>
+				<li>Définir des variables</li>
+				<li>Imbriquer des propriétés</li>
+				<li>Préfixer automatiquement les propriétés CSS3</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Less - comment ça marche ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Désormais, vous n’allez plus écrire des feuilles CSS mais des feuilles LESS. Malheureusement, le navigateur ne comprend pas le LESS. Il va donc falloir convertir le LESS en CSS.
+			</p>
+			<h4>Déclarer un fichier LESS :</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet/less" type="text/css" href="styles/style.less" /&gt;
+</pre>
+			<h4>Compiler le LESS en CSS (client side) - <a href="https://raw.githubusercontent.com/less/less.js/v2.6.1/dist/less.min.js" target="_blank">Télécharger less.min.js</a> :</h4>
+			<p><strong>less.js</strong> est un fichier javascript compilant le LESS en CSS au chargement de la page. Il faut l'indiquer <strong>dans le head, après votre link less</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet/less" type="text/css" href="styles/style.less" /&gt;
+&lt;script type="text/javascript" src="scripts/less.js"&gt;&lt;/script&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les variables - <a href="http://lesscss.org/features/#variables-feature" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+
+			<h4>CSS classique :</h4>
+<pre class="prettyprint lang-css linenums">
+a{
+	color: #333;
+}
+
+.intro{
+	background: #333;
+	color: #fff;
+}
+</pre>
+			<h4>LESS :</h4>
+<pre class="prettyprint lang-css linenums">
+@gray: #333; /* on définit une variable gray qui a comme valeur #333 */
+
+a{
+	color: @gray;
+}
+
+.intro{
+	background: @gray;
+	color: #fff;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Imbrication / hiérarchisation de propriétés</h3>
+		</div>
+		<div class="widget-content">
+
+			<h4>CSS classique :</h4>
+<pre class="prettyprint lang-css linenums">
+.nav{
+	background: #333;
+	padding: 10px;
+}
+
+.nav ul{
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+.nav ul li{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1rem;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav ul li a:hover{
+	color: red;
+}</pre>
+			<h4>LESS :</h4>
+<pre class="prettyprint lang-css linenums">
+.nav{
+	background: #333;
+	padding: 10px;
+	
+	ul{
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 1rem;
+	
+			a{
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover{
+					color: red;
+				}
+			}
+		}
+	}
+}</pre>
+		<blockquote><strong>&</strong> correspond à l'élément courant</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les mixins</h3>
+		</div>
+		<div class="widget-content">
+			<p>Les mixins sont comme des variables, mais peuvent contenir plusieurs propriétés/valeurs.</p>
+
+			<h4>CSS classique :</h4>
+<pre class="prettyprint lang-css linenums">
+.intro{
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.sidebar{
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+</pre>
+			<h4>LESS :</h4>
+<pre class="prettyprint lang-css linenums">
+.radius{
+     -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+     border-radius: 12px;
+}
+
+.intro{
+	.radius;
+}
+
+.sidebar{
+	.radius;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les mixins - avec paramètres</h3>
+		</div>
+		<div class="widget-content">
+			<h4>CSS classique :</h4>
+<pre class="prettyprint lang-css linenums">
+.intro{
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.sidebar{
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+</pre>
+			<h4>LESS :</h4>
+<pre class="prettyprint lang-css linenums">
+.radius(@radius){
+     -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+     border-radius: @radius;
+}
+
+.intro{
+	.radius(15px);
+}
+
+.sidebar{
+	.radius(50px);
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les opérations</h3>
+		</div>
+		<div class="widget-content">
+			<h4>CSS classique :</h4>
+			"Pas possible..." (en fait si, il existe une fonction <strong>calc()</strong> depuis CSS3 - <a href="http://www.alsacreations.com/article/lire/1630-la-fonction-calc-en-css.html" target="_blank">Informations</a>)
+			<h4>LESS :</h4>
+<pre class="prettyprint lang-css linenums">
+@sidebarWidth: 300px;
+
+.sidebar{
+	width: @sidebarWidth;
+	float: left;
+}
+.content{
+	width: 100% - @sidebarWidth;
+	float: left;
+}
+</pre>
+		</div>
+	</div>
+</div>

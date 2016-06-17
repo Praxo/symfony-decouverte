@@ -1,0 +1,132 @@
+<div class="main-wrapper">
+	<h1>Animations CSS3</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer des animations CSS3</p>
+					<ul>
+						<li>Définir une animation</li>
+						<li>Lancer une animation</li>
+						<li>Exemples / Exercices</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1299-timing-des-animations-et-des-transitions-en-css3.html" target="_blank">Documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Animations CSS3</h3>
+		</div>
+		<div class="widget-content">
+			<p>Les <strong>animations CSS3</strong> sont semblables aux transitions mais permettent un contrôle très précis dans le temps.<br />
+			Une animation peut être lancée lors d'un changement d'état, un ajout de class en JS ou au chargement de la page.</p>
+			<p>
+				Une animation se fait en 2 étapes :
+			</p>
+			<ul>
+				<li>Créer l'animation (genre de "fonction")</li>
+				<li>Assigner l'animation à un sélecteur</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Définir une animation</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li>Une déclaration d'images-clés (keyframes)</li>
+				<li>Le nom de la déclaration (comme une fonction)</li>
+				<li>Les différentes étapes de l'animation</li>
+			</ul>
+
+			<pre class="prettyprint lang-css linenums">
+/* Règle CSS3 donc on ajoute les prefixes */
+@-moz-keyframes monanim {}
+@-webkit-keyframes monanim {}
+@-o-keyframes monanim {}
+@-ms-keyframes monanim {}
+
+/* déclaration de keyframes et nommage */
+@keyframes monanim {
+	0%{
+		/* état initial (obligatoire) */
+		color: red;
+	}
+	50%{
+		/* état à 50% */
+		color: green;
+	}
+	100%{
+		/* état final (obligatoire) */
+		color: red;
+	}
+}
+</pre>
+			<blockquote><strong>NB :</strong> Une transition est effectuée entre chaque keyframe.</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Assigner une animation</h3>
+		</div>
+		<div class="widget-content">
+			<p>Une fois l'animation créée, il faut l'appeler avec <strong>animation</strong> (CSS3 donc préfix).</p>
+			<h4>Liste des paramètres :</h4>
+			<ul>
+				<li><strong>animation-name : </strong> nom de l'animation (obligatoire)</li>
+				<li><strong>animation-duration :</strong> durée en <strong>s</strong> ou <strong>ms</strong> (obligatoire)</li>
+				<li><strong>animation-iteration-count :</strong> nombre de fois que l'animation est effectuée (défaut 1), <strong>infinite</strong> si l'animation se répète à l'infini</li>
+				<li><strong>animation-direction :</strong> définit si l'animation se joue toujours du début à la fin ou si on alterne (défaut <strong>normal</strong>), <strong>alternate</strong> pour de "l'aller-retour" (<a href="http://jsfiddle.net/vaxilart/UkFkb/" target="_blank">exemple</a>)</li>
+				<li><strong>animation-timing-function :</strong> idem transition, effet de timing</li>
+				<li><strong>animation-delay :</strong> délai</li>
+			</ul>
+			<p>On peut Ou alors, utiliser le raccourci <strong>animation</strong></p>
+
+			<pre class="prettyprint lang-css linenums">
+.bouton{
+	animation: slideIn 3s infinite alternate;
+}
+
+@keyframes slideIn{
+	0%{
+		left: 100%;
+	}
+	100%{
+		left: 0%;
+	}
+}
+</pre>		
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/17-TP-transition/03-animations.html" target="_blank">Réaliser les exemples suivants</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,104 @@
+<div class="main-wrapper">
+	<h1>Débordements de contenu</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Gérer les débordements de contenu</p>
+					<ul>
+						<li>Re-découvrir la propriété CSS : <strong>overflow</strong></li>
+						<li>word-wrap</li>
+						<li>white-space</li>
+						<li>Exercice</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1038-gerer-debordement-contenu-et-cesures-css.html" target="_blank">Gérer les débordements de contenu</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Overflow - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/overflow" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>overflow</strong> permet de gérer les débordements dans une boîte.</p>
+			<ul>
+				<li><strong>visible</strong> : non rogné (défaut)</li>
+				<li><strong>hidden</strong> : rogné et scroll cachés</li>
+				<li><strong>scroll</strong> : rogné et force l'affichage des scroll</li>
+				<li><strong>auto</strong> : rogné et affiche si le contenu déborde</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.zone-scroll {
+	overflow: scroll; /* force l'affichage des scroll et le contenu est rogné */
+}
+</pre>
+			On peut également définir : <strong>overflow-x</strong> et <strong>overflow-y</strong>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">word-wrap - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/word-wrap" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>word-wrap</strong> permet de gérer la césure (retour ligne) à l'intérieur d'un mot, si celui-ci est trop long et dépasse de la boîte.</p> 
+			<ul>
+				<li><strong>normal</strong></li>
+				<li><strong>break-word</strong> : si pas de césure normal possible, on force le retour ligne et le mot sera coupé</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.contenu-coupe{
+	word-wrap: break-word;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">white-space - <a href="https://developer.mozilla.org/fr/docs/Web/CSS/white-space" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>white-space</strong> formate les textes dans une boîte : comment les espaces vont être géré (retour ligne ou non).</p> 
+			<ul>
+				<li><strong>normal</strong></li>
+				<li><strong>nowrap</strong> : pas de retour ligne</li>
+			</ul>
+<pre class="prettyprint lang-css linenums">
+.ligne{
+	white-space: nowrap;
+}
+</pre>
+		</div>
+	</div>
+
+
+
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<a href="../exercices/17-TP-transition/01-debordement.html" target="_blank">Réaliser l'exemple suivant</a>
+		</div>
+	</div>
+</div>

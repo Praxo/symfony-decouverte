@@ -1,0 +1,90 @@
+<div class="main-wrapper">
+	<h1>Utiliser les sprite CSS</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Utiliser les sprite CSS</p>
+					<ul>
+						<li>Un sprite - ça pétille ?</li>
+						<li>Comment l'utiliser</li>
+						<li>Exercice</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/tuto/lire/1068-sprites-css-background-position.html" target="_blank">Alsacreations - Les sprites CSS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Un sprite - ça pétille ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>Un <strong>sprite CSS</strong> est une technique qui consiste à exploiter un fichier unique pour stocker de multiples images, positionnées les unes à côté des autres.</p>
+			<h4>Exemple de fichier sprite</h4>
+			<img src="../assets/images/social-icons.png" alt="">
+			<h4>Intérêts</h4>
+			<ul>
+				<li>On ne charge qu'un seul fichier à la place de 8 : optimisation des requêtes HTTP + poids</li>
+				<li>Facitilité pour changer d'image lors d'un changement d'état</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Comment l'utiliser</h3>
+		</div>
+		<div class="widget-content">
+			<p>Un sprite s'utilise en CSS (donc pas avec la balise img, qui afficherait toute l'image). On va donc définir la dimension d'un élément, lui assigner le fichier sprite en <strong>background-image</strong>, et décaler ce background grâce au <strong>background-position</strong> (comme un masque dans les logiciels de graphisme).</p>
+<pre class="prettyprint lang-css linenums">
+.sprite{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../images/sprite.png);
+}
+
+.sprite.ico-facebook{
+	background-position: -30px -40px; /* decallage de 30 vers la gauche et 40 vers le haut */
+}
+
+.sprite.ico-twitter{
+	background-position: -60px 0;
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>Grâce au sprite suivant : <a href="../assets/images/social-icons.png" target="_blank">Récupérer l'image</a>, créer une liste de liens avec l'icône grise en état normal, puis en couleur au survol.</p>
+			<p>Dimension des icones : 46 x 46 px</p>
+			<p><a href="../exercices/21-TP-sprite/index.html" target="_blank">Voir le résultat</a></p>
+		</div>
+	</div>
+
+
+
+
+</div>
+

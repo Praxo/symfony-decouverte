@@ -1,0 +1,148 @@
+<div class="main-wrapper">
+	<h1>Balises de head - référencement</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Balises de head - référencement</p>
+					<ul>
+						<li>Référencement : title, description, keywords</robots>
+						<li>Robots</li>
+						<li>Favicon</li>
+						<li>Mode de compatibilité d'IE</li>
+						<li>Balises facebook - Open Graph</li>
+						<li>Sitemap</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://www.alsacreations.com/article/lire/628-balises-meta.html" target="_blank">Infos sur les balises meta</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balises meta référencement - <a href="http://www.alsacreations.com/article/lire/628-balises-meta.html" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+		<ul>
+			<li><strong>Title</strong> : titre de la page en cours. Conseil : ne pas dépasser 67 caractères (espaces compris)</li>
+			<li><strong>Description</strong> : description de la page en cours. Conseil : entre 150 et 255 caractères</li>
+			<li><strong>Keywords</strong> : mots clés - quasiment plus pris en compte</li>
+		</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;title&gt;Titre de la page en cours&lt;/title&gt;
+&lt;meta name="description" content="Description de la page actuelle" /&gt;
+&lt;meta name="keywords" content="mot, clés, du, site" /&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Robots.txt</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le fichier <strong>robots.txt</strong> permet d'indiquer si on interdit/autorise les robots d’indexation d'accèder à certaines pages ou certains dossiers.</p>
+<pre class="prettyprint lang-html linenums">
+User-agent: *
+Allow: /
+</pre>
+			<blockquote><strong>NB :</strong> Il se met à la racine d'un projet / il existe également une balise meta name='robots'</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Favicon (icone visible dans l'onglet) - <a href="http://www.favicon-generator.org/" target="_blank">Générateur de favicon</a></h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" /&gt;
+&lt;link rel="icon" type="image/x-icon" href="./favicon.ico"  /&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Interdire le mode de compatibilité d'IE - <a href="http://www.alsacreations.com/astuce/lire/1437-comment-interdire-le-mode-de-compatibilite-sur-ie.html" target="_blank">Informations</a></h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+</pre>
+		</div>
+	</div>
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Balises facebook - Open Graph - <a href="http://www.yakaferci.com/open-graph/" target="_blank">L'Open Graph et son impact sur le SEO</a></h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;meta property="og:title" content="Titre de la page" /&gt;
+&lt;meta property="og:type" content="article" /&gt;
+&lt;meta property="og:url" content="http://3wa.belzorash.com/" /&gt;
+&lt;meta property="og:image" content="http://3wa.belzorash.com/assets/images/poney.jpg" /&gt;
+...
+</pre>
+			<blockquote><strong>NB :</strong> pour plus d'infos et la liste complète : <a href="http://ogp.me/" target="_blank">site officiel de l'Open Graph</a></blockquote>
+		</div>
+	</div>
+
+
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Sitemap.xml - <a href="https://www.xml-sitemaps.com/" target="_blank">Générateur de sitemap</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>Le fichier <strong>sitemap.xml</strong> permet de lister l'ensemble des page d'un site pour faciliter l'indexation par les moteurs de recherche.</p>
+
+<pre class="prettyprint lang-html linenums">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://example.com/&lt;/loc&gt;
+        &lt;lastmod&gt;2016-05-01&lt;/lastmod&gt;
+        &lt;changefreq&gt;daily&lt;/changefreq&gt;
+        &lt;priority&gt;0.8&lt;/priority&gt;
+     &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://example.com/contact.html&lt;/loc&gt;
+        &lt;lastmod&gt;2016-03-01&lt;/lastmod&gt;
+        &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+        &lt;priority&gt;0.2&lt;/priority&gt;
+     &lt;/url&gt;
+&lt;/urlset&gt;
+</pre>
+			<p>Pour chaque url, on peut spécifier la date de dernière modification (lastmod), la fréquence des modifications (changefreq) et la priorité relaitve de la page par rapport aux autres pages du site. Inutile de spécifier une priorité élevée de toutes les pages, ça n'a aucune influence sur le positionnement dans les résultats de recherche avec les autres sites.</p>
+		</div>
+	</div>
+
+
+
+
+</div>

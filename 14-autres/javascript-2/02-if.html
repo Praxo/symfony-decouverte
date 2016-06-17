@@ -1,0 +1,168 @@
+<div class="main-wrapper">
+	<h1>Conditions</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Conditions</p>
+					<ul>
+						<li>Opérateurs conditionnels</li>
+						<li>Les opérateurs logiques</li>
+						<li>Créer une condition</li>
+						<li>Switch</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Opérateurs conditionnels</h3>
+		</div>
+		<div class="widget-content">
+			<p>==, !=, ===, !==, >, <, >=, <=</p>
+<pre class="prettyprint lang-js linenums">
+var number1 = 2, number2 = 2, number3 = 4, result;
+result = number1 == number2;
+alert(result); // true
+result = number1 == number3;
+alert(result); // false
+result = number1 < number3; 
+alert(result); // true
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les opérateurs logiques</h3>
+		</div>
+		<div class="widget-content">
+			<p>&& (ET), || (OU), ! (NON)</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Créer une condition</h3>
+		</div>
+		<div class="widget-content">
+			<h4>IF</h4>
+			<pre class="prettyprint lang-js linenums">
+if(true) {
+	alert("message affiché");
+}
+
+if(!true) { // ou if(false)
+	alert("non affiché");
+}
+</pre>
+			<h4>IF / ELSE</h4>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+if(age > 18) {
+	alert("Tu es majeur !");
+} else {
+	alert("Tu es mineur...");
+}
+</pre>
+			<h4>IF / ELSE IF / ELSE</h4>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+if(age < 5) {
+	alert("Tu as moins de 5 ans");
+} else if( age >= 5 && age < 10) {
+	alert("Tu as entre 5 et 10 ans");
+} else {
+	alert("Tu as 10 ans ou plus");
+}
+</pre>		
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Switch</h3>
+		</div>
+		<div class="widget-content">
+			<p>Très utile pour faire du cas par cas, et lorsqu'il y a de multiples conditions.</p>
+			<ul>
+				<li><strong>case : </strong> est suivi de la valeur qu'il doit prendre</li>
+				<li><strong>break : </strong> "casse" le switch (évite d'exécuter la suite)</li>
+				<li><strong>default : </strong> exécuté si aucun cas n'a été exécuté</li>
+			</ul>
+<pre class="prettyprint lang-js linenums">
+var numeroTiroir = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4) :'));
+switch (numeroTiroir) {
+    case 1:
+        alert('Contient divers outils pour dessiner : du papier, des crayons, etc.');
+    break;
+    case 2:
+        alert('Contient du matériel informatique : des câbles, des composants, etc.');
+    break;
+    case 3:
+        alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+    break;
+    case 4:
+        alert('Contient des vêtements : des chemises, des pantalons, etc.');
+    break;
+    default:
+        alert("Le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Demander l'âge</h4>
+			<table border="1" style="border-collapse: collapse" cellpadding="5">
+				<tr>
+					<td>1 à 17 ans</td>
+					<td>« Vous n'êtes pas encore majeur. »</td>
+				</tr>
+				<tr>
+					<td>18 à 49 ans</td>
+					<td>« Vous êtes majeur mais pas encore senior. »</td>
+				</tr>
+				<tr>
+					<td>50 à 59 ans</td>
+					<td>« Vous êtes senior mais pas encore retraité. »</td>
+				</tr>
+				<tr>
+					<td>60 à 120 ans</td>
+					<td>« Vous êtes retraité, profitez de votre temps libre ! »</td>
+				</tr>
+			</table>
+			<strong>Déroulement :</strong>
+			<ul>
+				<li>L'utilisateur est invité à renseigner son âge dans une fenêtre</li>
+				<li>Une fois l'âge fourni, on affiche le commentaire correspondant</li>
+			</ul>
+			<h4>Calculatrice</h4>
+			<ol>
+				<li>Demander le premier nombre à l'utilisateur (peut être décimal)</li>
+				<li>Demander le second nombre à l'utilisateur (peut être décimal)</li>
+				<li>Demander l'opérateur ( + - * / )</li>
+				<li>Afficher le résultat</li>
+			</ol>
+			<blockquote>Attention aux divisions par zéro !</blockquote>
+
+		</div>
+	</div>
+</div>

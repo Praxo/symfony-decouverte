@@ -1,0 +1,157 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Configurer le thème</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Configurer le thème</p>
+					<ul>
+						<li>functions.php</li>
+						<li>Créer un menu</li>
+						<li>Ajouter une image à la une</li>
+						<li>Créer une sidebar widgetisée</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://codex.wordpress.org/Functions_File_Explained" target="_blank">Function.php - Documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">functions.php - fichier de configuration</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>functions.php</strong> est un fichier de thème permettant de modifier/configurer le comportement par défaut de Wordpress (pour le thème courant).</p>
+			<p>Il peut contenir des fonctions PHP que vous souhaitez ajouter, mais également des fonctions natives de Wordpress pour customiser le thème (ajouter un menu, ajouter une sidebar, cacher la barre d'admin, changer le comportement d'une fonction...)</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ajouter un menu à un thème</h3>
+		</div>
+		<div class="widget-content">
+			<p>Aucun menu (barre de navigation) n'est installé par défaut sur Wordpress. Pour en ajouter une (ou plusieurs), il faut procéder en 2 étapes :</p>
+			<ul>
+				<li><strong>Définir un menu : </strong>il sera visible dans l'admin : Apparence > menu</li>
+				<li><strong>Afficher un menu : </strong> afficher le menu dans le thème</li>
+			</ul>
+
+			<h4>Définir un menu : regiter_nav_menu() - <a href="https://codex.wordpress.org/Function_Reference/register_nav_menu" target="_blank">Documentation</a></h4>
+			<p>&Agrave; indiquer dans <strong>functions.php</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+register_nav_menu( "mainMenu", "Menu principal" ); /* Définit un menu accessible dans l'admin */
+?&gt;
+</pre>
+<ul>
+	<li><strong>mainMenu</strong> : Clé du menu, valeur unique - permettra de cibler ce menu</li>
+	<li><strong>Menu principal</strong> : Nom du menu dans l'admin</li>
+</ul>
+
+			<h4>Afficher un menu : wp_nav_menu() - <a href="https://developer.wordpress.org/reference/functions/wp_nav_menu/" target="_blank">Documentation</a></h4>
+			<p>&Agrave; indiquer dans un template (ou dans header / footer)</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+wp_nav_menu(array(
+	"theme_location" => "mainMenu"
+)); /* Récupère le menu mainMenu et l'affiche */
+?&gt;
+</pre>
+<p><strong>wp_nav_menu()</strong> peut prendre un tableau en paramètre, pour préciser le menu, l'affichage, les class, l'id, la balise contenante...</p>
+<ul>
+	<li><strong>theme_location</strong> : Clé du menu que l'on souhaite afficher</li>
+</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ajouter une image à la une : add_theme_support() - <a href="https://codex.wordpress.org/Function_Reference/add_theme_support" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>Par défaut, il n'y a pas d'image à la une dans les pages et les articles. Il faut préciser qu'on en a besoin.</p>
+			<p>&Agrave; indiquer dans <strong>functions.php</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+add_theme_support( 'post-thumbnails' ); /* Permet d'autoriser les images à la une */
+?&gt;
+</pre>
+			<blockquote><strong>NB : </strong> pour appeler l'image à la une dans un template : <strong>the_post_thumbnail()</strong></blockquote>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ajouter une sidebar widgétisée</h3>
+		</div>
+		<div class="widget-content">
+			<p>Même fonctionnement que le menu, il faut procéder en 2 étapes :</p>
+			<ul>
+				<li><strong>Définir une sidebar</strong></li>
+				<li><strong>Afficher une sidebar</strong></li>
+			</ul>
+
+			<h4>Définir une sidebar : register_sidebar() - <a href="http://codex.wordpress.org/Function_Reference/register_sidebar" target="_blank">Documentation</a></h4>
+			<p>&Agrave; indiquer dans <strong>functions.php</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+register_sidebar(array(
+	'id'=>'main-sidebar',
+	'name'=>'Sidebar principal'
+)); /* Définit une sidebar accessible dans l'admin */
+?&gt;
+</pre>
+<ul>
+	<li><strong>main-sidebar</strong> : Clé de la sidebar, valeur unique - permettra de cibler cette sidebar</li>
+	<li><strong>register_sidebar</strong> prend un tableau en paramètre de clé/valeur en paramètre</li>
+</ul>
+
+			<h4>Afficher une sidebar : dynamic_sidebar() - <a href="https://codex.wordpress.org/Function_Reference/dynamic_sidebar" target="_blank">Documentation</a></h4>
+			<p>&Agrave; indiquer dans un template (ou dans header / footer)</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+/* Si la sidebar main-sidebar est active, on la récupère et on l'affiche */
+	dynamic_sidebar( 'main-sidebar' );
+?&gt;
+</pre>
+<p><strong>dynamic_sidebar()</strong> prend comme paramètre, la clé de la sidebar définie dans functions.php</p>
+
+			<blockquote><strong>NB :</strong> il est possible de créer un fichier <strong>sidebar.php</strong> dans le thème, et de l'inclure avec la fonction <strong>get_sidebar()</strong></blockquote>
+		</div>
+	</div>
+
+
+
+</div>

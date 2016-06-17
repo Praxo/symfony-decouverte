@@ -1,0 +1,88 @@
+<div class="main-wrapper">
+	<h1>Les boucles</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Les boucles</p>
+					<ul>
+						<li>Créer une boucle en PHP</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Créer une boucle en PHP</h3>
+		</div>
+		<div class="widget-content">
+			<p>Comme en JS, while / for</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$inc = 1;
+	while($inc <= 10){
+		echo $inc;
+
+		$inc++;
+	}
+
+	for($i=0; $i <= 10; $i++){
+		echo $inc;
+	}
+?&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Foreach</h3>
+		</div>
+		<div class="widget-content">
+			<p><strong>foreach</strong> permet de lister le contenu de tout un tableau</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$tab = ["fraise", "banane", "courge"];
+	
+	foreach($tab as $item){ // pour tous les éléments du tableau $tab, je stock l'élément courant dans $item
+		echo $item; // item correspond à l'élément courant
+	}
+?&gt;
+</pre>
+			<h4>Foreach et tableaux associatifs</h4>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$tab = [
+		"fruit" => "fraise",
+		"legume" => "courge",
+		"boisson" => "eau"
+	];
+	
+	foreach($tab as $key=>$item){ // pour tous les éléments du tableau $tab, je stock l'élément courant dans $item
+		echo $key." - ".$item; // item correspond à l'élément courant / key correspond à la clé
+	}
+?&gt;
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>Créer une boucle comptant jusqu'à 10, avec un while puis un for puis un foreach.</p>
+		</div>
+	</div>
+</div>

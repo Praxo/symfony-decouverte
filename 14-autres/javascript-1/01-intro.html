@@ -1,0 +1,77 @@
+<div class="main-wrapper">
+	<h1>Introduction au javascript</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Introduction au javascript</p>
+					<ul>
+						<li>Différences entre les langages</li>
+						<li>Protocole HTTP</li>
+						<li>Utilisation du javascript</li>
+						<li>Commentaires javascript</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Différences entre les langages</h3>
+		</div>
+		<div class="widget-content">
+			<ul>
+				<li><strong>HTML</strong> : Langage structurel d'une page</li>
+				<li><strong>CSS</strong> : Mise en forme</li>
+				<li><strong>javascript</strong> : Gère / ajoute du comportement à une page (langage client -> navigateur)</li>
+				<li><strong>PHP</strong> : Langage serveur, traite la demande, relation BDD et renvoi un résultat</li>
+			</ul>
+			<p>Chaque langage est complémentaire mais empiète plus ou moins également sur les autres (exemple : :hover est un comportement CSS qui empiète sur le JS).</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Protocole HTTP</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Pour chaque ressource dont le navigateur a besoin (HTML, fichiers CSS, scripts, images...), une <strong>requête HTTP</strong>  est effectuée à une adresse précise : <strong>l'URL</strong>.
+			</p>
+
+			<p>Le navigateur web (Client) envoie une requête HTTP au serveur.<br>Le serveur traite la demande et renvoie une réponse HTTP au client, avec un code réponse (200 OK, 404 non trouvé, 500 erreur, 301 redirection...)</p>.
+
+			<img src="../../assets/images/http_overview.png" alt="" style="max-width:100%">
+			<p>Ces "conversations" client - serveur sont visibles dans l'onglet "Réseau" ou "Network" de votre inspecteur navigateur.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Utilisation du Javascript</h3>
+		</div>
+		<div class="widget-content">
+			<p>Comme le CSS, il est possible de définir du javascript directement dans le fichier HTML, ou de faire appel à un fichier externe.</p>
+
+			<h4>Directement dans le fichier HTML</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	window.alert("test");
+&lt;/script&gt;
+</pre>
+			<h4>Appel d'un fichier externe</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript" src="./scripts/fichier.js"&gt;&lt;/script&gt;
+</pre>
+		</div>
+	</div>
+</div>

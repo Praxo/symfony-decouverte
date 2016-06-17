@@ -1,0 +1,128 @@
+<div class="main-wrapper">
+	<h1>Wordpress - La boucle</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">La boucle Wordpress</p>
+					<ul>
+						<li>La boucle</li>
+						<li>Structure d'une boucle</li>
+						<li>Afficher la boucle dans un template</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://codex.wordpress.org/fr:La_Boucle" target="_blank">La boucle - documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Administration</h3>
+		</div>
+		<div class="widget-content">
+			<p>La <strong>boucle (ou Loop)</strong> est le coeur de Wordpress. Il s'agit d'une boucle PHP par laquelle WordPress va passer pour afficher le contenu dans un template (liste des posts, page courante, article courant...)</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Structure d'une boucle</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;?php if(have_posts()) : ?&gt;
+	&lt;?php while(have_posts()) : the_post(); ?&gt;
+		&lt;div class="post"&gt;
+			&lt;h3 class="post-title"&gt;
+				&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;
+					&lt;?php the_title(); ?&gt;
+				&lt;/a&gt;
+			&lt;/h3&gt;
+			&lt;p class="post-info"&gt;
+				Posté dans : &lt;?php the_category(', '); ?&gt; / Auteur : &lt;?php the_author(); ?&gt;.
+			&lt;/p&gt;
+			&lt;div class="post-content"&gt;
+				&lt;?php the_content(); ?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;?php endwhile; ?&gt;
+&lt;?php else : ?&gt;
+	Aucune post à afficher !
+&lt;?php endif; ?&gt;
+</pre>
+			<h4>Explications</h4>
+			<p></p>
+			<ul>
+				<li><strong>have_posts()</strong> : vérifie s'il y a des posts</li>
+				<li><strong>while - endwhile</strong> : pour chaque post, on va faire ça...</li>
+			</ul>
+
+			<h4>the_post() - <a href="https://codex.wordpress.org/Function_Reference/the_post" target="_blank">Documentation</a></h4>
+			<p>Tant qu'on a des posts, <strong>the_post()</strong> permet "d'initialiser" le post courant, et de rendre disponible certaines fonctions, pour récupérer les informations de ce post :</p>
+			<ul>
+				<li><strong>the_permalink()</strong> : lien vers l'article courant</li>
+				<li><strong>the_title()</strong> : titre de l'article courant</li>
+				<li><strong>the_category(', ')</strong> : catégories de l'article courant, séparées par des virgules</li>
+				<li><strong>the_author()</strong> : auteur de l'article courant</li>
+				<li><strong>the_content()</strong> : contenu de l'article courant</li>
+				<li><strong>the_excerpt()</strong> : extrait de l'article courant</li>
+				<li>...</li>
+			</ul>
+
+			<blockquote><strong>Attention :</strong>Certaines fonctions acceptent des paramètres, pour préciser ce que l'on souhaite. La liste des paramètres, c'est vraiment du cas par cas. Il faut se référer à <a href="http://codex.wordpress.org/Template_Tags" target="_blank">la documentation</a> pour savoir quels sont les paramètres disponibles, ainsi que leurs valeurs associées.</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Afficher la boucle dans un template</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-html linenums">
+&lt;!-- On inclut header.php --&gt;
+&lt;?php get_header(); ?&gt;
+
+&lt;!-- On boucle pour récupérer le contenu de la page actuelle --&gt;
+&lt;?php if(have_posts()) : ?&gt;
+	&lt;?php while(have_posts()) : the_post(); ?&gt;
+		&lt;div class="post"&gt;
+			&lt;h3 class="post-title"&gt;
+				&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;
+					&lt;?php the_title(); ?&gt;
+				&lt;/a&gt;
+			&lt;/h3&gt;
+			&lt;p class="post-info"&gt;
+				Posté dans : &lt;?php the_category(', '); ?&gt; / Auteur : &lt;?php the_author(); ?&gt;.
+			&lt;/p&gt;
+			&lt;div class="post-content"&gt;
+				&lt;?php the_content(); ?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;?php endwhile; ?&gt;
+&lt;?php else : ?&gt;
+	Aucune post à afficher !
+&lt;?php endif; ?&gt;
+
+&lt;!-- On inclut footer.php --&gt;
+&lt;?php get_footer(); ?&gt;
+</pre>
+		</div>
+	</div>
+
+</div>

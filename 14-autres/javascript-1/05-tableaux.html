@@ -1,0 +1,89 @@
+<div class="main-wrapper">
+	<h1>Les tableaux de données</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Les tableaux de données</p>
+					<ul>
+						<li>Présentation des tableaux de données</li>
+						<li>Création d'un tableau</li>
+						<li>Récupérer la valeur d'un tableau</li>
+						<li>Exemple de tableau associatif</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les tableaux de données - <a href="http://devdocs.io/javascript/global_objects/array" target="_blank">Documentation</a></h3>
+		</div>
+		<div class="widget-content">
+			<p>En javascript, un tableau est une variable de type <strong>objet</strong>.<br>Si une variable représente une case dans la mémoire vive de l'ordinateur alors on peut définir un tableau comme une suite de cases.<br>Chaque case peut stocker une donnée d'un type différent.<br>On accède à chaque case à l'aide de son indice dans le tableau.</p>
+			<h4>Indices de tableau (ou clés)</h4>
+			<p>Un indice (ou une clé) correspond à la position d'une valeur dans un tableau.<br>Un indice peut-être numérique (par défaut) ou peut être une chaîne de caractères (on parle alors de <strong>tableau associatif</strong>).</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Création d'un tableau</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var tableau = new Array(); // déclaration d'une variable tableau de type objet de la classe Array
+tableau[0] = "rouge"; // indice : 0 / valeur : rouge
+tableau[1] = "vert"; // indice : 1 / valeur : vert
+tableau[2] = "bleu"; // indice : 2 / valeur : bleu
+</pre>
+			<p>qui revient au même que :</p>
+<pre class="prettyprint lang-js linenums">
+var tableau = ["rouge", "vert", "bleu"];
+</pre>
+			<blockquote><strong>NB : </strong>Un tableau commence avec clé numérique toujours à la clé 0</blockquote>
+		</div>
+	</div>
+
+
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Récupérer la valeur d'un tableau</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var tableau = ["rouge", "vert", "bleu"];
+document.write(tableau[1]); // affiche l'élément à la clé 1, donc vert
+document.write(tableau[0]); // affiche l'élément à la clé 0, donc rouge
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exemple de tableau associatif</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var user = new Array();
+user["nom"] = "Depardieu";
+user["prenom"] = "Gérard";
+user["hobby"] = "Vin rouge";
+
+document.write(user["nom"]); // affiche l'élément à la clé "nom", donc Depardieu
+</pre>
+		</div>
+	</div>
+
+</div>

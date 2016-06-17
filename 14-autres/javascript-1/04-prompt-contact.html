@@ -1,0 +1,79 @@
+<div class="main-wrapper">
+	<h1>Prompt et concaténation</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Prompt et concaténation</p>
+					<ul>
+						<li>Créer un prompt</li>
+						<li>Concaténation</li>
+						<li>Exercice</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Créer un prompt</h3>
+		</div>
+		<div class="widget-content">
+			<p>Un prompt est une popin avec un champ texte à remplir. Cette valeur peut être récupérée et stockée dans une variable.</p>
+<pre class="prettyprint lang-js linenums">
+var tonAge = window.prompt("Quel age as-tu ?");
+document.write(tonAge); // affiche la valeur renseignée dans le prompt
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Concaténation</h3>
+		</div>
+		<div class="widget-content">
+			<p>La concaténation consiste à ajouter une chaîne de caractères à une autre ("fusionner" des éléments).<br>
+			La concaténation (en javascript), se fait avec le caractère <strong>+</strong>.</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+document.write("J'ai : " + age + " ans"); // affichera : J'ai 10 ans
+</pre>
+			<p>Pour concaténer des valeurs de type Integer entre elles</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+var toto = 1;
+document.write(age + "" + toto); // affichera : 101
+</pre>
+			<h4>Forcer javascript a procéder à une addition entre 2 chaines de caractères</h4>
+			<p>Pour forcer une addition entre 2 chaines de caractères ayant comme valeur un nombre, nous allons utiliser la fonction <strong>parseInt()</strong> (nombre entier) ou <strong>parseFloat()</strong> (nombre entier ou décimal).</p>
+<pre class="prettyprint lang-js linenums">
+var age = "10";
+var toto = "20.5";
+var total = parseInt(age) + parseFloat(toto);
+document.write(total); // affichera : 30.5
+</pre>
+		</div>
+	</div>
+
+
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercice</h3>
+		</div>
+		<div class="widget-content">
+			<p>Reprendre l'exercice de calcul de TVA en demandant le prix HT dans un prompt et en affichant le résultat dans une phrase :<br> "La valeur TTC de 10€ avec une TVA de 20% est 12€".</div>
+			<blockquote><strong>Attention</strong> : le montant renseigné peut être décimal !</blockquote>
+		</div>
+	</div>
+
+</div>

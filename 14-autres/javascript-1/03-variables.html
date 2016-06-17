@@ -1,0 +1,154 @@
+<div class="main-wrapper">
+	<h1>Variables, constantes et opérateurs</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Variables, constantes et opérateurs</p>
+					<ul>
+						<li>Une variable, une constante, c'est quoi ?</li>
+						<li>Types de variables</li>
+						<li>Déclaration d'une variable</li>
+						<li>Déclaration d'une constante</li>
+						<li>Opérateurs arithmétiques</li>
+						<li>Exercices</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Une variable, une constante c'est quoi ?</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Variable</h4>
+			<p>Une <strong>variable</strong> est un emplacement dans la mémoire vive de l'ordinateur pour stocker de l'information.<br> Elle possède un <strong>nom</strong>, un <strong>type</strong> et une <strong>valeur</strong>.<br>La valeur d'une variable peut évoluer et être modifiée.</p>
+
+			<h4>Constante</h4>
+			<p>Une <strong>constante</strong> est -quasi- similaire à une variable, sauf qu'on ne peut plus changer sa valeur après sa déclaration (lecture seule).</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Types de variables</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le type d'une variable permet au langage de savoir comment manipuler la valeur de la variable.<br>Pour le moment, on se limitera aux types :</p>
+			<ul>
+				<li><strong>String </strong> : Chaine de caractère, encadré par des ""</li>
+				<li><strong>Int (ou Integer)</strong> : Valeurs numériques entières, sans ""</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Déclarer une variable</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le mot clé <strong>var</strong> permet de déclarer une variable.<br>Il faut <strong>toujours déclarer</strong> une variable.<br>Attention au nommage des variables : évitez les caractères spéciaux, préférez le camelCase ou la séparation avec un _.</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+</pre>
+			<ul>
+				<li><strong>var</strong> : mot clé pour déclarer la variable</li>
+				<li><strong>age</strong> : nom donné à la variable (attention au nommage : camelCase, ou séparé par des "_"</li>
+				<li><strong>10</strong> : valeur de la variable</li>
+				<li>Cette variable est de type <strong>Integer</strong> (nombre)</li>
+			</ul>
+<pre class="prettyprint lang-js linenums">
+var age = "10";
+</pre>
+			<p>Cette variable est de type <strong>String</strong> (chaine de caractères).</p>
+
+			<h4>Utiliser les variables</h4>
+			<p>Lorsqu'une variable est déclarée, on peut la modifier.</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10; // age vaut 10 et a un type int
+age = 20; // age vaut 20
+var test = age; // test vaut age (donc 20) et a un type int
+var prenom = "Roger"; // prenom est une String et a pour valeur Roger
+document.write(age); // affiche 20 sur la page
+window.alert(prenom); // affiche une alerte contenant la valeur de prenom, donc Roger
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Déclarer une constante</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le mot clé <strong>const</strong> permet de déclarer une constante.<br>Par convention, les constantes seront nommées en majuscule.<br>Pour rappel, une fois déclarée, une constante ne peut plus changer de valeur.</p>
+<pre class="prettyprint lang-js linenums">
+const PI = 3.14159265359;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Opérateurs arithmétiques</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Opérateurs arithmétiques de bases</h4>
+			<p>+, -, *, /, %</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+age = age + 1; // age vaut 11
+</pre>
+			<h4>Raccourcis pour les opérations arithmétiques sur une même variable</h4>
+			<p>+=, -=, *=, /=, %=, ++, --</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10;
+age += 1; // correspond à : age = age + 1
+age++; // correspond à : age = age + 1
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exercices</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Exercice 1</h4>
+			<p>Afficher <strong>Hello world</strong> dans la page via javascript.</p>
+
+			<h4>Exercice 2</h4>
+			<p>Afficher <strong>Hello world</strong> dans la console de développement.</p>
+
+			<h4>Exercice 3</h4>
+			<p>Afficher <strong>Hello world</strong> dans une popup.</p>
+
+			<h4>Exercice 4</h4>
+			<p>Afficher <strong>Hello world</strong> dans la page via javascript en passant par une <strong>variable</strong>.</p>
+
+			<h4>Exercice 5</h4>
+			<p>Afficher <strong>Hello world</strong> dans la page via javascript en passant par une <strong>constante</strong>.</p>
+
+			<h4>Exercice 6</h4>
+			<p>Créer un petit script pour calculer le prix TTC (20%) en utilisant des variables / constantes, et afficher le résultat dans une popup.<br>Variables / constantes :</p>
+			<ul>
+				<li><strong>TAUX_TVA</strong> : constante contenant le taux de TVA</li>
+				<li><strong>montantHT</strong> : variable contenant le montant Hors Taxe</li>
+				<li><strong>montantTTC</strong> : variable contenant le résultat TTC</li>
+			</ul>
+
+		</div>
+	</div>
+</div>

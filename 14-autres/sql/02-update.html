@@ -1,0 +1,48 @@
+<div class="main-wrapper">
+	<h1>Modification SQL</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Modification SQL</p>
+					<ul>
+						<li>Modifier des données en SQL</li>
+						<li>Et avec PHP ?</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Modifier des données en SQL</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour modifier des données en SQL, on utilise la requête <strong>UPDATE</strong></p>
+<pre class="prettyprint lang-php linenums">
+UPDATE post SET titre='post 3 modifié', contenu='Contenu du post 3 modifié' WHERE id=3
+</pre>
+
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Via SQL & PHP/PDO</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-php linenums">
+$db->exec('UPDATE post SET titre=\'post 3 modifié\', contenu=\'Contenu du post 3 modifié\' WHERE id=3');
+</pre>
+			<p>Idem que pour l'insertion, utilisez <strong>$db->quote($chaine)</strong> pour préparer vos chaines.</p>
+		</div>
+	</div>
+</div>

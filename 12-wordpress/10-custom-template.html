@@ -1,0 +1,76 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Créer un modèle de page</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Créer un modèle de page</p>
+					<ul>
+						<li>Pourquoi ?</li>
+						<li>Création d'un modèle de Page</li>
+						<li>Assigner un modèle à une page</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="https://wpchannel.com/creer-modele-page-wordpress/" target="_blank">Tuto - WPchannel</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Pourquoi créer un template ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>Toutes les pages n'auront pas forcément la meme apparence...<br>
+			Une des particularités des <strong>Pages</strong>, est de pouvoir créer des <strong>modèles de Page</strong>, différent du template page.php.</p>
+			<p>Un modèle de page est un fichier template (non natif de Wordpress), avec une boucle, et peut être assigné à une page particulière.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Création d'un modèle de Page</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Pour créer un modèle de page, il suffit de créer un fichier php, et d'ajouter un commentaire en début de fichier :
+			</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+/*
+	Template Name: Contact
+*/
+?&gt;
+</pre>
+			<p>La suite est une boucle habituelle avec la structure HTML que vous souhaitez...</p>
+			<blockquote><strong>NB :</strong> J'ai pour habitude de préfixer les modèles de page par <strong>tpl-</strong> (ex : tpl-contact.php, tpl-portfolio.php), ça permet de les distinguer des templates de base.</blockquote>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Assigner un modèle à une page</h3>
+		</div>
+		<div class="widget-content">
+			<p>
+				Une fois le modèle créé, il faut l'assigner à une page :
+				Gestion de la page souhaitée > Attributs de la page (colonne de droite) > Modèle
+			</p>
+		</div>
+	</div>
+</div>

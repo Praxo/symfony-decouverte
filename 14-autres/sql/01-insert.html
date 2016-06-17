@@ -1,0 +1,115 @@
+<div class="main-wrapper">
+	<h1>Insertion SQL</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Insertion SQL</p>
+					<ul>
+						<li>Insérer des données via phpmyadmin</li>
+						<li>Insérer des données en SQL</li>
+						<li>Et avec PHP fertomi ?!</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Insérer des données via phpmyadmin</h3>
+		</div>
+		<div class="widget-content">
+			<p>Dans phpmyadmin (<a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a>), vous pouvez directement insérer des données dans une table.<br>Rien de bien compliqué :</p>
+			<ul>
+				<li>Sélectionnez la table souhaitée</li>
+				<li>Cliquez sur <strong>Insérer</strong></li>
+				<li>Renseignez vos valeurs dans les différents champs</li>
+				<li>Validez</li>
+				<li>C'est fait</li>
+			</ul>
+
+			<p>Vous remarquerez que phpmyadmin renvoie vers la page SQL après la validation. Vous pourrez trouver sur cette page, la requête SQL effectuée pour votre insertion.</p>
+			<p>Par exemple :</p>
+<pre class="prettyprint lang-php linenums">
+INSERT INTO `blogtest`.`post` (`id`, `titre`, `contenu`) VALUES (1, 'post 1', 'Contenu du post 1');
+</pre>
+			<p>Dans ma bdd <strong>blogtest</strong>, j'ajoute dans la table <strong>post</strong>, une entrée avec :</p>
+			<ul>
+				<li><strong>id</strong> : 1</li>
+				<li><strong>titre</strong> : deuxième article</li>
+				<li><strong>contenu</strong> : Super ton article !</li>
+			</ul>
+
+			<h4>Remarques</h4>
+			<ul>
+				<li>Le nom de la bdd n'est pas obligatoire dans les requêtes</li>
+				<li>Les `` autours du nom de la table et du nom des champs ne sont pas obligatoires (sauf si plusieurs mots)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Insérer des données en SQL</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour insérer en SQL, il faudra utiliser la commande <strong>INSERT INTO</strong>.<br>Il existe différents formatages pour l'insertion.</p>
+			<h4>En précisant la relation clé / valeur :</h4>
+			<p>Vous pouvez n'indiquer que les champs à remplir, les autres seront à <em>Null</em></p>
+<pre class="prettyprint lang-php linenums">
+INSERT INTO post (id, titre, contenu) VALUES ('2', 'post 2', 'Contenu du post 2');
+</pre>
+
+			<h4>Sans préciser les clés :</h4>
+			<p>Tous les champs sont obligatoires ! On utilise ce raccourci uniquement si tous les champs sont à remplir.</p>
+<pre class="prettyprint lang-php linenums">
+INSERT INTO post VALUES ('3', 'post 3', 'Contenu du post 3');
+</pre>
+
+			<h4>En utilisant la propriété SET :</h4>
+<pre class="prettyprint lang-php linenums">
+INSERT INTO post SET id='4', titre='post 4', contenu='Contenu du post 4'
+</pre>
+			
+			<h4>Remarque</h4>
+			<ul>
+				<li>En cas d'<strong>AUTO_INCREMENT</strong> sur un champ, il n'est pas nécessaire de le préciser</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Via SQL & PHP/PDO</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Connexion à la BDD</h4>
+<pre class="prettyprint lang-php linenums">
+$db = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', 'troiswa');
+</pre>
+			<h4>Requête</h4>
+<pre class="prettyprint lang-php linenums">
+$db->exec('INSERT INTO post (id, titre, test) VALUES (1, \'Titre du post\', \'Contenu du post\')');
+</pre>
+			<p>Les \ permettent <em>d'échapper</em> le caractère ' .</p>
+
+			<h4>Avec un paramètre de type POST</h4>
+			<p>Afin de protéger les chaines de caractères, il faut utiliser <strong>PDO::quote()</strong>. Cette méthode va elle-même entourer vos chaines.</p>
+<pre class="prettyprint lang-php linenums">
+$titre = $db->quote($_POST['titre']);
+$contenu = $db->quote($_POST['contenu']);
+$db->exec('INSERT INTO post (id, titre, test) VALUES (1, '.$titre.', '.$contenu.')');
+</pre>
+		</div>
+	</div>
+
+</div>

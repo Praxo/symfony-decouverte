@@ -1,0 +1,94 @@
+<div class="main-wrapper">
+	<h1>Variables PHP</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Variables PHP</p>
+					<ul>
+						<li>Définir une variable</li>
+						<li>Les types de variables</li>
+						<li>Concaténation</li>
+						<li>Les opérateurs arithmétiques</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Définir une variable</h3>
+		</div>
+		<div class="widget-content">
+			<p>Une variable PHP doit <strong>toujours</strong> commencer par <strong>$</strong>.</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$pseudo = "Roger"; // définit une variable pseudo avec comme valeur la chaine de caractère Roger
+	echo $pseudo; // affiche la valeur de la variable $pseudo
+?&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les types de variables</h3>
+		</div>
+		<div class="widget-content">
+			<p>Comme en JS, il y a différents types de variables</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$pseudo = "Roger"; // string - chaine de caractères 
+	$age = 18; // int - nombre entier
+	$tva = 19.6; // float - décimal
+	$noob = true; // booleen
+	$useless = NULL; // variable "vide"
+?&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Concaténation</h3>
+		</div>
+		<div class="widget-content">
+			<p>Le caractère <strong>.</strong> permet de concaténer des variables / string</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$pseudo = "Roger"; // string - chaine de caractères 
+	$age = 18; // int - nombre entier
+	echo $pseudo." a ".$age." ans !";
+?&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les opérateurs arithmétiques</h3>
+		</div>
+		<div class="widget-content">
+			<p>+, -, *, /, %, ++, +=...</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	$age = 18; // int - nombre entier
+	$age = 18 + 1;
+	$age = $age + 1;
+	$age += 1;
+	$age ++;
+?&gt;
+</pre>
+		</div>
+	</div>
+</div>

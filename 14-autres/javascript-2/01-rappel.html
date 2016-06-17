@@ -1,0 +1,150 @@
+<div class="main-wrapper">
+	<h1>Rappels</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Rappels</p>
+					<ul>
+						<li>Utiliser du javascript</li>
+						<li>Afficher du contenu</li>
+						<li>Variables, constantes, opérateurs</li>
+						<li>Concaténation</li>
+						<li>Tableaux</li>
+						<li>Dates</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Utiliser du javascript</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Directement dans le fichier HTML</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	window.alert("test");
+&lt;/script&gt;
+</pre>
+			<h4>Appel d'un fichier externe</h4>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript" src="./scripts/fichier.js"&gt;&lt;/script&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Afficher du contenu</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+document.write('&lt;p&gt;Bonjour tout le monde !&lt;/p&gt;'); // affiche du contenu dans la page
+console.log('hello console !'); // affiche du contenu dans la console de développement (F12)
+window.alert('hello popup !'); // ouvre une fenêtre modale
+window.confirm("Valider la demande ?"); // modale avec 2 boutons : OK / Annuler
+window.prompt("Saisissez votre nom."); // modale avec champ texte
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Variables, constantes, opérateurs</h3>
+		</div>
+		<div class="widget-content">
+			<p>Une <strong>variable</strong> stocke une information, elle a un <strong>nom</strong>, un <strong>type</strong> (entier, string, objet...) et une <strong>valeur</strong>.</p>
+			<p>Une constante, c'est pareil, sauf qu'elle n'évoluera pas.</p>
+<pre class="prettyprint lang-js linenums">
+var age = 10; // variable "nom" - "entier" qui vaut 10
+var age = "10"; // variable "nom" - "string" qui vaut 10
+const TVA = 19.6; // constante
+
+var age = 10;
+age = age + 1;
+age += 1; // idem
+age++; // idem
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Concaténation</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var age = 26;
+document.write("Bonjour, j'ai " + age + " ans");
+
+// forcer javascript à faire une addition
+var age = "10";
+var toto = "20.5";
+var total = parseInt(age) + parseFloat(toto);
+document.write(total); // affichera : 30.5
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Les tableaux de données</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var tableau = new Array(); // déclaration d'une variable tableau de type objet de la classe Array
+tableau[0] = "rouge"; // indice : 0 / valeur : rouge
+tableau[1] = "vert"; // indice : 1 / valeur : vert
+tableau[2] = "bleu"; // indice : 2 / valeur : bleu
+
+// correspond aussi à : var tableau = ["rouge", "vert", "bleu"];
+
+alert(tableau[2]); // affiche bleu
+</pre>
+			<blockquote>Un tableau commence avec clé numérique toujours à la clé 0</blockquote>
+
+			<h4>Tableaux associatifs</h4>
+<pre class="prettyprint lang-js linenums">
+var user = new Array();
+user["nom"] = "Depardieu";
+user["prenom"] = "Gérard";
+user["hobby"] = "Vin rouge";
+
+document.write(user["nom"]); // affiche l'élément à la clé "nom", donc Depardieu
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Dates</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var maintenant; // déclaration d'une variable maintenant
+maintenant = new Date(); // de type objet de la classe Date
+
+var unJour = new Date('2015-07-15'); // instancie un objet date à la date du 15 juillet 2015
+
+// maintenant.getDay() renvoie le numéro du jour de la semaine, 0 = dimanche, 6 = samedi.
+// maintenant.getDate() renvoie le jour dans le mois (1 à 31).
+// maintenant.getMonth() renvoie le numéro du mois dans l'année, 0 = janvier, 11 = décembre.
+// maintenant.getFullYear() renvoie l'année.
+</pre>
+		</div>
+	</div>
+</div>

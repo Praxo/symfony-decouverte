@@ -1,0 +1,75 @@
+<div class="main-wrapper">
+	<h1>Découverte du javascript</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Découverte du javascript</p>
+					<ul>
+						<li>Ecrire du HTML dans la page</li>
+						<li>Ecrire dans la console de développement</li>
+						<li>Créer une alerte</li>
+					</ul>
+					<blockquote><strong>NB : </strong>je ne précise pas forcément les balises &lt;script&gt; autours du javascript (flemingite aigue).</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ecrire du HTML dans la page</h3>
+		</div>
+		<div class="widget-content">
+			<p>La méthode <strong>document.write()</strong> écrit à l'emplacement où on le déclare.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;JavaScript - Exemple 1&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Titre de la page&lt;/h1&gt;
+    &lt;script&gt;
+        document.write('&lt;p&gt;Bonjour tout le monde !&lt;/p&gt;');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ecrire dans la console de développement</h3>
+		</div>
+		<div class="widget-content">
+			<p>La méthode <strong>console.log()</strong> écrit le message dans la console de développement du navigateur web (F12).</p>
+<pre class="prettyprint lang-js linenums">
+console.log('hello console !');
+</pre>
+			<p>Très utilise pour afficher des informations durant la phase de développement.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Créer une alerte</h3>
+		</div>
+		<div class="widget-content">
+			<p>La méthode <strong>window.alert()</strong> écrit un message dans une fenêtre modale affichée par le navigateur.</p>
+<pre class="prettyprint lang-js linenums">
+window.alert('hello popup !');
+</pre>
+		</div>
+	</div>
+</div>

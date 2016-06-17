@@ -1,0 +1,64 @@
+<div class="main-wrapper">
+	<h1>Wordpress - Requêtes</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-6">
+					<p class="widget-intro">Requêtes</p>
+					<ul>
+						<li>Récupérer des articles en dehors d'un template</li>
+					</ul>
+				</div>
+				<div class="columns medium-6">
+					<p class="widget-intro">Documentations / Liens</p>
+					<ul>
+						<li>
+							<a href="http://codex.wordpress.org/Template_Tags/get_posts" target="_blank">Documentation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Récupérer des articles en dehors d'un template : get_posts()</h3>
+		</div>
+		<div class="widget-content">
+			<p>Il est souvent nécessaire de récupérer des articles hors du template qui leur est dédié. Par exemple : afficher les 3 derniers articles sur la page d'accueil.</p>
+			<p><strong>get_posts</strong> est une fonction permettant de récupérer des articles en fonction de certains paramètres (catégorie, nombre, tri, type...), dans n'importe quel template.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+// recupérer les 5 derniers articles de la catégorie d'id 2
+$actus = get_posts(array(
+	"posts_per_page" => 5,
+	"category" => 2,
+	"orderby" => "date"
+));
+?&gt;
+</pre>
+			<p>Pour afficher ces articles, il faut créer une boucle particulière :</p>
+<pre class="prettyprint lang-html linenums">
+&lt;?php
+// pour tous les éléments $post dans $articles
+foreach($actus as $post) : setup_postdata($post);
+	// je fais ce que je veux 
+endforeach;
+wp_reset_postdata();
+?&gt;
+</pre>		
+			<ul>
+				<li><strong>setup_postdata</strong> : permet de prendre la main sur la boucle actuelle.</li>
+				<li><strong>wp_reset_postdata</strong> : permet de rétablir la boucle "normale".</li>
+			</ul>
+			<blockquote><strong>NB :</strong> pour connaître l'ID d'une catégorie : modifier une catégorie > dans l'url, recherchez le paramètre <strong>tag_ID</strong></blockquote>
+		</div>
+	</div>
+</div>

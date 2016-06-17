@@ -1,0 +1,121 @@
+<div class="main-wrapper">
+	<h1>Les boucles</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Les boucles</p>
+					<p>Une boucle permet de répéter des actions pour éviter de les écrire plusieurs fois...</p>
+					<ul>
+						<li>Incrématations</li>
+						<li>Boucle While</li>
+						<li>Exerice While</li>
+						<li>Boucle For</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Incrématations</h3>
+		</div>
+		<div class="widget-content">
+<pre class="prettyprint lang-js linenums">
+var numero = 0;
+numero = numero + 1;
+numero += 1;
+numero++;
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Boucle While</h3>
+		</div>
+		<div class="widget-content">
+			<p>Pour faire fonctionner une boucle, il faut définir une condition. Tant que la condition est vraie (true), la boucle se répète, sinon, elle s'arrête (false).</p>
+<pre class="prettyprint lang-js linenums">
+var number = 1;
+
+while(number < 10) {
+	number++;
+}
+
+document.write(number); // Affiche 10
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exerices While</h3>
+		</div>
+		<div class="widget-content">
+			<h4>Demander l'âge</h4>
+			<p>Créer un script demandant à l'utilisateur d'indiquer son prénom.<br>Tant qu'il n'a pas rentré son prénom (champ vide), relancer l'opération.</p>
+			<h4>Calculatrice TTC</h4>
+			<p>En reprenant l'exercice sur le calcul d'un prix TTC, faites la même chose : tant que l'utilisateur n'a pas renseigné un chiffre, relancer la demande.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Boucle For</h3>
+		</div>
+		<div class="widget-content">
+			<p>Même fonctionnement que while, mais syntaxe différente.
+			Principle d'un for :</p>
+<pre class="prettyprint lang-js linenums">
+for ( initialisation ; condition ; incrémentation ){
+	// ...
+}
+
+for ( var iteration = 0; iteration < 10; iteration++) {
+	document.write('Itération n° ' + iteration);
+}
+</pre>
+
+			<h4>Afficher le contenu d'un tableau</h4>
+<pre class="prettyprint lang-js linenums">
+var tableau = ["toto", "tata", "titi"]
+
+for ( var iteration = 0; iteration < tableau.length; iteration++) {
+	document.write('Ligne n°' + iteration + " : " + tableau[iteration] + "&lt;br&gt;");
+}
+</pre>
+		</div>
+	</div>
+
+	<div class="widget widget-tp">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Exerices</h3>
+		</div>
+		<div class="widget-content">
+			<h4>La phrase la plus longue</h4>
+			<p>&Agrave; partir du fichier suivant, retrouver la phrase la plus longue et préciser le nombre de caractères qui la compose...<br>
+			<a href="../../exercices/js2/exercice-4-initial.js" target="_blank">Télécharger le fichier</a></p>
+			<h4>Table de multiplication</h4>
+			<ul>
+				<li>Demander quelle table souhaite voir l'utilisateur</li>
+				<li>Enregistrer cette table dans un tableau JS (<a href="http://devdocs.io/javascript-array/" target="_blank">objet Array</a>)</li>
+				<li>Afficher cette table dans un tableau <strong>HTML</strong></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+</div>

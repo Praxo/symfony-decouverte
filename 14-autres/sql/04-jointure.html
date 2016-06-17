@@ -1,0 +1,239 @@
+<div class="main-wrapper">
+	<h1>Jointures SQL</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Jointures SQL</p>
+					<ul>
+						<li>Mise en situation</li>
+						<li>Effectuer des jointures entre tables en SQL</li>
+						<li>Et avec PHP ?</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Mise en situation</h3>
+		</div>
+		<div class="widget-content">
+			<p>Imaginons le schéma suivant :</p>
+			<table border="1" width="100%" style="border-collapse: collapse">
+				<thead>
+					<tr>
+						<td colspan="6" style="text-align:center;">Table des posts -post-</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>id (primary A_I)</th>
+						<th>titre</th>
+						<th>contenu</th>
+						<th>nom_auteur</th>
+						<th>prenom_auteur</th>
+						<th>email_auteur</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Premier article</td>
+						<td>Ceci est le premier article</td>
+						<td>Boulay</td>
+						<td>Steevy</td>
+						<td>jesuisunboulay@tele.fr</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Article 2</td>
+						<td>Deuxième article</td>
+						<td>Allo</td>
+						<td>Nabilla</td>
+						<td>shampooing@allo.fr</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Article 3</td>
+						<td>Contenu de l'article 3</td>
+						<td>Allo</td>
+						<td>Nabilla</td>
+						<td>shampooing@allo.fr</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Article 4</td>
+						<td>Contenu de l'article 4</td>
+						<td>Allo</td>
+						<td>Nabilla</td>
+						<td>shampooing@allo.fr</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Article 5</td>
+						<td>Contenu de l'article 5</td>
+						<td>Boulay</td>
+						<td>Steevy</td>
+						<td>jesuisunboulay@tele.fr</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>On va devoir répéter à chaque fois le nom, le prénom et le mail de l'auteur, et en cas d'erreur le modifier autant de fois qu'il y a d'articles...<br>Ce n'est franchement pas pratique !<br>Ce serait mieux de séparer les auteurs des posts, et de les liés via un id (clé étrangère).</p>
+
+			<h4>Nouvelle situation</h4>
+
+			<div class="row">
+				<div class="columns medium-6">
+					<table border="1" width="100%" style="border-collapse: collapse;">
+						<thead>
+							<tr>
+								<td colspan="6" style="text-align:center;">Table des posts -post-</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>id (primary A_I)</th>
+								<th>titre</th>
+								<th>contenu</th>
+								<th>id_auteur</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Premier article</td>
+								<td>Ceci est le premier article</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Article 2</td>
+								<td>Deuxième article</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Article 3</td>
+								<td>Contenu de l'article 3</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Article 4</td>
+								<td>Contenu de l'article 4</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Article 5</td>
+								<td>Contenu de l'article 5</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="columns medium-6">
+					<table border="1" width="100%" style="border-collapse: collapse;">
+						<thead>
+							<tr>
+								<td colspan="6" style="text-align:center;">Table des auteurs -author-</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>id (primary A_I)</th>
+								<th>nom</th>
+								<th>prenom</th>
+								<th>email</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Allo</td>
+								<td>Nabilla</td>
+								<td>shampooing@allo.fr</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Boulay</td>
+								<td>Steevy</td>
+								<td>jesuisunboulay@tele.fr</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<p>Désormais, les auteurs sont externes aux posts. Il est bien plus pratique de modifier un auteur, d'en ajouter ou de simplement lister les auteurs.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Ok, je comprends bien, mais on fait comment pour retrouver l'auteur d'un article ?</h3>
+		</div>
+		<div class="widget-content">
+			<p>C'est là que les <strong>jointures SQL</strong> vont être utiles.<br>Une jointure permet de joindre/lier plusieurs tables en fonction de certains paramètres.</p>
+			<p>Dans notre situation, on veut récupérer les articles avec les informations de leur auteur.</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Jointures SQL - Old school</h3>
+		</div>
+		<div class="widget-content">
+			<p>L'Ancienne méthode, on utilise <strong>WHERE</strong> en précisant les tables à joindre (à titre d'info).</p>
+<pre class="prettyprint lang-php linenums">
+SELECT post.*, author.*
+FROM post, author 
+WHERE post.id_auteur = author.id
+</pre>
+			<p>On recherche tout dans post, tout dans author en précisant que <strong>id_auteur</strong> (table post) = <strong>id</strong> (table author).<br>Ca va donc renvoyer toutes les informations des 2 tables, tant qu'il y a une relation !</p>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Alias SQL</h3>
+		</div>
+		<div class="widget-content">
+			<p>Un <strong>alias</strong> permet de renommer la clé de sortie lors d'une reqête.<br>
+			Si vous avez des champs communs dans les 2 tables, vous pouvez utiliser des alias (sinon les valeurs seront écrasées) : </p>
+<pre class="prettyprint lang-php linenums">
+SELECT post.*, author.nom as nom_auteur
+FROM post, author 
+WHERE post.id_auteur = author.id
+</pre>
+			<p>Ainsi, le nom de l'auteur de sera plus dans <strong>nom</strong> mais dans <strong>nom_auteur</strong>.</p>
+			<h4>Alias sur les tables</h4>
+			<p>Il est également possible de donner un alias à une table pour éviter de la réecrire entièrement :</p>
+<pre class="prettyprint lang-sql linenums">
+SELECT p.*, a.*
+FROM post p, author a
+WHERE p.id_auteur = a.id
+</pre>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Jointures SQL - New school</h3>
+		</div>
+		<div class="widget-content">
+			<p>Désormais, on utilise <strong>JOIN ... ON</strong> pour effectuer une jointure.</p>
+<pre class="prettyprint lang-php linenums">
+select p.*, a.*
+FROM post p
+JOIN author a ON p.id_auteur=a.id
+</pre>
+		</div>
+	</div>
+</div>

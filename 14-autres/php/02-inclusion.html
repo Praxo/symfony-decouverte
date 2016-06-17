@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+	<h1>Inclusion en PHP</h1>
+
+	<div class="widget widget-objectif">
+		<div class="widget-header">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h3 class="widget-title">Objectifs</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row full-width">
+				<div class="columns medium-12">
+					<p class="widget-intro">Inclusion en PHP</p>
+					<ul>
+						<li>Inclure des portions de pages</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget">
+		<div class="widget-header">
+			<i class="fa fa-caret-right"></i>
+			<h3 class="widget-title">Inclure des portions de pages</h3>
+		</div>
+		<div class="widget-content">
+			<p>Dans un site web, il y a toujours des parties redondantes (header, footer, menu, sidebar...).<br>En PHP, il est possible d'inclure le contenu d'un fichier à l'intérieur d'un autre fichier.</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php 
+	require "menu.php"; // génère le contenu du fichier menu.php à l'endroit où on le déclare
+?&gt;
+</pre>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+	<style>
+		.majuscule{
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="texte" class="toto"></div>
+	<div id="texte2">lorem</div>
+
+	<a href="http://www.google.fr" class="lien">Lien vers google</a>
+
+
+
+
+
+	<script>
+			
+		// quand le document est chargé (que le DOM a été chargé)
+		// $(document).ready(function(){
+		$(function(){
+
+			// $("#texte") : selecteur, on recupère l'élément qui a l'id texte dans le DOM
+			// .html("hello world") : on modifie le contenu de la balise
+			// $(selecteur).action();
+			$('#texte').html("Hello world");
+
+			// changer une propriété CSS
+			$('#texte').css("color", "red");
+
+			// changer plusieurs propriétés CSS
+			$('#texte2').css({
+				"color": "blue",
+				"background": "red"
+			});
+
+			// stoque la valeur de la couleur dans la variable
+			var textColor = $('#texte').css("color");
+
+			// cacher un contenu (display: none)
+			$('#texte2').hide();
+			// afficher un contenu (display: block)
+			$('#texte2').show();
+
+			// attr permet de récupérer ou modifier un attribut (id, class, src, href...)
+			var lien = $('.lien').attr("href");
+
+			// avec 2 paramètres, on modifie l'attribut
+			$('.lien').attr("href", "http://www.kwery.fr");
+			lien = $('.lien').attr("href");
+
+
+			// addClass : permet d'ajouter une classe
+			$('#texte').addClass("majuscule");
+			
+			// removeClass : permet d'enlever une classe
+			$('#texte').removeClass("toto");
+
+			// toggleClass permet d'ajouter ou d'enlever (si la class est là, on la vire, sinon on l'ajoute)
+			$('#texte2').toggleClass("majuscule");
+
+			// hasClass : renoie un bool si l'element a la class
+			if($("#texte2").hasClass("majuscule")){
+				$('#texte2').toggleClass("majuscule");
+			}
+
+			// .val() récupère la value dans un champ de form
+			// .val("du contenu") : ajoute du contenu à la value
+
+			// append, prepend, before, after
+		})
+
+
+	</script>
+	
+</body>
+</html>
